@@ -146,6 +146,98 @@
             border: 1px solid #c9a962;
             color: #c9a962;
         }
+
+        /* Nav link */
+        .nav-link {
+            color: #b0b0b0;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #fafafa;
+        }
+
+        /* ========== LIGHT MODE ========== */
+        body.light-mode {
+            background: #f5f5f5;
+            color: #181818;
+        }
+
+        body.light-mode .glass {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.2);
+        }
+
+        body.light-mode .nav-link {
+            color: #525252;
+        }
+
+        body.light-mode .nav-link:hover {
+            color: #181818;
+        }
+
+        body.light-mode .bg-dark {
+            background: #f5f5f5 !important;
+        }
+
+        body.light-mode .bg-dark-50 {
+            background: #eeeeee !important;
+        }
+
+        body.light-mode .bg-dark-100 {
+            background: #e5e5e5 !important;
+        }
+
+        body.light-mode .text-light {
+            color: #181818 !important;
+        }
+
+        body.light-mode .text-light-200 {
+            color: #525252 !important;
+        }
+
+        body.light-mode .text-light-300 {
+            color: #737373 !important;
+        }
+
+        body.light-mode .border-dark-200 {
+            border-color: #d4d4d4 !important;
+        }
+
+        body.light-mode .btn-primary {
+            background: #c9a962;
+            color: #181818;
+        }
+
+        body.light-mode .btn-secondary {
+            border-color: #d4d4d4;
+            color: #181818;
+        }
+
+        body.light-mode .badge {
+            background: #fafafa;
+            border-color: #c9a962;
+            color: #8b7a3d;
+        }
+
+        body.light-mode .skill-card {
+            background: #fafafa;
+            border-color: #d4d4d4;
+        }
+
+        body.light-mode .project-card {
+            background: #fafafa;
+            border-color: #d4d4d4;
+        }
+
+        body.light-mode #themeToggle {
+            background: #fafafa;
+            border-color: #d4d4d4;
+        }
+
+        body.light-mode ::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
     </style>
 </head>
 
@@ -162,11 +254,18 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#presentation" class="text-light-200 hover:text-light transition-colors">Présentation</a>
-                    <a href="#parcours" class="text-light-200 hover:text-light transition-colors">Parcours</a>
-                    <a href="#experiences" class="text-light-200 hover:text-light transition-colors">Expériences</a>
-                    <a href="#competences" class="text-light-200 hover:text-light transition-colors">Compétences</a>
-                    <a href="#projets" class="text-light-200 hover:text-light transition-colors">Projets</a>
+                    <a href="#presentation" class="nav-link">Présentation</a>
+                    <a href="#parcours" class="nav-link">Parcours</a>
+                    <a href="#experiences" class="nav-link">Expériences</a>
+                    <a href="#competences" class="nav-link">Compétences</a>
+                    <a href="#projets" class="nav-link">Projets</a>
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle"
+                        class="w-10 h-10 rounded-lg bg-dark-100 border border-dark-200 flex items-center justify-center hover:border-gold transition-all"
+                        title="Changer de thème">
+                        <i data-lucide="sun" class="w-5 h-5 text-gold hidden" id="sunIcon"></i>
+                        <i data-lucide="moon" class="w-5 h-5 text-gold" id="moonIcon"></i>
+                    </button>
                     <a href="#contact" class="btn-primary px-5 py-2 rounded-md font-semibold">Contact</a>
                 </div>
 
@@ -411,7 +510,7 @@
                             <i data-lucide="wrench" class="w-6 h-6 text-blue-400"></i>
                         </div>
                         <div>
-                            <span class="text-blue-400 text-xs font-bold">BAC+1 — 2025</span>
+                            <span class="text-blue-400 text-xs font-bold">BAC+1 — 2026</span>
                             <h3 class="text-lg font-bold text-light">XtremPro</h3>
                         </div>
                     </div>
@@ -794,6 +893,35 @@
                 navbar.classList.add('shadow-lg');
             } else {
                 navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // ========== THEME TOGGLE ==========
+        const themeToggle = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                localStorage.setItem('theme', 'dark');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
             }
         });
     </script>
