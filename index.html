@@ -271,65 +271,96 @@
     <section id="parcours" class="py-24 bg-dark-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mon Parcours</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mon <span class="text-gold">Parcours</span>
+                </h2>
                 <p class="text-light-300 max-w-2xl mx-auto">
                     Une progression constante vers l'expertise en infrastructures et réseaux
                 </p>
             </div>
 
-            <div class="max-w-3xl mx-auto space-y-8">
-                <!-- BTS SIO -->
-                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
-                    <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-lg font-semibold text-light">BTS SIO — Option SISR</h3>
-                        <span class="text-sm text-light-300">2024 — 2026</span>
+            <!-- Timeline -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Line -->
+                <div
+                    class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-gold">
+                </div>
+
+                <!-- BTS SIO - Left -->
+                <div class="fade-in relative flex items-center mb-12">
+                    <div class="w-1/2 pr-8 text-right">
+                        <span class="text-blue-400 font-bold text-sm">2024 - 2026</span>
+                        <h3 class="text-xl font-bold text-light mt-1">BTS SIO - Option SISR</h3>
+                        <p class="text-cyan-400 text-sm mt-1">Lycée Fulbert - Chartres</p>
+                        <p class="text-light-300 text-sm mt-2">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                        <div class="mt-3 flex flex-wrap gap-2 justify-end">
+                            <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Linux</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
+                        </div>
                     </div>
-                    <p class="text-light-200 text-sm mb-3">Lycée Fulbert, Chartres</p>
-                    <p class="text-light-300 text-sm">Solutions d'Infrastructure, Systèmes et Réseaux</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Linux</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
+                    <!-- Icon -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-blue-500/30">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+
+                <!-- Stage - Right -->
+                <div class="fade-in relative flex items-center mb-12">
+                    <div class="w-1/2"></div>
+                    <!-- Icon -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-cyan-500/30">
+                        <i data-lucide="building" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="w-1/2 pl-8">
+                        <span class="text-cyan-400 font-bold text-sm">2026</span>
+                        <h3 class="text-xl font-bold text-light mt-1">Stage - XO XLS Optronic</h3>
+                        <p class="text-light-300 text-sm mt-2">Administration système et téléphonie. Gestion serveurs et
+                            maintenance du parc informatique.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
+                            <span class="badge text-xs px-2 py-1 rounded">3CX</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Maintenance</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Gestion Serveur</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Stage -->
-                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
-                    <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-lg font-semibold text-light">Stage — XO XLS Optronic</h3>
-                        <span class="text-sm text-light-300">2026</span>
+                <!-- BAC Pro - Left -->
+                <div class="fade-in relative flex items-center mb-12">
+                    <div class="w-1/2 pr-8 text-right">
+                        <span class="text-teal-400 font-bold text-sm">2021 - 2024</span>
+                        <h3 class="text-xl font-bold text-light mt-1">BAC Pro Systèmes Numériques</h3>
+                        <p class="text-teal-400 text-sm mt-1">Lycée des Métiers Sully - Nogent-le-Rotrou</p>
+                        <p class="text-light-300 text-sm mt-2">3 années de formation technique</p>
+                        <div class="mt-3 flex flex-wrap gap-2 justify-end">
+                            <span class="badge text-xs px-2 py-1 rounded">Électronique</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Réseaux</span>
+                        </div>
                     </div>
-                    <p class="text-light-200 text-sm mb-3">Dreux</p>
-                    <p class="text-light-300 text-sm">Administration système et téléphonie. Maintenance du parc
-                        informatique.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
-                        <span class="badge text-xs px-2 py-1 rounded">3CX</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Maintenance</span>
+                    <!-- Icon -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-teal-500/30">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
                     </div>
+                    <div class="w-1/2"></div>
                 </div>
 
-                <!-- BAC Pro -->
-                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
-                    <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-lg font-semibold text-light">BAC Pro Systèmes Numériques</h3>
-                        <span class="text-sm text-light-300">2021 — 2024</span>
+                <!-- Brevet - Right -->
+                <div class="fade-in relative flex items-center">
+                    <div class="w-1/2"></div>
+                    <!-- Icon -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center z-10 shadow-lg shadow-gold/30">
+                        <i data-lucide="award" class="w-5 h-5 text-dark"></i>
                     </div>
-                    <p class="text-light-200 text-sm mb-3">Lycée des Métiers Sully, Nogent-le-Rotrou</p>
-                    <p class="text-light-300 text-sm">3 années de formation technique</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="badge text-xs px-2 py-1 rounded">Électronique</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Réseaux</span>
+                    <div class="w-1/2 pl-8">
+                        <span class="text-gold font-bold text-sm">2021</span>
+                        <h3 class="text-xl font-bold text-light mt-1">Brevet des Collèges</h3>
+                        <p class="text-light-300 text-sm mt-2">Collège Jean Monnet - La Loupe</p>
                     </div>
-                </div>
-
-                <!-- Brevet -->
-                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
-                    <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-lg font-semibold text-light">Brevet des Collèges</h3>
-                        <span class="text-sm text-light-300">2021</span>
-                    </div>
-                    <p class="text-light-200 text-sm">Collège Jean Monnet, La Loupe</p>
                 </div>
             </div>
         </div>
@@ -339,7 +370,8 @@
     <section id="competences" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes Compétences</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span
+                        class="text-gold">Compétences</span></h2>
                 <p class="text-light-300 max-w-2xl mx-auto">
                     Un ensemble de compétences techniques acquises en formation et en stage
                 </p>
@@ -347,10 +379,12 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Systèmes -->
-                <div class="fade-in skill-card rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="server" class="w-5 h-5 text-gold"></i>
-                        <h3 class="text-base font-semibold text-light">Systèmes</h3>
+                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="server" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-light">Systèmes</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
@@ -362,10 +396,12 @@
                 </div>
 
                 <!-- Réseaux -->
-                <div class="fade-in skill-card rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="network" class="w-5 h-5 text-gold"></i>
-                        <h3 class="text-base font-semibold text-light">Réseaux</h3>
+                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-cyan-500/10 transition-all">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="network" class="w-6 h-6 text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-light">Réseaux</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="badge text-xs px-2 py-1 rounded">Cisco IOS</span>
@@ -377,10 +413,12 @@
                 </div>
 
                 <!-- Sécurité & Supervision -->
-                <div class="fade-in skill-card rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-gold"></i>
-                        <h3 class="text-base font-semibold text-light">Sécurité & Gestion</h3>
+                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-teal-500/10 transition-all">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-teal-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-light">Sécurité & Gestion</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="badge text-xs px-2 py-1 rounded">SSL/TLS</span>
@@ -391,10 +429,12 @@
                 </div>
 
                 <!-- Virtualisation -->
-                <div class="fade-in skill-card rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="box" class="w-5 h-5 text-gold"></i>
-                        <h3 class="text-base font-semibold text-light">Virtualisation</h3>
+                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-gold/10 transition-all">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="box" class="w-6 h-6 text-gold"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-light">Virtualisation</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="badge text-xs px-2 py-1 rounded">Proxmox VE</span>
@@ -411,69 +451,81 @@
     <section id="projets" class="py-24 bg-dark-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes Projets</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span class="text-gold">Projets</span>
+                </h2>
                 <p class="text-light-300 max-w-2xl mx-auto">
                     Des projets concrets réalisés en formation BTS SIO
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Projet 1 -->
-                <div class="fade-in project-card bg-dark-100 rounded-lg overflow-hidden">
-                    <div class="h-40 bg-dark-200 flex items-center justify-center">
-                        <i data-lucide="network" class="w-12 h-12 text-dark-300"></i>
+                <div
+                    class="fade-in project-card bg-dark-100 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-cyan-500/10 transition-all">
+                    <div
+                        class="h-44 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-cyan-500/30 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="network" class="w-8 h-8 text-cyan-400"></i>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-light mb-2">Sport Ludique Orléans</h3>
+                        <h3 class="text-lg font-bold text-light mb-2">Sport Ludique Orléans</h3>
                         <p class="text-light-300 text-sm mb-4">Conception et mise en place d'une infrastructure réseau
                             complète, segmentée et sécurisée.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-5">
                             <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
                             <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
                             <span class="badge text-xs px-2 py-1 rounded">Routage</span>
                         </div>
                         <a href="https://xola-max.github.io/gp-orleans-sportludique2025-2026/" target="_blank"
-                            class="btn-primary block text-center py-2 rounded-md text-sm font-semibold">
+                            class="btn-primary block text-center py-2.5 rounded-lg text-sm font-semibold">
                             Voir le projet
                         </a>
                     </div>
                 </div>
 
                 <!-- Projet 2 -->
-                <div class="fade-in project-card bg-dark-100 rounded-lg overflow-hidden">
-                    <div class="h-40 bg-dark-200 flex items-center justify-center">
-                        <i data-lucide="globe" class="w-12 h-12 text-dark-300"></i>
+                <div
+                    class="fade-in project-card bg-dark-100 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-teal-500/10 transition-all">
+                    <div
+                        class="h-44 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-teal-500/30 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="globe" class="w-8 h-8 text-teal-400"></i>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-light mb-2">Site Web : FC Fulbert</h3>
+                        <h3 class="text-lg font-bold text-light mb-2">Site Web : FC Fulbert</h3>
                         <p class="text-light-300 text-sm mb-4">Conception et développement d'un site web pour le club de
                             football, optimisé pour le SEO.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-5">
                             <span class="badge text-xs px-2 py-1 rounded">HTML/CSS</span>
                             <span class="badge text-xs px-2 py-1 rounded">SEO</span>
                         </div>
                         <span
-                            class="btn-secondary block text-center py-2 rounded-md text-sm font-semibold opacity-50 cursor-not-allowed">
+                            class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
                             Indisponible
                         </span>
                     </div>
                 </div>
 
                 <!-- Projet 3 -->
-                <div class="fade-in project-card bg-dark-100 rounded-lg overflow-hidden">
-                    <div class="h-40 bg-dark-200 flex items-center justify-center">
-                        <i data-lucide="code" class="w-12 h-12 text-dark-300"></i>
+                <div
+                    class="fade-in project-card bg-dark-100 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-gold/10 transition-all">
+                    <div class="h-44 bg-gradient-to-br from-gold/20 to-amber-500/20 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-gold/30 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="code" class="w-8 h-8 text-gold"></i>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-light mb-2">Jeu en ligne : Cluedo</h3>
+                        <h3 class="text-lg font-bold text-light mb-2">Jeu en ligne : Cluedo</h3>
                         <p class="text-light-300 text-sm mb-4">Développement d'un jeu de Cluedo en ligne avec mécaniques
                             de jeu dynamiques.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="flex flex-wrap gap-2 mb-5">
                             <span class="badge text-xs px-2 py-1 rounded">JavaScript</span>
                             <span class="badge text-xs px-2 py-1 rounded">Algorithmie</span>
                         </div>
                         <span
-                            class="btn-secondary block text-center py-2 rounded-md text-sm font-semibold opacity-50 cursor-not-allowed">
+                            class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
                             En cours...
                         </span>
                     </div>
