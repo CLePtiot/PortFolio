@@ -35,9 +35,9 @@
                             dark: '#059669'
                         },
                         'amber': {
-                            DEFAULT: '#f59e0b',
-                            light: '#fbbf24',
-                            dark: '#d97706'
+                            DEFAULT: '#10b981',
+                            light: '#34d399',
+                            dark: '#059669'
                         }
                     },
                     fontFamily: {
@@ -110,7 +110,7 @@
             background: rgba(18, 23, 31, 0.8);
             backdrop-filter: blur(10px);
             border: 1px solid #1e2530;
-            border-left: 3px solid #10b981;
+            border-top: 3px solid #10b981;
         }
 
         .glass-card:hover {
@@ -122,7 +122,7 @@
         .project-card {
             transition: all 0.25s ease;
             border: 1px solid #1e2530;
-            border-left: 3px solid #10b981;
+            border-top: 3px solid #10b981;
         }
 
         .project-card:hover {
@@ -172,11 +172,11 @@
             color: #10b981;
         }
 
-        /* Amber badge for alerts */
+        /* Amber badge for alerts (replaced with emerald) */
         .badge-amber {
             background: #1a202c;
-            border: 1px solid #f59e0b;
-            color: #f59e0b;
+            border: 1px solid #10b981;
+            color: #10b981;
         }
 
         /* Nav link */
@@ -223,7 +223,7 @@
         .pulse-amber {
             width: 8px;
             height: 8px;
-            background: #f59e0b;
+            background: #10b981;
             border-radius: 50%;
         }
 
@@ -334,114 +334,65 @@
 
 <body class="bg-dark text-light antialiased">
 
-    <!-- Mobile Header (Visible on mobile only) -->
-    <header class="lg:hidden fixed top-0 w-full z-50 glass border-b border-dark-200">
-        <div class="px-4 py-3 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold text-emerald font-mono flex items-center gap-2">
-                <span class="w-2 h-2 bg-emerald rounded-full"></span>
-                Cyriak.L
-            </a>
-            <button id="mobileMenuBtn" class="text-light hover:text-emerald transition-colors">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden glass border-t border-dark-200 absolute w-full left-0">
-            <div class="px-4 py-4 space-y-3">
-                <a href="#presentation"
-                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
-                    <span class="text-emerald mr-2">></span>Tableau de bord
+    <!-- Top Navigation (Horizontal) -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-dark-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-emerald font-mono flex items-center gap-2">
+                    <div class="w-3 h-3 bg-emerald rounded-full pulse-green"></div>
+                    Cyriak_L
                 </a>
-                <a href="#competences"
-                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
-                    <span class="text-dark-300 mr-2">#</span>Inventaire
-                </a>
-                <a href="#projets"
-                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
-                    <span class="text-dark-300 mr-2">#</span>Projets
-                </a>
-                <a href="#lab"
-                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
-                    <span class="text-dark-300 mr-2">#</span>Environnement
-                </a>
-                <a href="#veille"
-                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
-                    <span class="text-dark-300 mr-2">#</span>Veille
-                </a>
-                <a href="#contact"
-                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
-                    <span class="text-dark-300 mr-2">@</span>Contact
-                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#presentation" class="nav-link text-sm font-mono flex items-center gap-2">
+                        <span class="text-emerald">></span>Dashboard
+                    </a>
+                    <a href="#competences" class="nav-link text-sm font-mono flex items-center gap-2">
+                        <span class="text-emerald">#</span>Skills
+                    </a>
+                    <a href="#experiences" class="nav-link text-sm font-mono flex items-center gap-2">
+                        <span class="text-emerald">#</span>Parcours
+                    </a>
+                    <a href="#projets" class="nav-link text-sm font-mono flex items-center gap-2">
+                        <span class="text-emerald">#</span>Projets
+                    </a>
+                    <a href="#lab" class="nav-link text-sm font-mono flex items-center gap-2">
+                        <span class="text-emerald">#</span>Lab
+                    </a>
+                    <a href="#contact" class="btn-primary px-5 py-2 rounded-lg text-sm font-mono">
+                        Me contacter
+                    </a>
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="p-2 text-light-200 hover:text-emerald transition-colors">
+                        <i data-lucide="sun" class="w-5 h-5 hidden" id="sunIcon"></i>
+                        <i data-lucide="moon" class="w-5 h-5" id="moonIcon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-light-200 hover:text-emerald transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
-    </header>
 
-    <!-- Sidebar (Visible on desktop) -->
-    <aside class="hidden lg:flex flex-col w-64 fixed inset-y-0 left-0 glass border-r border-dark-200 z-40">
-        <!-- Sidebar Header -->
-        <div class="p-6 border-b border-dark-200">
-            <a href="#" class="text-xl font-bold text-emerald font-mono flex items-center gap-2">
-                <div class="w-3 h-3 bg-emerald rounded-full pulse-green"></div>
-                Cyriak_L
-            </a>
-            <div class="text-[10px] text-zinc-500 font-mono mt-1">v2.0.1-stable</div>
-        </div>
-
-        <!-- Navigation Links -->
-        <div class="flex-1 overflow-y-auto py-6 px-4 space-y-1">
-            <div class="text-xs font-bold text-zinc-600 uppercase tracking-wider mb-2 px-3 font-mono mt-6">Modules</div>
-            <a href="#competences"
-                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors group">
-                <i data-lucide="cpu" class="w-4 h-4 text-zinc-500 group-hover:text-emerald transition-colors"></i>
-                Inventaire Skills
-            </a>
-            <a href="#experiences"
-                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors group">
-                <i data-lucide="history" class="w-4 h-4 text-zinc-500 group-hover:text-emerald transition-colors"></i>
-                Parcours
-            </a>
-            <a href="#projets"
-                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors group">
-                <i data-lucide="folder-git-2"
-                    class="w-4 h-4 text-zinc-500 group-hover:text-emerald transition-colors"></i>
-                Projets
-            </a>
-
-            <div class="text-xs font-bold text-zinc-600 uppercase tracking-wider mb-2 px-3 font-mono mt-6">Ressources
+        <!-- Mobile Menu (Dropdown) -->
+        <div id="mobileMenu" class="hidden glass border-t border-dark-200 lg:hidden">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#presentation" class="block nav-link font-mono">Tableau de bord</a>
+                <a href="#competences" class="block nav-link font-mono">Inventaire Skills</a>
+                <a href="#experiences" class="block nav-link font-mono">Parcours</a>
+                <a href="#projets" class="block nav-link font-mono">Projets</a>
+                <a href="#lab" class="block nav-link font-mono">Environnement</a>
+                <a href="#contact" class="block btn-primary px-4 py-2 rounded-lg text-center font-mono">Me contacter</a>
             </div>
-            <a href="#lab"
-                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-amber hover:bg-dark-200 rounded-lg transition-colors group">
-                <i data-lucide="server" class="w-4 h-4 text-zinc-500 group-hover:text-amber transition-colors"></i>
-                Environnement
-            </a>
-            <a href="#veille"
-                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-blue-400 hover:bg-dark-200 rounded-lg transition-colors group">
-                <i data-lucide="rss" class="w-4 h-4 text-zinc-500 group-hover:text-blue-400 transition-colors"></i>
-                Veille
-            </a>
         </div>
-
-
-        <!-- Sidebar Footer -->
-        <div class="p-4 border-t border-dark-200">
-            <a href="#contact"
-                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors mb-4">
-                <i data-lucide="mail-plus" class="w-4 h-4"></i>
-                Me contacter
-            </a>
-
-            <!-- Theme Toggle -->
-            <button id="themeToggle"
-                class="w-full h-10 rounded-lg bg-dark-100 border border-dark-200 flex items-center justify-center hover:border-emerald transition-all gap-2 text-xs font-mono text-light-200">
-                <i data-lucide="sun" class="w-4 h-4 hidden" id="sunIcon"></i>
-                <i data-lucide="moon" class="w-4 h-4" id="moonIcon"></i>
-                <span>Changer thème</span>
-            </button>
-        </div>
-    </aside>
+    </nav>
 
     <!-- Main Content Wrapper -->
-    <main class="lg:pl-64 pt-16 lg:pt-0">
+    <main class="pt-20">
 
         <!-- Hero Section / Présentation -->
         <section id="presentation" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -500,7 +451,7 @@
                         <div
                             class="inline-flex items-center gap-2 bg-dark-50 border border-amber rounded-full px-4 py-2 mb-6">
                             <span class="pulse-amber"></span>
-                            <span class="text-sm text-amber font-medium">En recherche d'alternance — Rentrée
+                            <span class="text-sm text-emerald font-medium">En recherche d'alternance — Rentrée
                                 2026-2027</span>
                         </div>
 
@@ -547,7 +498,7 @@
         <section id="about" class="py-24 bg-dark-50">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-light">À propos de <span
-                        class="text-gold">Moi</span>
+                        class="text-emerald">Moi</span>
                 </h2>
                 <div class="space-y-6 text-lg text-light leading-relaxed font-medium">
                     <p>
@@ -572,7 +523,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mon <span
-                            class="text-gold">Parcours</span>
+                            class="text-emerald">Parcours</span>
                     </h2>
                     <p class="text-light max-w-2xl mx-auto">
                         Une progression constante vers l'expertise en infrastructures et réseaux
@@ -583,15 +534,15 @@
                 <div class="relative max-w-4xl mx-auto">
                     <!-- Vertical Line -->
                     <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-gold">
+                        class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-emerald via-emerald/50 to-emerald/10">
                     </div>
 
                     <!-- BTS SIO - Left -->
                     <div class="fade-in relative flex items-center mb-12">
                         <div class="w-1/2 pr-8 text-right">
-                            <span class="text-blue-400 font-bold text-sm">2024 - 2026</span>
+                            <span class="text-emerald/80 font-bold text-sm">2024 - 2026</span>
                             <h3 class="text-xl font-bold text-light mt-1">BTS SIO - Option SISR</h3>
-                            <p class="text-cyan-400 text-sm mt-1">Lycée Fulbert - Chartres</p>
+                            <p class="text-emerald/60 text-sm mt-1">Lycée Fulbert - Chartres</p>
                             <p class="text-light text-sm mt-2">Solutions d'Infrastructure, Systèmes et Réseaux</p>
                             <div class="mt-3 flex flex-wrap gap-2 justify-end">
                                 <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
@@ -601,7 +552,7 @@
                         </div>
                         <!-- Icon -->
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-blue-500/30">
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-emerald rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald/30">
                             <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
                         </div>
                         <div class="w-1/2"></div>
@@ -612,11 +563,11 @@
                         <div class="w-1/2"></div>
                         <!-- Icon -->
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-cyan-500/30">
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-emerald rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald/30">
                             <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
                         </div>
                         <div class="w-1/2 pl-8">
-                            <span class="text-cyan-400 font-bold text-sm">2026</span>
+                            <span class="text-emerald/60 font-bold text-sm">2026</span>
                             <h3 class="text-xl font-bold text-light mt-1">Stage - XO XLS Optronic</h3>
                             <p class="text-light text-sm mt-1 mb-1 font-bold">Le Coudray</p>
                             <p class="text-light text-sm mt-2">Développement, administration système et téléphonie.
@@ -636,9 +587,9 @@
                     <!-- BAC Pro - Left -->
                     <div class="fade-in relative flex items-center mb-12">
                         <div class="w-1/2 pr-8 text-right">
-                            <span class="text-teal-400 font-bold text-sm">2021 - 2024</span>
+                            <span class="text-emerald/60 font-bold text-sm">2021 - 2024</span>
                             <h3 class="text-xl font-bold text-light mt-1">BAC Pro Systèmes Numériques</h3>
-                            <p class="text-teal-400 text-sm mt-1">Lycée des Métiers Sully - Nogent-le-Rotrou</p>
+                            <p class="text-emerald/60 text-sm mt-1">Lycée des Métiers Sully - Nogent-le-Rotrou</p>
                             <p class="text-light text-sm mt-2">3 années de formation technique</p>
                             <div class="mt-3 flex flex-wrap gap-2 justify-end">
                                 <span class="badge text-xs px-2 py-1 rounded">Électronique</span>
@@ -647,7 +598,7 @@
                         </div>
                         <!-- Icon -->
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-teal-500/30">
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-emerald rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald/30">
                             <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
                         </div>
                         <div class="w-1/2"></div>
@@ -730,13 +681,13 @@
 
                     <!-- Nuit de l'Info -->
                     <div
-                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all text-center">
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all text-center">
                         <div class="flex flex-col items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="trophy" class="w-6 h-6 text-amber"></i>
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="trophy" class="w-6 h-6 text-emerald"></i>
                             </div>
                             <div>
-                                <span class="text-amber text-xs font-bold font-mono">Événement — 2025</span>
+                                <span class="text-emerald text-xs font-bold font-mono">Événement — 2025</span>
                                 <h3 class="text-lg font-bold text-light mt-1">Nuit de l'Info</h3>
                             </div>
                         </div>
@@ -906,10 +857,11 @@
 
                     <!-- Projet 3 -->
                     <div
-                        class="fade-in glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-amber/10 transition-all group">
+                        class="fade-in glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-emerald/10 transition-all group">
                         <div class="h-44 bg-dark-100 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-amber/5 group-hover:bg-amber/10 transition-colors"></div>
-                            <i data-lucide="gamepad-2" class="w-12 h-12 text-amber relative z-10"></i>
+                            <div class="absolute inset-0 bg-emerald/10 group-hover:bg-emerald/20 transition-colors">
+                            </div>
+                            <i data-lucide="gamepad-2" class="w-12 h-12 text-emerald relative z-10"></i>
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-light mb-2 font-mono">Jeu en ligne : Cluedo</h3>
@@ -921,7 +873,7 @@
                             </div>
                             <span
                                 class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
-                                En développement...
+                                En savoir plus
                             </span>
                         </div>
                     </div>
@@ -934,7 +886,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Environnement <span
-                            class="text-amber">Technique</span></h2>
+                            class="text-emerald">Technique</span></h2>
                     <p class="text-light-200 max-w-2xl mx-auto">
                         Utilisation de serveurs HP ProLiant DL380 en environnement de test, virtualisation sous Proxmox
                         et gestion de conteneurs Docker pour les services web.
@@ -943,10 +895,11 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <!-- Proxmox -->
-                    <div class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all">
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="server" class="w-6 h-6 text-amber"></i>
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="server" class="w-6 h-6 text-emerald"></i>
                             </div>
                             <h3 class="text-lg font-bold text-light font-mono">Hyperviseur</h3>
                         </div>
@@ -959,10 +912,11 @@
                     </div>
 
                     <!-- Network -->
-                    <div class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all">
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="network" class="w-6 h-6 text-amber"></i>
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="network" class="w-6 h-6 text-emerald"></i>
                             </div>
                             <h3 class="text-lg font-bold text-light font-mono">Réseau & DNS</h3>
                         </div>
@@ -979,10 +933,11 @@
                     </div>
 
                     <!-- Services -->
-                    <div class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all">
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="container" class="w-6 h-6 text-amber"></i>
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="container" class="w-6 h-6 text-emerald"></i>
                             </div>
                             <h3 class="text-lg font-bold text-light font-mono">Services Docker</h3>
                         </div>
@@ -1006,7 +961,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Veille <span
-                            class="text-blue-400">Technologique</span></h2>
+                            class="text-emerald">Technologique</span></h2>
                     <p class="text-light-200 max-w-2xl mx-auto">
                         Outils et sources pour rester informé sur la cybersécurité et l'infrastructure
                     </p>
@@ -1014,10 +969,10 @@
 
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div
-                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="rss" class="w-6 h-6 text-blue-400"></i>
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="rss" class="w-6 h-6 text-emerald"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-light font-mono">Flux de sécurité</h3>
@@ -1041,10 +996,10 @@
                     </div>
 
                     <div
-                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="book-open" class="w-6 h-6 text-blue-400"></i>
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="book-open" class="w-6 h-6 text-emerald"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-light font-mono">Méthodologie & Documentation</h3>
