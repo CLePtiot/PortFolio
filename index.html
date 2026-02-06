@@ -16,11 +16,11 @@
                 extend: {
                     colors: {
                         'dark': {
-                            DEFAULT: '#0a0a0a',
-                            50: '#171717',
-                            100: '#1a1a1a',
-                            200: '#262626',
-                            300: '#404040',
+                            DEFAULT: '#121212',
+                            50: '#1a1a1a',
+                            100: '#1f1f1f',
+                            200: '#2a2a2a',
+                            300: '#3d3d3d',
                             400: '#525252',
                         },
                         'light': {
@@ -28,6 +28,11 @@
                             100: '#e5e5e5',
                             200: '#a3a3a3',
                             300: '#737373'
+                        },
+                        'gold': {
+                            DEFAULT: '#c9a962',
+                            light: '#d4bc7a',
+                            dark: '#b8954d'
                         }
                     },
                     fontFamily: {
@@ -52,17 +57,17 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Scrollbar monochrome */
+        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #0a0a0a;
+            background: #121212;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #404040;
+            background: #3d3d3d;
             border-radius: 3px;
         }
 
@@ -84,33 +89,33 @@
 
         /* Glass effet subtle */
         .glass {
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         /* Card hover effect */
         .project-card {
             transition: all 0.25s ease;
-            border: 1px solid #262626;
+            border: 1px solid #2a2a2a;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            border-color: #404040;
-            background: #171717;
+            border-color: #c9a962;
+            background: #1a1a1a;
         }
 
         /* Skill card */
         .skill-card {
             transition: all 0.2s ease;
-            background: #0a0a0a;
-            border: 1px solid #262626;
+            background: #121212;
+            border: 1px solid #2a2a2a;
         }
 
         .skill-card:hover {
-            border-color: #404040;
-            background: #171717;
+            border-color: #c9a962;
+            background: #1a1a1a;
         }
 
         /* Subtle border glow on buttons */
@@ -151,7 +156,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="#" class="text-xl font-bold text-light">
+                <a href="#" class="text-xl font-bold text-gold">
                     Cyriak.L
                 </a>
 
@@ -212,13 +217,13 @@
                     <!-- Title -->
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                         <span class="text-light">Bonjour, je suis</span><br>
-                        <span class="text-light">Cyriak Launay</span>
+                        <span class="text-gold">Cyriak Launay</span>
                     </h1>
 
                     <!-- Subtitle -->
                     <p class="text-xl sm:text-2xl text-light-200 font-medium mb-6">
                         Étudiant <span class="text-light">BTS SIO</span> — Option <span
-                            class="text-light border-b border-light-300">SISR</span>
+                            class="text-gold border-b border-gold">SISR</span>
                     </p>
 
                     <!-- Description -->
