@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		
+		<!--  Celine AUZIAS 2011-20** c DOT line AT ymail DOT com  -->
+		<!--                    La Nuit de l'Info                  -->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4062009-27"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-4062009-27');
+		</script>
+				
+		<link rel="canonical" href="https://www.nuitdelinfo.com/" />
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="theme-color" content="#051923">
+	    		<title>La Nuit de l'Info - Site officiel</title>
+				
+		<meta name="Description" content="Comp&eacute;tition informatique du coucher au lev&eacute; du soleil - Une Nuit, des &eacute;quipes, une ambiance, des d&eacute;fis, un challenge, des prix !" > 
+		<meta name="keywords" content="nuit info defis challenge sujet etudiants universites industriels communication marketing programming web reseaux modelisation" >
+		<meta name="Author" content="C.line - Celine Auzias" >
+		<meta name="Date-Creation-yyyy" content="2009" >
+		<meta name="Date-Revision-yyyymmdd" content="20160110" >
+		<meta name="Category" content="Informatique education" >
+		<meta name="Publisher" content="C.line" >
+		<meta name="Copyright" content="C.line" >
+		<meta name="robots" content="index.php" >
+	  
+		<meta property="og:site_name" content="La Nuit de l'Info" > 
+		<meta property="fb:admins" content="156518469155" > 
+		<meta property="fb:page-id" content="156518469155" > 
+		<meta property="og:type" content="website" >
+		<meta property="og:image" content="https://scontent-mad1-1.xx.fbcdn.net/hphotos-xlp1/v/t1.0-9/12065563_905733022835454_4996584470886410622_n.png?oh=993dcd357972d08816d99779304925a1&oe=573319D5" > 
+		<meta property="og:url" content="https://www.nuitdelinfo.com/" > 
+		<meta property="og:title" content="La Nuit de l'Info" > 
+		<meta property="og:description" content="Comp&eacute;tition informatique du coucher au lev&eacute; du soleil - Une Nuit, des &eacute;quipes, une ambiance, des d&eacute;fis, un challenge, des prix !" >
+
+		<meta name= "twitter:card" content= "summary" />
+		<meta name= "twitter:site" content= "@nuitinfo" />
+		<meta name= "twitter:creator" content= "@nuitinfo" />
+		<meta name ="twitter:url" content="https://www.nuitdelinfo.com/" /> 
+		<meta name ="twitter:title" content="La Nuit de l'Info" /> 
+		<meta name ="twitter:description" content="Comp&eacute;tition informatique du coucher au lev&eacute; du soleil - Une Nuit, des &eacute;quipes, une ambiance, des d&eacute;fis, un challenge, des prix !" />		
+		<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/532339903/infos-nuit_info_logo_simple.png" />	
+		
+		<meta name="msapplication-TileColor" content="#051923"/>
+		<meta name="msapplication-TileImage" content="img/favicon.png"/>
+		<meta name="msapplication-square150x150logo" content="img/favicon.png"/>
+		<meta name="theme-color" content="#051923"/>
+		
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<link rel="icon" href="img/favicon.ico" sizes="64x64" type="image/vnd.microsoft.icon"/>
+		<link rel="apple-touch-icon" href="img/favicon.png" />
+		<link rel="icon" sizes="192x192" href="icon192.png" type="image/png"/>
+		
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Cabin+Sketch:700">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Slackey&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="files/style.css">
+				<link rel="stylesheet" type="text/css" href="files/horizontal-timeline/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="files/horizontal-timeline/css/style.css?v=3">
+		 	
+		<link rel="stylesheet" type="text/css" href="files/style-print.css" media="print">
+			</head>
+<body>   			
+
+<!-- COMPTEUR -->
+
+<!-- COMPTEUR -->
+<div class="counter">
+	<a class="zoom" href="#" onclick="showModale('cd'); return false;" title="Afficher le compteur en plein ecran"><img src="img/zoom.svg" alt=""></a>
+	<div class="countdown">
+		<span class="year"></span>
+		<div class="days"><div class="_days">-</div><span class="small">j </span></div>
+		<div class="hours"> <div class="_hours">-</div><span class="small">h</span></div>
+		<div class="minutes"> <div class="_minutes">-</div><span class="small">min</span></div>
+		<div class="secondes"><div class="_secondes">-</div><span class="small"> </span></div>
+		<div class="divClear"></div>
+	</div>
+	<div class="countdownNight"></div>
+	<div class="divClear"></div>
+</div>
+
+<!-- Modale compteur -->
+<div class="modale cd">
+	<a href="#" class="close" onclick="closeModale('cd');return false;">&#x2715;</a>
+	<div class="content td" >
+		<div class="clock">
+			<div class='pie'>0%</div>
+			<div class='logo-clock'><img class="logo" src="img/logo_n2i_blanc.svg" alt=""></div>
+			<div class='anim-clock'><img class="anim" src="img/clock-anim.svg" alt=""></div>
+		</div>
+		<div id="modale-content"></div>	
+	</div>
+</div>
+
+		
+<div class="bullet">
+	<a href="#home" class="scrollTo nav-home active">&nbsp;</a>
+	<a href="#lanuit" title="La Nuit" class="scrollTo nav-lanuit ">&nbsp;</a>
+	<a href="#lanuit_passees" title="Les Nuits Pass&eacute;es" class="scrollTo nav-lanuit_passees">&nbsp;</a>
+	<a href="#inscription" title="Inscription" class="scrollTo nav-inscription">&nbsp;</a>
+	<a href="#sponsors" title="Sponsors" class="scrollTo nav-sponsors">&nbsp;</a>
+	<a href="#faq" title="FAQ" class="scrollTo nav-faq">&nbsp;</a>
+	<a href="#contact" title="Contact" class="scrollTo nav-contact">&nbsp;</a>
+</div>
+
+<!-- HEADER/HOME --> 
+<div class="page home ">
+	<a id="home" href="#noanchor1" title="Home"></a>
+	<div class="lalune"> </div>
+	<div class="table"><div class="td">
+	<div>
+		<header >
+			<!-- <img class="logo" src="img/logo_n2i_color_moon.svg" width="auto" height="100" alt=""> -->
+			<h1>La Nuit de l'<span>Info</span> 2025<img class="" src="img/logo-n2i-2025.png" width="auto" height="400" alt="La Nuit de l'Info"></h1>
+		</header>
+		<!-- Annee de l edition  -->
+		<div class="nyear hidden">2025</div>
+
+		<!-- Dates de la nuit -->
+		<p class="description dates autocenter">4 et 5 d&eacute;cembre 2025, de 16h34 &agrave; 08h04</p>
+
+		<h2 class="max768 autocenter">Le plus fun serious-game regroupant des milliers d’&eacute;tudiants pour <b>d&eacute;velopper une application</b> informatique <b>en une nuit</b></h2>
+
+		<p class="description suite autocenter max768 hidden ">A l'image des &eacute;ditions pr&eacute;c&eacute;dentes, elle r&eacute;unira des &eacute;tudiants de toute la France, pour une grande aventure collective, pour un m&eacute;lange d'informatique, de communication, de marketing, d'extr&ecirc;me programming, de mod&eacute;lisation, de pizzas, de caf&eacute;, de musique, ...
+		</p>
+
+	  <!-- BOUTONS -->
+	  <div>
+		    <!-- La radio de la nuit -->
+		    
+				<!-- Inscriptions -->
+									<a href="#inscription" class="bouton scrollTo"> Inscription </a>
+				
+									<a href="https://www.nuitdelinfo.com/materiel_communication/2025/LaNuitDeLInfo2025-Sujet.pdf" target="_blank" class="bouton scrollTo"> <img src="img/btn-pdf.png" alt=""> Sujet 2025 </a>
+				
+									<a href="https://www.youtube.com/watch?v=9dbJ5VdzITM" target="_blank" class="bouton "> <img src="img/btn-video.png" alt=""> Vidéo 2025 </a>
+				
+				<a href="https://www.nuitdelinfo.com/inscription/defis/liste" target="_blank" class="bouton scrollTo"> <img src="img/btn-defis.png" alt=""> Défis 2025 </a>
+						</div>
+		<br>
+
+		<!-- SPONSORS de la Nuit en cours -->
+		
+		<!-- Statistiques des inscriptions en cours -->
+			    				
+		<br><a href="#lanuit" class="scrollTo down"><img src="img/style/arrow2.png" alt="" ></a>
+	</div>
+	</div></div>
+</div>
+
+<!-- MENU -->
+
+<!-- Modale menu -->
+<div class="modale menu">
+	<a href="#" class="close" onclick="closeModale('menu');return false;">&#x2715;</a>
+	<div class="content td" id="modale-menu-content"></div>	
+</div>
+
+
+<nav>
+<div class="nav">
+		<a href="#home" class="pullLeft scrollTo" title="La Nuit de l'Info"><img class="logo" src="img/logo_n2i_blanc.svg" width="30" height="30" alt="La Nuit de l'Info"></a>
+
+	<div class="nav-links">
+		<a href="https://www.nuitdelinfo.com#lanuit" title="La Nuit" class="scrollTo tooltip nav-lanuit">
+			La Nuit
+			<span class="tooltiptext">Description, règles du jeu et concepts. Les Nuits passées...</span>
+		</a>
+		<a href="https://www.nuitdelinfo.com#inscription" title="Inscription" class="scrollTo tooltip nav-inscription">
+			Inscription
+			<span class="tooltiptext">Inscription des équipes, des sites, et des défis</span>
+		</a>
+		<a href="https://www.nuitdelinfo.com#sponsors" title="Sponsors" class="scrollTo tooltip nav-sponsors">
+			Partenaires
+			<span class="tooltiptext">Entreprises soutenant/sponsorisant la Nuit de l'Info</span>
+		</a>
+		<a href="https://www.nuitdelinfo.com#faq" title="FAQ" class="scrollTo tooltip nav-faq ">
+			FAQ
+			<span class="tooltiptext">Toutes les réponses aux questions sur les défis, les équipes et les partenariats</span>
+		</a>
+		<a href="https://www.nuitdelinfo.com#contact" title="Contact" class="scrollTo tooltip nav-contact">
+			Contact
+			<span class="tooltiptext">Infos contacts, réseaux sociaux et documents de communication</span>
+		</a>
+	</div>	
+	<a href="https://www.nuitdelinfo.com/nuitinfo/" title="Le Wiki de la Nuit (info techniques, etc...)" class="nav-wiki tooltip jaune" target="_blank">
+		(WIKI)
+		<span class="tooltiptext border">Le Wiki de la Nuit : autres informations techniques, listes des sites/équipes/défis, résultats...</span>
+	</a>
+	<a href="#noanchor" class="aburger" title="Menu" onclick="showModale('menu'); return false;"><span class="burger"><span></span><span></span><span></span></span></a>
+</div> 
+</nav> 
+<div class="clear"></div>
+<!-- BANDEAU PROCHAINE EDITION -->
+
+
+<!-- LA NUIT -->
+<a id="lanuit" href="#noanchor2" title="La Nuit"></a>
+<div class="page lanuit marine">
+		<div class="max1024 autocenter">
+
+		<!-- QU EST CE QUE LA NUIT  -->
+		<div class="dflex">
+			<div class="dflex-text">
+				<h3><b>La nuit de l'info</b>, c'est quoi ?</h3>
+			
+				<p class="pbig">La Nuit de l’Info est une comp&eacute;tition nationale qui r&eacute;unit &eacute;tudiants, enseignants et entreprises pour travailler ensemble sur le d&eacute;veloppement d’une application web.</p>
+				<p class="pbig">La Nuit se d&eacute;roule tous les ans, du premier jeudi du mois de d&eacute;cembre, coucher du soleil, jusqu'au lever du soleil le lendemain matin.</p>
+				<p class="pbig">Les participants ont la dur&eacute;e d'une nuit pour proposer, impl&eacute;menter et packager une application Web 2.0. </p>
+				<p>Durant cette nuit, des partenaires lancent des d&eacute;fis (par exemple : interface web la plus ergonomique, meilleure architecture du syst&egrave;me, meilleure collaboration, etc.) aux &eacute;quipes participantes, et proposent des prix pour les &eacute;quipes ayant le mieux r&eacute;ussi. </p>
+				<p>La nuit est aussi l'occasion de rencontres et discussions avec les entreprises, les ing&eacute;nieurs et les chefs d'entreprises qui viennent soutenir les &eacute;tudiants, voire leur donner quelques conseils pour mieux relever les d&eacute;fis.</p>	
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_nuit  autocenter" >
+					<div class="responsive-container" >
+						<div class="anim anim_nuit" >
+							<img class="a6" src="img/anim/nuit_brass.png" alt="">
+							<img class="a5" src="img/anim/nuit_bras2.png" alt="">
+							<img class="a4" src="img/anim/nuit_bras1.png" alt="">
+							<img class="a3" src="img/anim/nuit_etoiles.png" alt="">
+							<img class="a2" src="img/anim/nuit_logo.png" alt="">
+							<img class="a1" src="img/anim/nuit_soleil.png" alt="">
+							<img class="a0" src="img/anim/nuit_0.png" alt="">
+						</div>		
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- OBJECTIFS  -->
+		<div class="dflex reverse">
+			<div class="dflex-text">
+				<a id="lanuit_objectifs" href="#noanchor2-1" title="La Nuit - Objectifs"></a>
+				<h3><b>Objectifs</b> de la Nuit</h3>
+
+				<p>L’objectif de cette manifestation est de faire travailler ensemble les &eacute;tudiants voulant participer &agrave; un d&eacute;fi informatique national. Ces d&eacute;fis portent la plupart du temps sur l’utilisation de nouvelles technologies telles que le Web 2.0, les r&eacute;seaux sociaux et les technologies multim&eacute;dias.</p>
+				<p>Cette manifestation, outre son aspect unique et original, permet aux &eacute;tudiants en informatique, mais aussi d’autres formations telles que la communication et le multim&eacute;dia par exemple, de participer &agrave; un travail collectif de mani&egrave;re autonome autour de th&eacute;matiques d’actualit&eacute;.</p>
+				<p>Une certaine transversalit&eacute; est donc encourag&eacute;e au sein des &eacute;quipes pour permettre aux &eacute;tudiants de concourir sur plusieurs d&eacute;fis connexes au d&eacute;fi principal, et de multiplier leurs chances de remporter un prix. Ils y rencontrent leurs enseignants dans un cadre plus convivial où l’enseignant n’est pas l&agrave; pour les &eacute;valuer mais pour les aider &agrave; s’organiser face &agrave; un cahier des charges complexe, et leur permettre de mettre en application leurs connaissances informatiques et leur cr&eacute;ativit&eacute;.</p>
+				<p>Pour les personnels, cette manifestation est l’occasion d’un d&eacute;cloisonnement tr&egrave;s enrichissant où bonnes volont&eacute;s, comp&eacute;tences et bonne humeur sont r&eacute;unies. <br>
+				Par ailleurs, le soutien de partenaires donne aux d&eacute;fis &agrave; relever un r&eacute;el int&eacute;rêt pour les &eacute;tudiants.</p>
+			</div>
+			<div class="dflex-media">
+				<img class="logo" src="img/logo_n2i_color_moon.svg" width="50%" height="auto" alt="">
+			</div>
+		</div>
+
+		<!-- DEROULEMENT DE LA NUIT  -->
+		<a id="lanuit_regles" href="#noanchor2-2" title="La Nuit - Regles du jeu"></a>
+		<h3><b>R&egrave;gles du jeu</b> - D&eacute;roulement de la Nuit</h3>
+		
+		<div class="dflex">
+			<div class="dflex-text">
+				<ul >
+				<li><b class="bleu">En amont de la Nuit : </b> un <a href="#lanuit_concepts_sujet" class="scrollTo">sujet</a> de d&eacute;veloppement Web Informatique <b>unique et national</b> est &eacute;labor&eacute; par des partenaires (entreprises et acad&eacute;miques) de la Nuit de l'Info.</li>
+				<li>Les partenaires d&eacute;finissent &eacute;galement des <a href="#lanuit_concepts_defis" class="scrollTo">d&eacute;fis</a> (en amont de la Nuit), qui feront l'objet de primes (ch&egrave;ques cadeaux, livres…).</li>
+				<li><b class="bleu">Le <em>jeudi soir, au coucher du Soleil</em> : </b>lors d'une séance plénière, le sujet national est diffusé simultanément par les organisateurs (les gardiens de la Nuit), sur tous les sites où des participants concourent. </li>
+				</ul>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_sujet autocenter " >
+				<div class="responsive-container" >
+				<div class="anim anim_sujet" >
+					<img class="a4" src="img/anim/sujet_4.png" alt="">
+					<img class="a3" src="img/anim/sujet_3.png" alt="">
+					<img class="a2" src="img/anim/sujet_2.png" alt="">
+					<img class="a1" src="img/anim/sujet_1.png" alt="">
+				</div>		
+				</div></div>
+			</div>
+		</div>
+		<img src="img/style/arrow1.png" alt="">
+
+		<div class="dflex reverse">
+			<div class="dflex-text">
+				<ul >
+				<li>Les &eacute;tudiants, organisés en <a href="#lanuit_concepts_equipes" class="scrollTo">&eacute;quipes</a>, et dot&eacute;es de moyens techniques (connexions internet, espaces d'hébergement, etc...), d&eacute;veloppent pendant toute la nuit leur projet dans une atmosph&egrave;re conviviable et festive (animations, musique, ravitaillement...)</li>
+				<li>Dans le cadre du sujet, les &eacute;quipes peuvent relever un ou plusieurs d&eacute;fis propos&eacute;s par des partenaires, mettant plus particuli&egrave;rement l’accent sur une th&eacute;matique sp&eacute;cifique au sein du sujet (par exemple : l’accessibilit&eacute;, l’utilisation d’un produit ou d’une technologie particuli&egrave;re, etc...).</li>
+				</ul>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_geeks  autocenter " >
+				<div class="responsive-container" >
+				<div class="anim anim_geeks" >
+					<img class="arm" src="img/anim/coding_main.png" alt="">
+					<img class="dev1" src="img/anim/coding_mec.png" alt="">
+					<img class="m1" src="img/anim/coding_music1.png" alt="">
+					<img class="m2" src="img/anim/coding_music2.png" alt="">
+					<img class="wf1" src="img/anim/coding_wifi1.png" alt="">
+					<img class="wf2" src="img/anim/coding_wifi2.png" alt="">
+					<img class="yes2" src="img/anim/coding_yes2.png" alt="">
+					<img class="yes1" src="img/anim/coding_yes1.png" alt="">
+					<img class="a1" src="img/anim/coding_0.png" alt="">
+				</div>
+				</div></div>
+			</div>
+		</div>
+		<img src="img/style/arrow2.png" alt="">
+
+		<div class="dflex">
+			<div class="dflex-text">
+				<ul >
+				<li><b class="bleu">Le <em>vendredi matin, au lever du Soleil</em></b>, les d&eacute;veloppements sont fig&eacute;s. Les &eacute;tudiants (et les vaillants enseignants-chercheurs-ing&eacute;nieurs qui ont pass&eacute; la nuit avec les &eacute;tudiants) vont se reposer !</li>
+				<li>Le vendredi matin (pendant que les &eacute;tudiants dorment) : les <a href="#lanuit_concepts_jurys" class="scrollTo">jurys</a> se r&eacute;unissent sur les diff&eacute;rents sites (un jury par d&eacute;fi) et &eacute;valuent les <a href="#lanuit_concepts_prez" class="scrollTo">travaux r&eacute;alis&eacute;s</a> par les diff&eacute;rentes &eacute;quipes durant la Nuit, afin de d&eacute;signer les vainqueurs qui seront r&eacute;compens&eacute;s. Les jurys auront une semaine pour rendre leurs résultats.</li>
+				</ul>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_jury  autocenter " >
+				<div class="responsive-container" >
+				<div class="anim anim_jury" >
+					<img class="a5" src="img/anim/jury_tete.png" alt="">
+					<img class="a3" src="img/anim/jury_bras2.png" alt="">
+					<img class="a2" src="img/anim/jury_bras1.png" alt="">
+					<img class="a1" src="img/anim/jury_0.png" alt="">
+					<img class="a4" src="img/anim/jury_tel.png" alt="">
+				</div>		
+				</div></div>
+			</div>
+		</div>
+
+
+		<!-- CONCEPTS IMPORTANTS  -->
+		<a id="lanuit_concepts" href="#noanchor2-3" title="La Nuit - Concepts"></a>
+		<br><h3><b>Les concepts importants </b>de la Nuit</h3>
+
+		<a id="lanuit_concepts_sujet" href="#noanchor2-3-1" title="Un sujet commum"></a>
+		<div class="dflex large reverse">
+			<div class="dflex-text">
+				<h4 class="uppercase"><b>Un sujet commun</b> national, qui donne le th&egrave;me de la Nuit </h4>
+				<p class="pbig">Le sujet reste secret jusqu'au d&eacute;marrage de la Nuit : ni le th&egrave;me ni le partenaire porteur ne sera d&eacute;voil&eacute; avant cette date.</p>		
+				<p>Le th&egrave;me du sujet est propos&eacute; par une entreprise partenaire, issue du monde associatif et &agrave; but non lucratif. 
+				Il s'agira donc d'une vraie probl&eacute;matique d'entreprise.</p>
+				<p>Il portera sur la mise en place d'une application Web compl&egrave;te (strat&eacute;gie marketing, contenu, apparence visuelle, moteur informatique, communication, pr&eacute;sentation…), de sorte que des &eacute;tudiants de profils compl&eacute;mentaires devront collaborer pour mener &agrave; bien le d&eacute;veloppement.</p>
+				<p>Les outils mis &agrave; disposition seront relatifs aux technologies du web, et connus &agrave; l'avance par les &eacute;quipes. Le choix des outils de d&eacute;veloppement reste libre. Le choix des outils de communication, dans la limite des outils autoris&eacute;s, est &eacute;galement libre et devra &ecirc;tre choisi par les &eacute;quipes.</p>
+				<p>Il s'agit donc dans la r&eacute;alisation du projet de (d&eacute;)couvrir le spectre des activit&eacute;s n&eacute;cessaires &agrave; la r&eacute;alisation d'une application en ligne, en &eacute;quipe.</p>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_1sujet  autocenter " >
+				<div class="responsive-container" >
+				<div class="anim anim_1sujet" >
+					<img class="a2" src="img/anim/asujet_2.png" alt="">
+					<img class="a1" src="img/anim/asujet_1.png" alt="">
+				</div>		
+				</div></div>	
+			</div>
+		</div>
+
+		<a id="lanuit_concepts_defis" href="#noanchor2-3-2" title="Des defis"></a>
+		<div class="dflex large ">
+			<div class="dflex-text">
+				<h4 class="uppercase"><b>Des d&eacute;fis</b> propos&eacute;s par les partenaires </h4>
+				<p>Les d&eacute;fis sont lanc&eacute;s par les sponsors-partenaires sur des valeurs qui leurs sont ch&egrave;res : esprit d’&eacute;quipe, technologie, architecture logicielle, accessibilit&eacute;, méthodologie, communication, d&eacute;veloppement durable... <br>
+				</p>
+				<p>Chaque équipe devra cibler ses défis avant une heure impartie, et pourra choisir au maximum 5 défis. Les &eacute;tudiants concourent sur les diff&eacute;rents d&eacute;fis.</p>
+				<p>Attention, un défi n'est pas un développement qui remplace le sujet principal de la Nuit, mais un aspect orthogonal aux aspects fonctionnels du sujet principal (non connu à l'avance) qui peut être traité (ou ajouté) en lien avec ce dernier. </p>
+				<div class="centrer"><a href="#faq" class="bouton scrollTo " >FAQ Défis</a> &nbsp; &nbsp; <a href="#inscription" class="bouton scrollTo " >Proposer un défi</a></div>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_1defi autocenter " >
+				<div class="responsive-container" >
+				<div class="anim anim_1defi" >
+					<img class="a4" src="img/anim/adefi_4.png" alt="">
+					<img class="a3" src="img/anim/adefi_3.png" alt="">
+					<img class="a2" src="img/anim/adefi_2.png" alt="">
+					<img class="a1" src="img/anim/adefi_1.png" alt="">
+				</div>		
+				</div></div>
+			</div>
+		</div>
+
+		<a id="lanuit_concepts_equipes" href="#noanchor2-3-3" title="Des equipes"></a>
+		<div class="dflex large reverse">
+			<div class="dflex-text">
+				<h4 class="uppercase"><b>Des &eacute;quipes</b> d'&eacute;tudiants multi-disciplinaires </h4>
+				<p>Les &eacute;tudiants s'auto-organisent en &eacute;quipes. Il est recommand&eacute;, mais non obligatoire, que les &eacute;quipes soient constitu&eacute;es sur au moins deux sites. Les &eacute;tudiants sont fortement encourag&eacute;s &agrave; former des groupes h&eacute;t&eacute;rog&egrave;nes (diff&eacute;rentes ann&eacute;es, formations…). Tous les profils sont bienvenus : il faut programmer, mais aussi faire des graphiques, du HTML, r&eacute;diger du contenu, d&eacute;finir les messages de communication, faire du bruit sur les réseaux sociaux... bref, il y en a pour tout le monde !</p>
+				<div class="centrer"><a href="#faq" class="bouton scrollTo " >FAQ Equipes</a> &nbsp; &nbsp; <a href="#inscription" class="bouton scrollTo " >Participer</a></div>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_1team  autocenter ">
+				<div class="responsive-container" >
+				<div class="anim anim_1team" >
+					<img class="a2" src="img/anim/ateam_2.png" alt="">
+					<img class="a1" src="img/anim/ateam_1.png" alt="">
+				</div>		
+				</div></div>
+			</div>
+		</div>
+		
+		<a id="lanuit_concepts_prez" href="#noanchor2-3-4" title="Des presentations"></a>
+		<div class="dflex large ">
+			<div class="dflex-text">
+				<h4 class="uppercase"><b>Des projets d'applications web</b> r&eacute;alis&eacute;s </h4>
+				<p>Le projet rendu par chaque équipe d'étudiants doit obligatoirement se présenter sous la forme d'un <b>site/application web</b>, site qui sera visit&eacute; par le jury pour &eacute;valuer la r&eacute;alisation. <br>
+				Il est essentiel que les projets soient déposés sur le site pérenne. Si des logiciels/outils spécifiques sont utilisés, ils devront &eacute;galement &ecirc;tre accessibles &agrave; distance. <br>Chaque d&eacute;fi sera jug&eacute; selon ses propres modalit&eacute;s : les &eacute;quipes devront donc veiller &agrave; bien respecter les sp&eacute;cificit&eacute;s de chaque d&eacute;fi (type de rendu, documents &agrave; fournir, logiciels utilisés...)</p>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_1prez autocenter " >
+				<div class="responsive-container" >
+				<div class="anim anim_1prez" >
+					<img class="a4" src="img/anim/aprez_4.png" alt="">
+					<img class="a3" src="img/anim/aprez_3.png" alt="">
+					<img class="a2" src="img/anim/aprez_2.png" alt="">
+					<img class="a1" src="img/anim/aprez_1.png" alt="">
+				</div>		
+				</div></div>
+			</div>
+		</div>
+		
+		<a id="lanuit_concepts_jurys" href="#noanchor2-3-5" title="Des jurys"></a>
+		<div class="dflex large reverse">
+			<div class="dflex-text">
+				<h4 class="uppercase"><b>Des jurys</b> qui r&eacute;compensent </h4>
+				<p>Les jurys seront &eacute;tablis par les partenaires en fonction des d&eacute;fis, et par les porteurs du sujet national pour le défi-sujet principal.</p>
+				<p>A partir du lendemain midi de la Nuit, et sous une semaine, les résultats des défis seront affichés sur le site.</p>
+				<p>Afin que les lots/récompenses des entreprises puissent être remis dans les meilleures conditions, il faudra penser à bien indiquer les coordonnées des équipes (nom, e-mail, adresse...).</p>
+			</div>
+			<div class="dflex-media">
+				<div class="responsive-container-main anim_1jury  autocenter " >
+				<div class="responsive-container">
+				<div class="anim anim_1jury" >
+					<img class="a5" src="img/anim/ajury_5.png" alt="">
+					<img class="a6" src="img/anim/ajury_6.png" alt=""> 
+					<img class="a4" src="img/anim/ajury_4.png" alt="">
+					<img class="a3" src="img/anim/ajury_3.png" alt="">
+					<img class="a2" src="img/anim/ajury_2.png" alt="">
+					<img class="a1" src="img/anim/ajury_1.png" alt="">
+				</div>		
+				</div></div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- NUITS PASSEES -->
+		<div class="nuitspassees clair">
+		<a id="lanuit_passees" href="#noanchor2-4" title="La Nuit - Les nuits passees"></a>
+		<h3 class="autocenter"><b>Les nuits </b>pass&eacute;es</h3>
+
+	<section class="cd-horizontal-timeline" >
+		<div class="timeline">
+			<div class="events-wrapper">
+				<div class="events">
+					<ol>
+						<li><a href="#0" data-date="06/12/2007">2007</a></li>
+						<li><a href="#0" data-date="04/12/2008">2008</a></li>
+						<li><a href="#0" data-date="03/12/2009">2009</a></li>
+						<li><a href="#0" data-date="02/12/2010">2010</a></li>
+						<li><a href="#0" data-date="01/12/2011">2011</a></li>
+						<li><a href="#0" data-date="06/12/2012">2012</a></li>
+						<li><a href="#0" data-date="05/12/2013">2013</a></li>
+						<li><a href="#0" data-date="04/12/2014">2014</a></li>
+						<li><a href="#0" data-date="03/12/2015">2015</a></li>
+						<li><a href="#0" data-date="01/12/2016">2016</a></li>
+						<li><a href="#0" data-date="07/12/2017">2017</a></li>
+						<li><a href="#0" data-date="06/12/2018">2018</a></li>
+						<li><a href="#0" data-date="05/12/2019">2019</a></li>
+						<li><a href="#0" data-date="03/12/2020">2020</a></li>
+						<li><a href="#0" data-date="02/12/2021">2021</a></li>
+						<li><a href="#0" data-date="01/12/2022">2022</a></li>
+						<li><a href="#0" data-date="07/12/2023">2023</a></li>
+						<li><a href="#0" data-date="05/12/2024" class="selected">2024</a></li>
+					</ol>
+					<span class="filling-line" aria-hidden="true"></span>
+				</div>
+			</div> 
+				
+			<ul class="cd-timeline-navigation">
+				<li><a href="#0" class="prev inactive">Prev</a></li>
+				<li><a href="#0" class="next">Next</a></li>
+			</ul> 
+		</div> 
+	
+		<div class="events-content">
+			<ol>
+				<li class="selected" id="n2i2024" data-date="05/12/2024">
+					<div class="max644">
+						<img src="img/affiche_2024.png" class="poster" alt="Affiche Nuit de l Info 2024">
+						<h5>2024 : Et si l'océan était un corps humain ?</h5>
+						<em>5 D&eacute;cembre 16h39 / 6 D&eacute;cembre 8h04</em>
+						<!-- <span>En 2023, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a> <a href="https://www.viveris.fr/"><img src="img/viveris.svg" height="50" alt="Veveris" style="vertical-align:middle;"></a></span><br> -->
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2024" target="_blank">Le site de l'&eacute;dition 2024</a>
+							<a href="https://www.nuitdelinfo.com/materiel_communication/2024/La%20Nuit%20de%20l%E2%80%99Info%202024.pdf" target="_blank">Le sujet de l'&eacute;dition 2024</a>
+							<!-- <a href="https://www.youtube.com/watch?v=Xi9dOqV-u4I" target="_blank">La vidéo de l'&eacute;dition 2024</a></p> -->
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>6027</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>904</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>72</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>44</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2023" data-date="07/12/2023">
+					<div class="max644">
+						<img src="img/affiche_2023.png" class="poster" alt="Affiche Nuit de l Info 2023">
+						<h5>2023 : Faire face au changement climatique : le vrai du faux</h5>
+						<em>7 D&eacute;cembre 16h38 / 8 D&eacute;cembre 8h06</em>
+						<!-- <span>En 2023, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a> <a href="https://www.viveris.fr/"><img src="img/viveris.svg" height="50" alt="Veveris" style="vertical-align:middle;"></a></span><br> -->
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2023" target="_blank">Le site de l'&eacute;dition 2023</a>
+							<a href="https://www.nuitdelinfo.com/materiel_communication/2023/La_Nuit_de_l_Info_2023-Sujet.pdf" target="_blank">Le sujet de l'&eacute;dition 2023</a>
+							<a href="https://www.youtube.com/watch?v=Xi9dOqV-u4I" target="_blank">La vidéo de l'&eacute;dition 2023</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>5578</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>806</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>61</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>47</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2022" data-date="01/12/2022">
+					<div class="max644">
+						<img src="img/affiche_2022.png" class="poster" alt="Affiche Nuit de l Info 2022">
+						<h5>2022 : SexInfo, La prévention par le jeu</h5>
+						<em>1 D&eacute;cembre 16h35 / 2 D&eacute;cembre 8h00</em>
+						<span>En 2022, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a> <a href="https://www.viveris.fr/"><img src="img/viveris.svg" height="50" alt="Veveris" style="vertical-align:middle;"></a></span><br>
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2022" target="_blank">Le site de l'&eacute;dition 2022</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/ni2022.pdf" target="_blank">Le sujet de l'&eacute;dition 2022</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>4615</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>695</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>64</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>52</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2021" data-date="02/12/2021">
+					<div class="max644">
+						<img src="img/affiche_2021.png" class="poster" alt="Affiche Nuit de l Info 2021" >
+						<h5>2021 : L'informatique à l'aide de l'histoire des sauvetages en mer</h5>
+						<em>2 D&eacute;cembre 16h40 / 3 D&eacute;cembre 8h00</em>
+						<span>En 2021, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.ovh.com/fr/"><img src="img/ovhLogoWhite.svg" height="40" alt="OVH" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a> <a href="https://www.viveris.fr/"><img src="img/viveris.svg" height="50" alt="Veveris" style="vertical-align:middle;"></a></span><br>
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2021" target="_blank">Le site de l'&eacute;dition 2021</a>
+							<a href="https://www.nuitdelinfo.com/materiel_communication/2021/la_nuit_de_l_info_2021_-_sujet.pdf" target="_blank">Le sujet de l'&eacute;dition 2021</a>
+						<a href="https://youtu.be/QVe6KgqJTr0" target="_blank">La vidéo de l'&eacute;dition 2021</a>
+					</p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>3546</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>527</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>54</big> sites</div>
+						<!-- <div><img src="img/style/picto_ecoles.png" alt="" /><big>64</big> &eacute;coles</div> -->
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>40</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2020" data-date="03/12/2020">
+					<div class="max644">
+						<img src="img/affiche_2020.png" class="poster" alt="Affiche Nuit de l Info 2020" >
+						<h5>2020 : Suivre l’activité des surfeurs et l’exposition à leur milieu</h5>
+						<em>3 D&eacute;cembre 16h39 / 4 D&eacute;cembre 8h02</em>
+						<span>En 2020, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.ovh.com/fr/"><img src="img/ovhLogoWhite.svg" height="40" alt="OVH" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a></span><br>
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2020" target="_blank">Le site de l'&eacute;dition 2020</a>
+							<a href="https://www.nuitdelinfo.com/materiel_communication/2020/La_Nuit_de_l_Info_2020-Sujet.pdf" target="_blank">Le sujet de l'&eacute;dition 2020</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>1352</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>232</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>32</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>64</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>26</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2019" data-date="05/12/2019">
+					<div class="max644">
+						<img src="img/affiche_2019.png" class="poster" alt="Affiche Nuit de l Info 2019" >
+						<h5>2019 : Augmenter le pouvoir d’agir des étudiant·e·s en situation de précarité</h5>
+						<em>5 D&eacute;cembre 16h39 / 6 D&eacute;cembre 8h03</em>
+						<span>En 2019, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.ovh.com/fr/"><img src="img/ovhLogoWhite.svg" height="40" alt="OVH" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.viveris.fr/"><img src="img/viveris.svg" height="50" alt="Veveris" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a></span><br>
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2019" target="_blank">Le site de l'&eacute;dition 2019</a>
+							<a href="https://www.nuitdelinfo.com/materiel_communication/2019/La_Nuit_de_l_Info_2019-Sujet.pdf" target="_blank">Le sujet de l'&eacute;dition 2019</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>4185</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>528</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>55</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>110</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>50</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2018" data-date="06/12/2018">
+					<div class="max644">
+						<img src="img/affiche_2018.png" class="poster" alt="Affiche Nuit de l Info 2018" >
+						<h5>2018 : “L’assistance numérique d’un explorateur en conditions extrêmes</h5>
+						<em>6 D&eacute;cembre 16h39 / 7 D&eacute;cembre 8h05</em>
+						<span>En 2018, la Nuit a &eacute;t&eacute; soutenue par : <br><a href="https://www.ovh.com/fr/"><img src="img/logo-ovh-40h.png" height="40" alt="OVH" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.viveris.fr/"><img src="img/logo-viveris-blanc-50.png" height="50" alt="Veveris" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.programmez.com/"><img src="img/programmez-com-40.jpg" height="30" alt="Programmez.com" style="vertical-align:middle;"></a> &nbsp;<a href="https://boutique.ed-diamond.com/"><img src="img/logo-linux-mag.jpg" height="40" alt="LinuxMag" style="vertical-align:middle;"></a></span><br>
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2018" target="_blank">Le site de l'&eacute;dition 2018</a>
+							<a href="https://www.nuitdelinfo.com/sujets/sujet-N2I-2018.pdf" target="_blank">Le sujet de l'&eacute;dition 2018</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>4027</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>554</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>56</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>124</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>50</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li id="n2i2017" data-date="07/12/2017">
+					<div class="max644">
+						<img src="img/affiche_2017.png" class="poster" alt="Affiche Nuit de l Info 2017" >
+						<h5>2017 : En route pour la f&ecirc;te !</h5>
+						<em>7 D&eacute;cembre 16h38 / 8 D&eacute;cembre 8h06</em>
+						<span>En 2017, la Nuit a &eacute;t&eacute; soutenue par : <a href="https://www.ovh.com/fr/"><img src="img/logo-ovh-40h.png" height="40" alt="OVH" style="vertical-align:middle;"></a> &nbsp;<a href="https://www.viveris.fr/"><img src="img/logo-viveris-blanc-50.png" height="50" alt="Veveris" style="vertical-align:middle;"></a> &nbsp;<a href="https://boutique.ed-diamond.com/"><img src="img/logo-linux-mag.jpg" height="40" alt="LinuxMag" style="vertical-align:middle;"></a></span><br>
+
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2017" target="_blank">Le site de l'&eacute;dition 2017</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2017.pdf" target="_blank">Le sujet de l'&eacute;dition 2017</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>3325</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>462</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>47</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>109</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>51</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>				
+				<li id="n2i2016" data-date="01/12/2016">
+					<div class="max644">
+						<img src="img/affiche_2016.png" class="poster" alt="Affiche Nuit de l Info 2016" >
+						<h5>2016 : Venir en aide aux r&eacute;fugi&eacute;s</h5>
+						<em>1 D&eacute;cembre 16h40 / 2 D&eacute;cembre 8h00</em>
+						<span>En 2016, la Nuit a &eacute;t&eacute; soutenue par : <a href="https://www.renater.fr/"><img src="img/logo-renater.png" width="110" alt="Renater"></a>,  <a href="http://www.msf.fr/"><img src="img/MSF.svg" width="100" alt="Medecins Sans Frontieres"></a>&nbsp; et &nbsp;<a href="https://www.ovh.com/fr/"><img src="img/logo-ovh-80.png" width="80" alt="OVH"></a></span><br>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2016" target="_blank">Le site de l'&eacute;dition 2016</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2016.pdf" target="_blank">Le sujet de l'&eacute;dition 2016</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>3064</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>392</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>44</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>108</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>39</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+
+				<li id="n2i2015" data-date="03/12/2015">
+					<div class="max644">
+						<img src="img/affiche_2015.png" class="poster" alt="Affiche Nuit de l Info 2015" >
+						<h5>2015 : Urgences et R&eacute;seaux Sociaux</h5>
+						<em>3 D&eacute;cembre 16h40 / 4 D&eacute;cembre 8h01</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2015" target="_blank">Le site de l'&eacute;dition 2015</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2015.pdf" target="_blank">Le sujet de l'&eacute;dition 2015</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>2847</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>366</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>45</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>100</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>32</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+	
+				<li data-date="04/12/2014" id="n2i2014" >
+					<div class="max644">
+						<img src="img/affiche_2014.png" class="poster"  alt="Affiche Nuit de l Info 2014">
+						<h5>2014 : La Nuit au service de l'Humanit&eacute;</h5>
+						<em>4 D&eacute;cembre 16h36 / 5 D&eacute;cembre 8h04</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2014" target="_blank">Le site de l'&eacute;dition 2014</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i2014.pdf" target="_blank">Le sujet de l'&eacute;dition 2014</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>2913</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>337</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>43</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>90</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>41</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+	
+				<li data-date="05/12/2013" id="n2i2013" >
+					<div class="max644">
+						<img src="img/affiche_2013.png" class="poster"  alt="Affiche Nuit de l Info 2013">
+						<h5>2013 : Y-Commerce, Le commerce pour vous et par vous (Your Commerce)</h5>
+						<em>5 D&eacute;cembre 16h36 / 6 D&eacute;cembre 8h04</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2013" target="_blank">Le site de l'&eacute;dition 2013</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2013.pdf" target="_blank">Le sujet de l'&eacute;dition 2013</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>2853</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>294</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>32</big> sites</div>
+						<div><img src="img/style/picto_ecoles.png" alt="" /><big>79</big> &eacute;coles</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>54</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+
+				<li data-date="06/12/2012" id="n2i2012">
+					<div class="max644">
+						<img src="img/affiche_2012.png" class="poster"  alt="Affiche Nuit de l Info 2012">
+						<h5>2012 : Promotion et valorisation du patrimoine culturel fran&ccedil;ais</h5>
+						<em>6 D&eacute;cembre 16h33 / 7 D&eacute;cembre 8h11</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2012" target="_blank">Le site de l'&eacute;dition 2012</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2012.pdf" target="_blank">Le sujet de l'&eacute;dition 2012</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>2113</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>203</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>30</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>36</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+
+				<li data-date="01/12/2011" id="n2i2011" >
+					<div class="max644">
+						<img src="img/affiche_2011.png" class="poster"  alt="Affiche Nuit de l Info 2011">
+						<h5>2011 : R&eacute;seau social, quand tu t'offres &agrave; nous !</h5>
+						<em>1 D&eacute;cembre 16h41 / 2 D&eacute;cembre 7h59</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2011" target="_blank">Le site de l'&eacute;dition 2011</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2011.pdf" target="_blank">Le sujet de l'&eacute;dition 2011</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>1361</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>144</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>22</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>30</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+
+				<li data-date="02/12/2010" id="n2i2010" >
+					<div class="max644">
+						<img src="img/affiche_2010.png" class="poster"  alt="Affiche Nuit de l Info 2010">
+						<h5>2010 : D&eacute;veloppement durable : l'organisation du co-voiturage au sein d'une communaut&eacute; universitaire</h5>
+						<em>2 D&eacute;cembre 16h40 / 3 D&eacute;cembre 8h00</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2010" target="_blank">Le site de l'&eacute;dition 2010</a>
+						<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2010.pdf" target="_blank">Le sujet de l'&eacute;dition 2010</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>1012</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>115</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>18</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>29</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+										
+				<li data-date="03/12/2009" id="n2i2009" >
+					<div class="max644">
+						<img src="img/affiche_2009.png" class="poster"  alt="Affiche Nuit de l Info 2009">
+						<h5>2009 : D&eacute;veloppement durable, recyclage, r&eacute;seaux sociaux & GreenIT : r&eacute;seau social de r&eacute;cup&eacute;ration et valorisation des d&eacute;chets informatiques</h5>
+						<em>3 D&eacute;cembre 16h39 / 4 D&eacute;cembre 8h02</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2009" target="_blank">Le site de l'&eacute;dition 2009</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2009.pdf" target="_blank">Le sujet de l'&eacute;dition 2009</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>584</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>79</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>15</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>18</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				
+				<li data-date="04/12/2008" id="n2i2008" >
+					<div class="max644">
+						<img src="img/affiche_2008.png" class="poster"  alt="Affiche Nuit de l Info 2008">
+						<h5>2008 : Nuit "sociable", communicante et innovante !</h5>
+						<em>4 D&eacute;cembre 16h54 / 5 D&eacute;cembre 8h32</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2008" target="_blank">Le site de l'&eacute;dition 2008</a>
+							<a href="https://www.nuitdelinfo.com/nuitinfo/_media/sujets:sujet_n2i_2008.pdf" target="_blank">Le sujet de l'&eacute;dition 2008</a></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>231</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>33</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>8</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>9</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>	
+	
+				<li data-date="06/12/2007" id="n2i2007" >
+					<div class="max644">
+						<img src="img/affiche_2007.png" class="poster"  alt="Affiche Nuit de l Info 2007">
+						<h5>2007 : Le d&eacute;fi d'une nuit, un projet de folie, votre seul ennui : le lever du soleil</h5>
+						<em>6 D&eacute;cembre 16h37 / 7 D&eacute;cembre 8h00</em>
+						<p><a href="https://www.nuitdelinfo.com/nuitinfo/editions_precedentes:2007" target="_blank">Le site de l'&eacute;dition 2007</a>
+							<del>Le sujet de l'&eacute;dition 2007 est indisponible</del></p>
+						<div class="stats_p">
+				    	<div><img src="img/style/picto_info_participant.png" alt="" /><big>202</big> participants</div>
+						<div><img src="img/style/picto_info_group.png" alt="" /><big>23</big> &eacute;quipes</div>
+						<div><img src="img/style/picto_info_villes.png" alt="" /><big>9</big> sites</div>
+						<div><img src="img/style/picto_info_defis.png" alt="" /><big>7</big> d&eacute;fis</div><br/>
+				    	</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+			</ol>
+		</div>
+	</section>
+	</div>	</div>
+
+<!-- INSCRIPTIONS -->
+<a id="inscription" href="#noanchor3" title="Inscription"></a>
+<div class="page inscription cyan">
+		<div class="max1024 autocenter">
+		<h3><b>Inscription</b></h3>
+
+				<span class="warning">La date limite d'inscription des participants est fixée au Lundi 1ier Décembre 2025 à 19h.</span><br><br>
+				<a href="#planning" class="scrollTo"><b>Voir toutes les dates du planning de la Nuit 2025</b></a><br>
+
+		<div class="dflex dflex-30">
+			<div class="box">
+				<img src="img/style/menu-inscription-equipe.png" alt="Equipes">
+				<h5>Equipes d'&eacute;tudiants</h5>
+				<b>Cr&eacute;er et g&eacute;rer les &eacute;quipes d'&eacute;tudiants.</b>
+				<p>Vous êtes un étudiant ? Vous devez rejoindre ou former une équipe puis inscrire celle ci.</p>
+				<p>Rapprochez-vous de votre campus pour connaître la procédure mise en place pour les inscriptions.</p>
+				<p>Pour toute question relative au nombre d'&eacute;tudiants par &eacute;quipe, merci de consulter la <a href="#faq" class="scrollTo">FAQ</a>.</p>
+				<a href="http://www.nuitdelinfo.com/n2i/inscriptions/equipe" class="bouton" target="_blank">Inscription</a>
+			</div>	
+			<div class="box">
+				<img src="img/style/menu-inscription-site.png" alt="Sites">
+				<h5>Site organisateur</h5>
+				<b>Cr&eacute;er et g&eacute;rer un site.</b> 
+				<p>Vous êtes un universitaire/une école souhaitant accueillir la Nuit de l’Info, les étudiants et équipes dans vos locaux ? Inscrivez votre site.</p>
+				<p>Tout site doit apporter au moins un d&eacute;fi au nom de son université, afin de contribuer au succ&egrave;s de l’&eacute;v&eacute;nement.</p>
+				<p class="info">Info : le correspondant institutionnel doit &ecirc;tre un permanent (personnel enseignant ou administratif)</p>
+				
+				<a href="http://www.nuitdelinfo.com/n2i/inscriptions/site" class="bouton" target="_blank">Inscription</a>
+				<p class="info">Vous avez déjà créé un compte organisateur l'an dernier :</p>
+				<a href="https://www.nuitdelinfo.com/inscription/login" class="bouton btnLink" target="_blank">Connexion</a>
+			</div>	
+			<div class="box">
+				<img src="img/style/menu-inscription-defi.png" alt="Defis">
+				<h5>Proposer un d&eacute;fi</h5>
+				<b>Cr&eacute;er et g&eacute;rer un d&eacute;fi.</b>
+				<p>Vous êtes une entreprise et partenaire d’un site universitaire ? Vous devez vous rapprocher de l’université et contacter les responsables afin de proposer un/des défi(s).</p>
+				<p>Pensez &agrave; consulter la <a href="#faq" class="scrollTo">FAQ</a> pour conna&icirc;tre les modalit&eacute;s et contraintes des d&eacute;fis.</p>
+				<a href="https://www.nuitdelinfo.com/inscription/inscription_defi/etape1" class="bouton" target="_blank">Inscription</a>
+				<p class="info">Vous avez déjà créé un compte partenaire l'an dernier :</p>
+				<a href="https://www.nuitdelinfo.com/inscription/login" class="bouton btnLink" target="_blank">Connexion</a><br><br>
+				<p>Liste des défis déposés :</p>
+				<b><a href="https://www.nuitdelinfo.com/inscription/defis/liste" class="bouton2 btnLink" target="_blank">Défis 2025</a></b>
+				
+			</div>	
+		</div>
+
+	    
+  	</div>
+  	
+  	<!-- Overlay when register not allowed-->
+  	<div class="denied notyet"><div class="table"><div class="td"><big><b>Bient&ocirc;t !</b></big><br><br>Les inscriptions 2025 ouvriront quelques semaines avant la prochaine Nuit de l'Info (Jeudi 4 décembre 2025).</div></div></div></div>
+
+<!-- DATES IMPORTANTES -->
+<a id="planning" href="#noanchor35" title="Planning de la Nuit"></a>
+<div class="page planning marine ">
+		<div class="max1024 autocenter">
+		<h3><b>Planning</b> de la Nuit 2025</h3>
+
+		<ul class="max768">
+			<li><b class="bleu">Lundi 01 Décembre 2025 19h</b> : clôture des inscriptions nationales des sites et des équipes (sauf disposition particulière propre à chaque ville - voyez avec vos responsables de site)</li>
+			<li><b class="bleu">Mercredi 3 Décembre 2025 12h </b> : clôture des inscriptions des défis</li>
+			<li><b class="bleu">Jeudi 4 Décembre 2025 - 16h36</b> : début de la Nuit (coucher du soleil à Mulhouse)</li>
+			<li><b class="bleu">Jeudi 4 Décembre 2025 - 21h30</b> : clôture des inscriptions aux défis</li>
+			<li><b class="bleu">Vendredi 5 Décembre - 8h04</b> : fin de la Nuit (lever du soleil à Mulhouse)</li>
+			<li><b class="bleu">Vendredi 5 Décembre</b> : début de diffusion des résultats</li>
+		</ul>
+		
+	</div></div>
+
+<!-- SPONSORS -->
+<a id="sponsors" href="#noanchor4" title="Sponsors"></a>
+<div class="page sponsors clair-plus">
+	<div class="max1024 autocenter">
+
+		<h3><b>Partenaires</b> et sponsors</h3><br/>
+		Ils ont particip&eacute;/participent, ont aid&eacute;/aident, ont soutenu/soutiennent au moins une &eacute;dition de la Nuit de l'Info :<br><br>
+		<!--<h4>Partenaires institutionnels</h4>-->
+		<div class="spons sponsors_entreprises autocenter" >
+		<img src="img/sponsors/entreprises/abase.jpeg" alt="abase"> <img src="img/sponsors/entreprises/abylsen.png" alt="Abylsen"> <img src="img/sponsors/entreprises/accenture.png" alt="Accenture"> <img src="img/sponsors/entreprises/actimage.jpeg" alt="actimage"> <img src="img/sponsors/entreprises/activeeon.gif" alt="activeeon"> <img src="img/sponsors/entreprises/activis.gif" alt="activis"> <img src="img/sponsors/entreprises/AFIA.png" alt="AFIA"> <img src="img/sponsors/entreprises/AgileLaval.png" alt="Agile Laval"> <img src="img/sponsors/entreprises/agixis.png" alt="Agixis"> <img src="img/sponsors/entreprises/airbus.png" alt="airbus"> <img src="img/sponsors/entreprises/airfrance.jpeg" alt="airfrance"> <img src="img/sponsors/entreprises/akka.png" alt="akka"> <img src="img/sponsors/entreprises/alithya.jpeg" alt="alithya"> <img src="img/sponsors/entreprises/alltech.png" alt="Alltech"> <img src="img/sponsors/entreprises/alluco.jpg" alt="Alluco"> <img src="img/sponsors/entreprises/alten.png" alt="alten"> <img src="img/sponsors/entreprises/Altran.png" alt="Altran"> <img src="img/sponsors/entreprises/ankama.png" alt="ankama"> <img src="img/sponsors/entreprises/aoc.png" alt="aoc"> <img src="img/sponsors/entreprises/aprogsys.png" alt="aprogsys"> <img src="img/sponsors/entreprises/apside.png" alt="apside"> <img src="img/sponsors/entreprises/Arduinova.png" alt="Arduinova"> <img src="img/sponsors/entreprises/arhsdev.png" alt="Arhsdev"> <img src="img/sponsors/entreprises/asi.png" alt="ASI"> <img src="img/sponsors/entreprises/asobo.png" alt="asobo"> <img src="img/sponsors/entreprises/atos.jpg" alt="atos"> <img src="img/sponsors/entreprises/ausy.png" alt="ausy"> <img src="img/sponsors/entreprises/aubay.png" alt="aubay"> <img src="img/sponsors/entreprises/AXA.png" alt="AXA"> <img src="img/sponsors/entreprises/Axopen.png" alt="Axopen"> <img src="img/sponsors/entreprises/azurmobile.jpeg" alt="azurmobile"> <img src="img/sponsors/entreprises/BDE-epita.png" alt="BDE-epita"> <img src="img/sponsors/entreprises/beampulse.jpeg" alt="beampulse"> <img src="img/sponsors/entreprises/bim.png" alt="bim"> <img src="img/sponsors/entreprises/bluage.png" alt="bluage"> <img src="img/sponsors/entreprises/bluestech.png" alt="Blues Tech"> <img src="img/sponsors/entreprises/boost.jpg" alt="boost"> <img src="img/sponsors/entreprises/BPO.png" alt="Banque Populaire Occitanie"> <img src="img/sponsors/entreprises/c_line_design.png" alt="C.line Design"> <img src="img/sponsors/entreprises/CA-techno.png" alt="Credit Agricole Technologies et Services"> <img src="img/sponsors/entreprises/camptocamp.png" alt="Camp To Camp"> <img src="img/sponsors/entreprises/cashless.png" alt="Cashless"> <img src="img/sponsors/entreprises/cap_emploi.png" alt="cap_emploi"> <img src="img/sponsors/entreprises/capcod.png" alt="Capcod"> <img src="img/sponsors/entreprises/capgemini.png" alt="CapGemini"> <img src="img/sponsors/entreprises/cat-amania.png" alt="Cat amania"> <img src="img/sponsors/entreprises/castelis.jpeg" alt="castelis"> <img src="img/sponsors/entreprises/catalyseur.png" alt="Le Catalyseur"> <img src="img/sponsors/entreprises/CCILozere.jpeg" alt="CCI Lozere"> <img src="img/sponsors/entreprises/cci_mulhouse.jpeg" alt="CCI Mulhouse"> <img src="img/sponsors/entreprises/cdiscount.png" alt="cdiscount"> <img src="img/sponsors/entreprises/cesi.png" alt="CESI"><img src="img/sponsors/entreprises/CGI.png" alt="CGI"> <img src="img/sponsors/entreprises/CNAM-grand-est.png" alt="CNAM Grand Est"> <img src="img/sponsors/entreprises/cirruseo.png" alt="cirruseo"> <img src="img/sponsors/entreprises/chartres.png" alt="Chartres Metropole Innovations Numeriques"> <img src="img/sponsors/entreprises/cnil.png" alt="cnil"> <img src="img/sponsors/entreprises/Coddity.png" alt="Coddity"> <img src="img/sponsors/entreprises/CODE-TROOPERS.png" alt="Code Troopers"> <img src="img/sponsors/entreprises/connectingplace.png" alt="connectingplace"> <img src="img/sponsors/entreprises/coretechs.png" alt="Core techs"> <img src="img/sponsors/entreprises/CRI.jpeg" alt="CRI"> <img src="img/sponsors/entreprises/logo_cs_group.png" alt="CS"> <img src="img/sponsors/entreprises/Davidson.png" alt="Davidson"> <img src="img/sponsors/entreprises/dcp.jpeg" alt="dcp"> <img src="img/sponsors/entreprises/decathlon.png" alt="Decathlon"> <img src="img/sponsors/entreprises/decath-techno.jpeg" alt="Decathlon Technology"> <img src="img/sponsors/entreprises/Deville.png" alt="Deville"> <img src="img/sponsors/entreprises/devweb.png" alt="Dev'Web"> <img src="img/sponsors/entreprises/digitalcommunication.jpg" alt="digitalcommunication"> <img src="img/sponsors/entreprises/digitale.jpg" alt="digitale"> <img src="img/sponsors/entreprises/Divalto.png" alt="Divalto"> <img src="img/sponsors/entreprises/docapost.jpeg" alt="docapost"> <img src="img/sponsors/entreprises/dunod.jpeg" alt="dunod"> <img src="img/sponsors/entreprises/EPIsup.png" alt="EPIsup"> <img src="img/sponsors/entreprises/ernst.png" alt="ernst"> <img src="img/sponsors/entreprises/ESIEA.png" alt="ESIEA"> <img src="img/sponsors/entreprises/etena.jpg" alt="etena"> <img src="img/sponsors/entreprises/etineo.png" alt="Etineo"> <img src="img/sponsors/entreprises/etudiantMS.png" alt="etudiantMS"> <img src="img/sponsors/entreprises/euro.jpeg" alt="euro"> <img src="img/sponsors/entreprises/EVA.jpg" alt="EVA"> <img src="img/sponsors/entreprises/evaluant.jpg" alt="evaluant"> <img src="img/sponsors/entreprises/expertime.jpeg" alt="expertime"> <img src="img/sponsors/entreprises/FABSpace.jpeg" alt="FAB Space"> <img src="img/sponsors/entreprises/fealinx.png" alt="Fealinx"> <img src="img/sponsors/entreprises/FI.png" alt="Femmes ingenieures"> <img src="img/sponsors/entreprises/femmesnumeriques.jpg" alt="femmesnumeriques"> <img src="img/sponsors/entreprises/finaxys.jpeg" alt="finaxys"> <img src="img/sponsors/entreprises/fingerprint.jpg" alt="fingerprint"> <img src="img/sponsors/entreprises/fluoptics.jpeg" alt="fluoptics"> <img src="img/sponsors/entreprises/fondation_catalyses.jpg" alt="fondation_catalyses"> <img src="img/sponsors/entreprises/FrenchTech.jpg" alt="FrenchTech"> <img src="img/sponsors/entreprises/frimake.png" alt="Frimake"> <img src="img/sponsors/entreprises/Gandi.jpg" alt="Gandi"> <img src="img/sponsors/entreprises/genapi.png" alt="GenApi"> <img src="img/sponsors/entreprises/google.png" alt="google"> <img src="img/sponsors/entreprises/gridpocket.png" alt="Grid Pocket"> <img src="img/sponsors/entreprises/HapplyBaseline.png" alt="HapplyBaseline"> <img src="img/sponsors/entreprises/HARA.png" alt="HARA Consulting"> <img src="img/sponsors/entreprises/humancoder.jpeg" alt="humancoder"> <img src="img/sponsors/entreprises/ibisc.png" alt="ibisc"> <img src="img/sponsors/entreprises/ibm.jpg" alt="ibm"> <img src="img/sponsors/entreprises/inetum.jpeg" alt="Inetium"> <img src="img/sponsors/entreprises/infotel.png" alt="infotel"> <img src="img/sponsors/entreprises/3il_ingenieurs.jpeg" alt="3IL Ingenieurs"> <img src="img/sponsors/entreprises/inria.png" alt="inria"> <img src="img/sponsors/entreprises/insa.png" alt="insa"> <img src="img/sponsors/entreprises/intechinfo.jpg" alt="intechinfo"> <img src="img/sponsors/entreprises/Ippon.png" alt="IPPON"> <img src="img/sponsors/entreprises/isics.png" alt="isics"> <img src="img/sponsors/entreprises/iutACDI.jpeg" alt="IUT ACDI"> <img src="img/sponsors/entreprises/IUT-eiffel.png" alt="IUT Gustave Eiffel"> <img src="img/sponsors/entreprises/iteracode.png" alt="Iteracode"> <img src="img/sponsors/entreprises/IZYSTUD.png" alt="IZYSTUD"> <img src="img/sponsors/entreprises/JobOpportunIT.png" alt="Job Opportu'IT"> <img src="img/sponsors/entreprises/jump.gif" alt="jump"> <img src="img/sponsors/entreprises/kimeria.png" alt="Kimeria"> <img src="img/sponsors/entreprises/LAB.png" alt="LAB"> <img src="img/sponsors/entreprises/labHidouille.png" alt="LAB Hidouille"> <img src="img/sponsors/entreprises/LCL.jpg" alt="LCL"> <img src="img/sponsors/entreprises/adeo_leroy.png" alt="Leroy Merlin"> <img src="img/sponsors/entreprises/logo-linux-mag.jpg" alt="Linux Mag"> <img src="img/sponsors/entreprises/Lisio.png" alt="Lisio"> <img src="img/sponsors/entreprises/logica.png" alt="logica"> <img src="img/sponsors/entreprises/logilab.png" alt="logilab"> <img src="img/sponsors/entreprises/lyreco.jpg" alt="Lyreco"> <img src="img/sponsors/entreprises/MAIF.png" alt="MAIF"> <img src="img/sponsors/entreprises/maltem.png" alt="maltem"> <img src="img/sponsors/entreprises/manuloc.png" alt="Manuloc"> <img src="img/sponsors/entreprises/mapsIT.png" alt="maps IT"> <img src="img/sponsors/entreprises/maryposa.png" alt="Maryposa"> <img src="img/sponsors/entreprises/mgate.png" alt="mgate"> <img src="img/sponsors/entreprises/miageconnection.png" alt="miageconnection"> <img src="img/sponsors/entreprises/microsoft.jpeg" alt="microsoft"> <img src="img/sponsors/entreprises/mipih.png" alt="Mipih"> <img src="img/sponsors/entreprises/mobilead.png" alt="mobilead"> <img src="img/sponsors/entreprises/modis.jpeg" alt="modis"> <img src="img/sponsors/entreprises/MSF.png" alt="MSF"> <img src="img/sponsors/entreprises/multiweb.png" alt="multi web"><img src="img/sponsors/entreprises/my-support.png" alt="My support"> <img src="img/sponsors/entreprises/nagarro.png" alt="Nagarro"> <img src="img/sponsors/entreprises/neosoft.png" alt="Neo Soft"> <img src="img/sponsors/entreprises/norsys.jpeg" alt="Norsys"><img src="img/sponsors/entreprises/nuxit.png" alt="nuxit"> <img src="img/sponsors/entreprises/open.png" alt="open"> <img src="img/sponsors/entreprises/openplug.png" alt="openplug"> <img src="img/sponsors/entreprises/opensource.jpeg" alt="opensource"> <img src="img/sponsors/entreprises/optimData.png" alt="OptimData"> <img src="img/sponsors/entreprises/oracle.jpg" alt="oracle"> <img src="img/sponsors/entreprises/logo-ovh-h.png" alt="OVH"> <img src="img/sponsors/entreprises/outscale.png" alt="outscale"> <img src="img/sponsors/entreprises/oxalide.png" alt="oxalide"> <img src="img/sponsors/entreprises/oxyl.png" alt="Oxyl"> <img src="img/sponsors/entreprises/pascaline.jpg" alt="pascaline"> <img src="img/sponsors/entreprises/pictime.png" alt="Pictime"> <img src="img/sponsors/entreprises/Pit.png" alt="Pit"> <img src="img/sponsors/entreprises/process.png" alt="process"> <img src="img/sponsors/entreprises/propolis.png" alt="propolis"> <img src="img/sponsors/entreprises/protection_civile.png" alt="protection_civile"> <img src="img/sponsors/entreprises/proxiad.png" alt="Proxiad"> <img src="img/sponsors/entreprises/proxim.png" alt="Proxym Group"> <img src="img/sponsors/entreprises/proxym_it.jpg" alt="proxym_it"> <img src="img/sponsors/entreprises/puissancee.png" alt="puissancee"> <img src="img/sponsors/entreprises/programmez-com.jpg" alt="Programmez.com"> <img src="img/sponsors/entreprises/pvdf.jpg" alt="pvdf"> <img src="img/sponsors/entreprises/pwc.png" alt="PWC"> <img src="img/sponsors/entreprises/python.png" alt="python"> <img src="img/sponsors/entreprises/QimInfo.png" alt="Qiminfo"> <img src="img/sponsors/entreprises/quadra.png" alt="quadra"> <img src="img/sponsors/entreprises/R2DEVOPS.png" alt="R2DEVOPS"> <img src="img/sponsors/entreprises/RadioKing.png" alt="Radio King"> <img src="img/sponsors/entreprises/redlab.png" alt="Red Lab"> <img src="img/sponsors/entreprises/regionmidipyrenes.png" alt="regionmidipyrenes"> <img src="img/sponsors/entreprises/renatic.jpg" alt="renatic"> <img src="img/sponsors/entreprises/Richatt.png" alt="Richatt"> <img src="img/sponsors/entreprises/rgpd.png" alt="RGPD Express"> <img src="img/sponsors/entreprises/SALVIA.png" alt="SALVIA"> <img src="img/sponsors/entreprises/SAP.png" alt="SAP"> <img src="img/sponsors/entreprises/semia.jpg" alt="semia"> <img src="img/sponsors/entreprises/sensio_labs.png" alt="sensio_labs"> <img src="img/sponsors/entreprises/septeo.png" alt="Septeo"> <img src="img/sponsors/entreprises/SFEIR.jpeg" alt="sfeir"> <img src="img/sponsors/entreprises/shine.jpeg" alt="shine"> <img src="img/sponsors/entreprises/SI4P.png" alt="SI4P"> <img src="img/sponsors/entreprises/sii.gif" alt="sii"> <img src="img/sponsors/entreprises/simplon.png" alt="Simplon"> <img src="img/sponsors/entreprises/smartesting.jpg" alt="smartesting"> <img src="img/sponsors/entreprises/smile.png" alt="Smile"><img src="img/sponsors/entreprises/sodimas.jpeg" alt="sodimas"> <img src="img/sponsors/entreprises/soft-at-home.jpeg" alt="soft-at-home"> <img src="img/sponsors/entreprises/softeam.jpg" alt="softeam"> <img src="img/sponsors/entreprises/sogeti.png" alt="Sogeti"> <img src="img/sponsors/entreprises/solinest.jpg" alt="solinest"> <img src="img/sponsors/entreprises/sopra.jpeg" alt="Sopra Steria"> <img src="img/sponsors/entreprises/spider.jpg" alt="spider"> <img src="img/sponsors/entreprises/sqli.jpeg" alt="sqli"> <img src="img/sponsors/entreprises/ssi.jpg" alt="ssi"> <img src="img/sponsors/entreprises/SUN.jpg" alt="SUN"> <img src="img/sponsors/entreprises/supralog.png" alt="Supralog"> <img src="img/sponsors/entreprises/surfrider.png" alt="SurfRider"> <img src="img/sponsors/entreprises/symfony.png" alt="symfony"> <img src="img/sponsors/entreprises/syntec.jpg" alt="syntec"> <img src="img/sponsors/entreprises/sysml.jpeg" alt="sysml"> <img src="img/sponsors/entreprises/tech_strat.png" alt="tech_strat"> <img src="img/sponsors/entreprises/temesis.png" alt="temesis"> <img src="img/sponsors/entreprises/thales.jpg" alt="thales"> <img src="img/sponsors/entreprises/thiais.jpg" alt="Ville de Thiais"> <img src="img/sponsors/entreprises/toolpad.png" alt="Toolpad"> <img src="img/sponsors/entreprises/toucan.png" alt="Toucan Toco"> <img src="img/sponsors/entreprises/ubisoft.png" alt="Ubisoft Bordeaux"> <img src="img/sponsors/entreprises/UHA-4-0.png" alt="UHA-4-0"> <img src="img/sponsors/entreprises/umanis.gif" alt="umanis"> <img src="img/sponsors/entreprises/uppa.png" alt="universite de pau et des pays de l adour"> <img src="img/sponsors/entreprises/usharesoft.png" alt="UShareSoft">  <img src="img/sponsors/entreprises/ValSoftware.png" alt="val software"> <img src="img/sponsors/entreprises/virado.png" alt="virado"> <img src="img/sponsors/entreprises/veep.png" alt="Veep.ai"> <img src="img/sponsors/entreprises/visov_logo.png" alt="visov_logo"> <img src="img/sponsors/entreprises/Viveris3.jpg" alt="viveris"> <img src="img/sponsors/entreprises/vix.png" alt="vix"> <img src="img/sponsors/entreprises/VMW.png" alt="VMWare"> <img src="img/sponsors/entreprises/vulog.jpg" alt="vulog"> <img src="img/sponsors/entreprises/w3c_home.png" alt="w3c_home"> <img src="img/sponsors/entreprises/wai.png" alt="wai"> <img src="img/sponsors/entreprises/weecop.png" alt="weecop"> <img src="img/sponsors/entreprises/wikimedia.jpeg" alt="Wikimedia"> <img src="img/sponsors/entreprises/winamax.jpeg" alt="winamax"> <img src="img/sponsors/entreprises/wrigley.gif" alt="wrigley"> <img src="img/sponsors/entreprises/yeswedev.png" alt="Yes We Dev"> <img src="img/sponsors/entreprises/zenika.png" alt="zenika"> <img src="img/sponsors/entreprises/ziwit.png" alt="Ziwit"></div>
+		
+		<!--<br><h4>Partenaires acad&eacute;miques</h4>
+		<div class="spons sponsors_academiques autocenter">
+		<img src="img/sponsors/academique/ADEI.jpeg" alt="ADEI"> <img src="img/sponsors/academique/aixmarseille.jpg" alt="aixmarseille"> <img src="img/sponsors/academique/arts-et-metier.jpeg" alt="arts-et-metier"> <img src="img/sponsors/academique/cesi-nancy.jpeg" alt="cesi-nancy"> <img src="img/sponsors/academique/cnam.png" alt="cnam"> <img src="img/sponsors/academique/CRI.jpeg" alt="CRI"> <img src="img/sponsors/academique/ECAM.jpeg" alt="ECAM"> <img src="img/sponsors/academique/ece.jpg" alt="ece"> <img src="img/sponsors/academique/EM.jpg" alt="EM"> <img src="img/sponsors/academique/enseirb-matmeca.png" alt="enseirb-matmeca"> <img src="img/sponsors/academique/ensibouge.png" alt="ensibouge"> <img src="img/sponsors/academique/ensibs.jpeg" alt="ensibs"> <img src="img/sponsors/academique/ensieta.png" alt="ensieta"> <img src="img/sponsors/academique/ensiie.jpeg" alt="ensiie"> <img src="img/sponsors/academique/ensisa.jpg" alt="ensisa"> <img src="img/sponsors/academique/EnstaBretagne.jpg" alt="EnstaBretagne"> <img src="img/sponsors/academique/epita.png" alt="epita"> <img src="img/sponsors/academique/epitech-bordeau.png" alt="epitech-bordeau"> <img src="img/sponsors/academique/epsi.png" alt="epsi"> <img src="img/sponsors/academique/esiea.jpeg" alt="esiea"> <img src="img/sponsors/academique/esimed.jpeg" alt="esimed"> <img src="img/sponsors/academique/esiroi.jpg" alt="esiroi"> <img src="img/sponsors/academique/exia-lyon.jpeg" alt="exia-lyon"> <img src="img/sponsors/academique/fho.gif" alt="fho"> <img src="img/sponsors/academique/iariss.png" alt="iariss"> <img src="img/sponsors/academique/ifts.jpg" alt="ifts"> <img src="img/sponsors/academique/ingesup.png" alt="ingesup"> <img src="img/sponsors/academique/INSA.png" alt="INSA"> <img src="img/sponsors/academique/intech.png" alt="intech"> <img src="img/sponsors/academique/irit.jpg" alt="irit"> <img src="img/sponsors/academique/isep.jpeg" alt="isep"> <img src="img/sponsors/academique/ISI.png" alt="ISI"> <img src="img/sponsors/academique/istv.gif" alt="istv"> <img src="img/sponsors/academique/itta.jpg" alt="itta"> <img src="img/sponsors/academique/IUT-amiens.jpeg" alt="IUT-amiens"> <img src="img/sponsors/academique/iut-blagnac.png" alt="iut-blagnac"> <img src="img/sponsors/academique/IUT-bordeaux.jpeg" alt="IUT-bordeaux"> <img src="img/sponsors/academique/IUT-cote-azur.png" alt="IUT-cote-azur"> <img src="img/sponsors/academique/IUT-Laval.jpg" alt="IUT-Laval"> <img src="img/sponsors/academique/IUT-lille.jpeg" alt="IUT-lille"> <img src="img/sponsors/academique/IUT-paris-descartes.png" alt="IUT-paris-descartes"> <img src="img/sponsors/academique/IUT-reims.jpeg" alt="IUT-reims"> <img src="img/sponsors/academique/IUT-tours.jpeg" alt="IUT-tours"> <img src="img/sponsors/academique/IUT-valence.png" alt="IUT-valence"> <img src="img/sponsors/academique/iut_mulhouse.gif" alt="iut_mulhouse"> <img src="img/sponsors/academique/IUT_Toulouse.png" alt="IUT_Toulouse"> <img src="img/sponsors/academique/iut_valenciennes.jpg" alt="iut_valenciennes"> <img src="img/sponsors/academique/iutaix.jpg" alt="iutaix"> <img src="img/sponsors/academique/IUTChambery.png" alt="IUTChambery"> <img src="img/sponsors/academique/iuthaguenau.gif" alt="iuthaguenau"> <img src="img/sponsors/academique/iutrs.jpg" alt="iutrs"> <img src="img/sponsors/academique/lif.jpeg" alt="lif"> <img src="img/sponsors/academique/lifl.jpg" alt="lifl"> <img src="img/sponsors/academique/lig.png" alt="lig"> <img src="img/sponsors/academique/logo_ginp.jpg" alt="logo_ginp"> <img src="img/sponsors/academique/logoiup.gif" alt="logoiup"> <img src="img/sponsors/academique/mdh.jpg" alt="mdh"> <img src="img/sponsors/academique/miage-mulhouse.png" alt="miage-mulhouse"> <img src="img/sponsors/academique/miage-nanterre.png" alt="miage-nanterre"> <img src="img/sponsors/academique/mines-st-etienne.png" alt="mines-st-etienne"> <img src="img/sponsors/academique/mulhouse.jpg" alt="mulhouse"> <img src="img/sponsors/academique/paris_ouest.png" alt="paris_ouest"> <img src="img/sponsors/academique/parisdes.jpeg" alt="parisdes"> <img src="img/sponsors/academique/polytech-tours.jpeg" alt="polytech-tours"> <img src="img/sponsors/academique/polytech_grenoble.png" alt="polytech_grenoble"> <img src="img/sponsors/academique/polytech_lille.jpg" alt="polytech_lille"> <img src="img/sponsors/academique/polytech_sophia.jpg" alt="polytech_sophia"> <img src="img/sponsors/academique/reunion.jpg" alt="reunion"> <img src="img/sponsors/academique/sorbonne.jpg" alt="sorbonne"> <img src="img/sponsors/academique/supinfo-marseille.png" alt="supinfo-marseille"> <img src="img/sponsors/academique/technomulhouse.jpg" alt="technomulhouse"> <img src="img/sponsors/academique/UBO.jpeg" alt="UBO"> <img src="img/sponsors/academique/UFC.gif" alt="UFC"> <img src="img/sponsors/academique/UFR-Unistra.png" alt="UFR-Unistra"> <img src="img/sponsors/academique/ufrsra.png" alt="ufrsra"> <img src="img/sponsors/academique/uha.jpg" alt="uha"> <img src="img/sponsors/academique/UHA.png" alt="UHA"> <img src="img/sponsors/academique/ujf.jpg" alt="ujf"> <img src="img/sponsors/academique/unistra.gif" alt="unistra"> <img src="img/sponsors/academique/univ_evru.jpeg" alt="univ_evru"> <img src="img/sponsors/academique/univaix.jpg" alt="univaix"> <img src="img/sponsors/academique/universite-blois.png" alt="universite-blois"> <img src="img/sponsors/academique/universite-bordeaux.png" alt="universite-bordeaux"> <img src="img/sponsors/academique/universite-lille.jpeg" alt="universite-lille"> <img src="img/sponsors/academique/universite-limoge.png" alt="universite-limoge"> <img src="img/sponsors/academique/universite-maine.jpeg" alt="universite-maine"> <img src="img/sponsors/academique/universite-paris1-sorbonne.jpeg" alt="universite-paris1-sorbonne"> <img src="img/sponsors/academique/universite-rochelle.png" alt="universite-rochelle"> <img src="img/sponsors/academique/Universite-Savoie-Mont-Blanc.png" alt="Universite-Savoie-Mont-Blanc"> <img src="img/sponsors/academique/Universite-sousse.png" alt="Universite-sousse"> <img src="img/sponsors/academique/Universite-toulouse-2.png" alt="Universite-toulouse-2"> <img src="img/sponsors/academique/universite-toulouse-3.png" alt="universite-toulouse-3"> <img src="img/sponsors/academique/Universite-Toulouse.png" alt="Universite-Toulouse"> <img src="img/sponsors/academique/universite-versailles.jpeg" alt="universite-versailles"> <img src="img/sponsors/academique/uns.png" alt="uns"> <img src="img/sponsors/academique/upmc_orange.png" alt="upmc_orange"> <img src="img/sponsors/academique/uppa.png" alt="uppa"> <img src="img/sponsors/academique/urca.jpg" alt="urca"> <img src="img/sponsors/academique/USTL.gif" alt="USTL"> <img src="img/sponsors/academique/utc.jpg" alt="utc"> <img src="img/sponsors/academique/uvhc.jpg" alt="uvhc">  </div>
+		-->
+		<!--<br><h4>Sponsors locaux</h4>
+		<div class="spons sponsors_locaux autocenter">
+		<img src="img/sponsors/local/charal.jpg" alt="charal"> <img src="img/sponsors/local/maitrekanter.png" alt="maitrekanter"> <img src="img/sponsors/local/mars.jpg" alt="mars"> <img src="img/sponsors/local/nescafe.jpg" alt="nescafe"> <img src="img/sponsors/local/pizzalogo.png" alt="pizzalogo"> <img src="img/sponsors/local/subway.jpg" alt="subway"> </div>-->
+
+</div>
+</div>
+
+<!-- FAQ -->
+<a id="faq" href="#noanchor5" title="FAQ"></a>
+<div class="page faq cyan">
+		<div class="max1024 autocenter">
+		<h3><b>FAQ</b> : Foire Au Questions</h3>
+
+		<div class="dflex dflex-30">
+			<div class="box">
+				<img src="img/style/menu-faq-2.png" alt="FAQ Etudiants">
+				<h5>Etudiants</h5>
+				Vous &ecirc;tes un <b>&eacute;tudiant</b>, une <b>&eacute;quipe</b>, un <b>participant &agrave; la Nuit</b> : vous trouverez ici toutes les informations utiles et n&eacute;cessaires.<br>
+				<a href="http://www.nuitdelinfo.com/faq/#qa_equipes" class="bouton" >FAQ participants</a>
+			</div>	
+			<div class="box">
+				<img src="img/style/menu-faq-2.png" alt="FAQ sites">
+				<h5>Sites</h5>
+				Vous &ecirc;tes un <b>campus</b>, une <b>universit&eacute;</b>, un <b>site</b> (ou son <b>correspondant</b>) : vous trouverez ici toutes les informations utiles et n&eacute;cessaires.<br>
+				<a href="http://www.nuitdelinfo.com/faq/#qa_sites" class="bouton" >FAQ sites</a>
+			</div>	
+			<div class="box">
+				<img src="img/style/menu-faq-2.png" alt="FAQ partenaires">
+				<h5>Partenaires</h5>
+				Vous &ecirc;tes une <b>entreprise</b>, un <b>partenaire</b>, vous proposez un <b>d&eacute;fi</b> : vous trouverez ici toutes les informations utiles et n&eacute;cessaires.<br>
+				<a href="http://www.nuitdelinfo.com/faq/#qa_defis" class="bouton" >FAQ d&eacute;fis</a>
+			</div>	
+		</div>
+  	</div></div>
+
+<!-- CONTACT -->
+<a id="contact" href="#noanchor6" title="contact"></a>
+<div class="page contact marine">
+		<div class="max1024 autocenter">
+		<h3><b>Contact</b> et r&eacute;seaux sociaux</h3>
+
+		<div class="dflex dflex-30">
+			<div class="box">
+				<img src="img/style/discord_N2I.png" alt="">
+				<h5>Discord</h5>
+				Pendant toute la Nuit, nous sommes sur Discord pour vous aider et résoudre les éventuels problèmes techniques rencontrés.<br>
+				<a href="https://discord.gg/JpXAz7A" class="bouton" target="_blank">Forum Discord</a>
+			</div>
+
+			<!-- <div class="box">
+				<img src="img/style/twitter_N2I.png" alt="">
+				<h5>Twitter</h5>
+				Suivez-nous en direct sur Twitter avant et pendant toute la Nuit ! Utilisez le mot-cl&eacute; #nuitinfo.<br>
+				<a href="http://twitter.com/nuitinfo" class="bouton" target="_blank">Suivez-nous sur Twitter</a>
+			</div> -->	
+			<div class="box">
+				<img src="img/style/facebook_N2I.png" alt="">
+				<h5>Facebook</h5>
+				Suivez-nous en direct sur Facebook avant et pendant toute la Nuit !<br>
+				<a href="https://www.facebook.com/NuitDeLInfo" class="bouton" target="_blank">Suivez-nous sur Facebook</a>
+			</div>
+		
+			<div class="box">
+				<img src="img/style/contact_N2I.png" alt="">
+				<h5>Email</h5>
+				Merci de consulter les FAQs avant de nous contacter, les r&eacute;ponses &agrave; vos questions s'y trouvent peut-&ecirc;tre !<br>
+				<a href="http://www.nuitdelinfo.com/nuitinfo/infos:contacts" class="bouton" target="_blank">Envoyer un email</a>
+			</div>	
+			<div class="box">
+				<img src="img/pdf.svg" alt="">
+				<h5>Presskit</h5>
+				Consultez et partagez notre plaquette informative.<br>
+				<a href="../materiel_communication/presskit-NuitDeLInfo.pdf" class="bouton" target="_blank">Téléchargez notre kit de presse</a>
+			</div>	
+
+			<div class="box">
+				<img src="img/comm.png" alt="" >
+				<h5>Charte graphique</h5>
+				Matériel de communication : affiche, logos, élements vectoriels...<br>
+				<a href="http://www.nuitdelinfo.com/charte" class="bouton" target="_blank">Consulter</a>
+			</div>	
+		</div>
+
+	</div></div> 
+
+<!-- footer -->
+<!-- footer -->
+<div class="page footer">
+	<div class="max960 autocenter">
+		<hr>
+		<footer>
+		<br>La Nuit de l'Info (2026) - Tous droits r&eacute;serv&eacute;s - Conception : <a href="http://c.line-design.fr" title="C.line Design" class="noTips">C.line Design</a><br>
+		Toute reproduction, m&ecirc;me partielle, est strictement interdite.<br>
+		</footer>
+	</div>
+</div>	
+<script type="text/javascript">
+var _inscription_allowed=1;
+var	_nextNight = new Date ("Thu, 4 Dec 2025 16:34:00");
+var	_nextNightEnd = new Date ("Fri, 5 Dec 2025 8:04:00");
+</script>
+
+<script type="text/javascript" src="files/horizontal-timeline/js/modernizr.js"></script>
+<script type="text/javascript" src="files/js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="files/js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="files/js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="files/js/n2ijs.js?v=20230629"></script>
+
+<script type="text/javascript" src="files/horizontal-timeline/js/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="files/horizontal-timeline/js/main.js"></script> 
+
+<noscript>
+  Ce site necessite l'activation de Javascript.
+</noscript>
+
+
+</body>
+</html>
