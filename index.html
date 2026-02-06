@@ -291,6 +291,10 @@
             border-color: #e2e8f0 !important;
         }
 
+        body.light-mode .text-light-200 {
+            color: #475569 !important;
+        }
+
         body.light-mode .btn-primary {
             background: #10b981;
             color: #ffffff;
@@ -308,6 +312,11 @@
         }
 
         body.light-mode .skill-card {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode .glass-card {
             background: #ffffff;
             border-color: #e2e8f0;
         }
@@ -815,18 +824,19 @@
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-light mb-2 font-mono">Infrastructure Multi-sites
                                 "SportLudique"</h3>
-                            <p class="text-light-200 text-sm mb-4">Conception et déploiement d'une infrastructure réseau
-                                et système interconnectant 4 villes. Mise en place de la sécurité (Firewalls, Reverse
-                                Proxy), de la gestion de parc (GLPI) et de la centralisation des logs (Graylog).</p>
+                            <p class="text-light-200 text-sm mb-4">Interconnexion multi-sites sécurisée pour 4 agences
+                                régionales.
+                                Mise en place de la sécurité (Firewalls, Reverse Proxy), de la gestion de parc (GLPI) et
+                                de la centralisation des logs (Graylog).</p>
                             <div class="flex flex-wrap gap-2 mb-5">
                                 <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
                                 <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
-                                <span class="badge text-xs px-2 py-1 rounded">Routage</span>
+                                <span class="badge text-xs px-2 py-1 rounded">VPN IPsec</span>
                             </div>
                             <div class="flex gap-3">
                                 <a href="https://xola-max.github.io/gp-orleans-sportludique2025-2026/" target="_blank"
                                     class="flex-1 btn-primary text-center py-2 rounded-lg text-sm font-semibold">
-                                    Consulter le dossier technique
+                                    Voir la documentation
                                 </a>
                             </div>
                         </div>
@@ -911,45 +921,45 @@
                         </ul>
                     </div>
 
-                    <!-- Network -->
+                    <!-- Network & Security -->
                     <div
                         class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="network" class="w-6 h-6 text-emerald"></i>
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-light font-mono">Réseau & DNS</h3>
+                            <h3 class="text-lg font-bold text-light font-mono">Réseau & Sécurité</h3>
                         </div>
                         <ul class="text-light-200 text-sm space-y-2 font-mono">
-                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Windows Server (AD /
-                                DNS / DHCP)</li>
-                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Segmentation VLAN
-                                (802.1Q)</li>
-                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Routage Inter-VLAN
-                                (L3)</li>
                             <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Cisco IOS (9200L /
                                 3750)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Stormshield SN210
+                                (Firewall)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> OPNsense & VLANs
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Routage Inter-VLAN
+                                (L3)</li>
                         </ul>
                     </div>
 
-                    <!-- Services -->
+                    <!-- Systems & Services -->
                     <div
                         class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
-                                <i data-lucide="container" class="w-6 h-6 text-emerald"></i>
+                                <i data-lucide="settings" class="w-6 h-6 text-emerald"></i>
                             </div>
-                            <h3 class="text-lg font-bold text-light font-mono">Services Docker</h3>
+                            <h3 class="text-lg font-bold text-light font-mono">Systèmes & Supervision</h3>
                         </div>
                         <ul class="text-light-200 text-sm space-y-2 font-mono">
-                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Nginx Proxy Manager
-                                (Reverse Proxy)</li>
-                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Portainer (Gestion
-                                GUI)</li>
-                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Wordpress & Apache2
-                            </li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Windows Server (AD /
+                                DNS)</li>
                             <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Ansible
                                 (Automatisation)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Graylog (Logs) &
+                                GLPI</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Docker / Portainer
+                            </li>
                         </ul>
                     </div>
                 </div>
