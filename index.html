@@ -255,6 +255,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#presentation" class="nav-link">Présentation</a>
+                    <a href="#about" class="nav-link">À propos</a>
                     <a href="#parcours" class="nav-link">Parcours</a>
                     <a href="#experiences" class="nav-link">Expériences</a>
                     <a href="#competences" class="nav-link">Compétences</a>
@@ -281,6 +282,7 @@
             <div class="px-4 py-4 space-y-3">
                 <a href="#presentation"
                     class="block text-light-200 hover:text-light transition-colors py-2">Présentation</a>
+                <a href="#about" class="block text-light-200 hover:text-light transition-colors py-2">À propos</a>
                 <a href="#parcours" class="block text-light-200 hover:text-light transition-colors py-2">Parcours</a>
                 <a href="#experiences"
                     class="block text-light-200 hover:text-light transition-colors py-2">Expériences</a>
@@ -366,6 +368,29 @@
         <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
             <i data-lucide="chevron-down" class="w-6 h-6 text-light-300"></i>
+        </div>
+    </section>
+
+    <!-- À Propos Section -->
+    <section id="about" class="py-24 bg-dark-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-light">À propos de <span class="text-gold">Moi</span>
+            </h2>
+            <div class="space-y-6 text-lg text-light-300 leading-relaxed">
+                <p>
+                    Passionné par l'informatique depuis toujours, j'ai choisi de m'orienter vers l'administration
+                    système et réseaux pour comprendre et maîtriser les infrastructures qui font tourner le monde
+                    numérique.
+                </p>
+                <p>
+                    Actuellement en BTS SIO option SISR, je combine formation théorique et expérience pratique
+                    pour développer une expertise solide en sécurisation, virtualisation et gestion de parc.
+                </p>
+                <p>
+                    Curieux et rigoureux, j'aime relever des défis techniques et apprendre de nouvelles technologies
+                    pour proposer des solutions toujours plus performantes et sécurisées.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -482,8 +507,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- XLS Optronic -->
                 <div
-                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-cyan-500/50 transition-all">
-                    <div class="flex items-center gap-4 mb-4">
+                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-cyan-500/50 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-4">
                         <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="building-2" class="w-6 h-6 text-cyan-400"></i>
                         </div>
@@ -495,7 +520,7 @@
                     <p class="text-light-200 text-sm mb-1">Stage • Dreux</p>
                     <p class="text-light-300 text-sm mb-4">Administration système, téléphonie 3CX et maintenance du parc
                         informatique.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
                         <span class="badge text-xs px-2 py-1 rounded">3CX</span>
                         <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
@@ -504,8 +529,8 @@
 
                 <!-- XtremPro -->
                 <div
-                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-blue-500/50 transition-all">
-                    <div class="flex items-center gap-4 mb-4">
+                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-blue-500/50 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-4">
                         <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="wrench" class="w-6 h-6 text-blue-400"></i>
                         </div>
@@ -517,7 +542,7 @@
                     <p class="text-light-200 text-sm mb-1">Stage • Boutique informatique</p>
                     <p class="text-light-300 text-sm mb-4">Réparation matérielle, diagnostic de pannes et relation
                         client.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">Hardware</span>
                         <span class="badge text-xs px-2 py-1 rounded">Réparation</span>
                         <span class="badge text-xs px-2 py-1 rounded">Diagnostic</span>
@@ -526,8 +551,8 @@
 
                 <!-- Nuit de l'Info -->
                 <div
-                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-gold/50 transition-all">
-                    <div class="flex items-center gap-4 mb-4">
+                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-gold/50 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-4">
                         <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="moon" class="w-6 h-6 text-gold"></i>
                         </div>
@@ -539,7 +564,7 @@
                     <p class="text-light-200 text-sm mb-1">Hackathon national</p>
                     <p class="text-light-300 text-sm mb-4">Développement intensif d'une application web en équipe.
                         Challenge technique et créatif sur une nuit.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">Travail d'équipe</span>
                         <span class="badge text-xs px-2 py-1 rounded">Développement</span>
                     </div>
@@ -561,14 +586,15 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Systèmes -->
-                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
-                    <div class="flex items-center gap-4 mb-5">
+                <div
+                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-5">
                         <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="server" class="w-6 h-6 text-blue-400"></i>
                         </div>
                         <h3 class="text-lg font-bold text-light">Systèmes</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
                         <span class="badge text-xs px-2 py-1 rounded">Active Directory</span>
                         <span class="badge text-xs px-2 py-1 rounded">Apache2 / Nginx</span>
@@ -578,14 +604,15 @@
                 </div>
 
                 <!-- Réseaux -->
-                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-cyan-500/10 transition-all">
-                    <div class="flex items-center gap-4 mb-5">
+                <div
+                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-cyan-500/10 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-5">
                         <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="network" class="w-6 h-6 text-cyan-400"></i>
                         </div>
                         <h3 class="text-lg font-bold text-light">Réseaux</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">Cisco IOS</span>
                         <span class="badge text-xs px-2 py-1 rounded">Routage & Switching</span>
                         <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
@@ -595,14 +622,15 @@
                 </div>
 
                 <!-- Sécurité & Supervision -->
-                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-teal-500/10 transition-all">
-                    <div class="flex items-center gap-4 mb-5">
+                <div
+                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-teal-500/10 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-5">
                         <div class="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="shield-check" class="w-6 h-6 text-teal-400"></i>
                         </div>
                         <h3 class="text-lg font-bold text-light">Sécurité & Gestion</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">SSL/TLS</span>
                         <span class="badge text-xs px-2 py-1 rounded">Firewall & VPN</span>
                         <span class="badge text-xs px-2 py-1 rounded">Supervision SNMP</span>
@@ -611,14 +639,15 @@
                 </div>
 
                 <!-- Virtualisation -->
-                <div class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-gold/10 transition-all">
-                    <div class="flex items-center gap-4 mb-5">
+                <div
+                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-gold/10 transition-all text-center">
+                    <div class="flex flex-col items-center gap-4 mb-5">
                         <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
                             <i data-lucide="box" class="w-6 h-6 text-gold"></i>
                         </div>
                         <h3 class="text-lg font-bold text-light">Virtualisation</h3>
                     </div>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge text-xs px-2 py-1 rounded">Proxmox VE</span>
                         <span class="badge text-xs px-2 py-1 rounded">VirtualBox</span>
                         <span class="badge text-xs px-2 py-1 rounded">Docker</span>
@@ -650,11 +679,11 @@
                             <i data-lucide="network" class="w-8 h-8 text-cyan-400"></i>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 text-center">
                         <h3 class="text-lg font-bold text-light mb-2">Sport Ludique Orléans</h3>
                         <p class="text-light-300 text-sm mb-4">Conception et mise en place d'une infrastructure réseau
                             complète, segmentée et sécurisée.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
+                        <div class="flex flex-wrap gap-2 mb-5 justify-center">
                             <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
                             <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
                             <span class="badge text-xs px-2 py-1 rounded">Routage</span>
@@ -675,11 +704,11 @@
                             <i data-lucide="globe" class="w-8 h-8 text-teal-400"></i>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 text-center">
                         <h3 class="text-lg font-bold text-light mb-2">Site Web : FC Fulbert</h3>
                         <p class="text-light-300 text-sm mb-4">Conception et développement d'un site web pour le club de
                             football, optimisé pour le SEO.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
+                        <div class="flex flex-wrap gap-2 mb-5 justify-center">
                             <span class="badge text-xs px-2 py-1 rounded">HTML/CSS</span>
                             <span class="badge text-xs px-2 py-1 rounded">SEO</span>
                         </div>
@@ -698,11 +727,11 @@
                             <i data-lucide="code" class="w-8 h-8 text-gold"></i>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 text-center">
                         <h3 class="text-lg font-bold text-light mb-2">Jeu en ligne : Cluedo</h3>
                         <p class="text-light-300 text-sm mb-4">Développement d'un jeu de Cluedo en ligne avec mécaniques
                             de jeu dynamiques.</p>
-                        <div class="flex flex-wrap gap-2 mb-5">
+                        <div class="flex flex-wrap gap-2 mb-5 justify-center">
                             <span class="badge text-xs px-2 py-1 rounded">JavaScript</span>
                             <span class="badge text-xs px-2 py-1 rounded">Algorithmie</span>
                         </div>
