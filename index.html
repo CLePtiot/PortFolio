@@ -15,16 +15,19 @@
             theme: {
                 extend: {
                     colors: {
-                        'slate': {
-                            950: '#020617',
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
+                        'dark': {
+                            DEFAULT: '#0a0a0a',
+                            50: '#171717',
+                            100: '#1a1a1a',
+                            200: '#262626',
+                            300: '#404040',
+                            400: '#525252',
                         },
-                        'accent': {
-                            DEFAULT: '#2563eb', // Blue 600
-                            light: '#3b82f6',   // Blue 500
-                            dark: '#1d4ed8'     // Blue 700
+                        'light': {
+                            DEFAULT: '#fafafa',
+                            100: '#e5e5e5',
+                            200: '#a3a3a3',
+                            300: '#737373'
                         }
                     },
                     fontFamily: {
@@ -49,48 +52,29 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Scrollbar personnalisée */
+        /* Scrollbar monochrome */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #1e293b;
+            background: #0a0a0a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 4px;
+            background: #404040;
+            border-radius: 3px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #60a5fa;
-        }
-
-        /* Animation typing */
-        .typing-text::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-
-            0%,
-            50% {
-                opacity: 1;
-            }
-
-            51%,
-            100% {
-                opacity: 0;
-            }
+            background: #525252;
         }
 
         /* Animation fade-in au scroll */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
 
         .fade-in.visible {
@@ -98,131 +82,119 @@
             transform: translateY(0);
         }
 
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Glassmorphism adouci */
+        /* Glass effet subtle */
         .glass {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         /* Card hover effect */
         .project-card {
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
+            border: 1px solid #262626;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
-        }
-
-        /* Badge hover */
-        .tech-badge {
-            transition: all 0.2s ease;
-        }
-
-        .tech-badge:hover {
-            transform: scale(1.05);
-        }
-
-        /* Timeline */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -26px;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #3b82f6;
-            border: 2px solid #0f172a;
-        }
-
-        /* Glow effect */
-        .glow {
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+            border-color: #404040;
+            background: #171717;
         }
 
         /* Skill card */
         .skill-card {
             transition: all 0.2s ease;
-            background: #0f172a;
+            background: #0a0a0a;
+            border: 1px solid #262626;
         }
 
         .skill-card:hover {
-            border-color: #2563eb;
-            background: #1e293b;
+            border-color: #404040;
+            background: #171717;
+        }
+
+        /* Subtle border glow on buttons */
+        .btn-primary {
+            background: #fafafa;
+            color: #0a0a0a;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: #e5e5e5;
+        }
+
+        .btn-secondary {
+            border: 1px solid #404040;
+            color: #e5e5e5;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #737373;
+            background: #171717;
+        }
+
+        /* Badge minimal */
+        .badge {
+            background: #1a1a1a;
+            border: 1px solid #262626;
+            color: #a3a3a3;
         }
     </style>
 </head>
 
-<body class="bg-navy-900 text-slate-100 antialiased">
+<body class="bg-dark text-light antialiased">
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="#" class="text-xl font-bold gradient-text">
-                    &lt;Portfolio /&gt;
+                <a href="#" class="text-xl font-bold text-light">
+                    Cyriak.L
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#presentation" class="text-slate-300 hover:text-accent transition-colors">Présentation</a>
-                    <a href="#parcours" class="text-slate-300 hover:text-accent transition-colors">Parcours</a>
-                    <a href="#competences" class="text-slate-300 hover:text-accent transition-colors">Compétences</a>
-                    <a href="#projets" class="text-slate-300 hover:text-accent transition-colors">Projets</a>
-                    <a href="#contact"
-                        class="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg transition-all font-medium">Contact</a>
+                    <a href="#presentation" class="text-light-200 hover:text-light transition-colors">Présentation</a>
+                    <a href="#parcours" class="text-light-200 hover:text-light transition-colors">Parcours</a>
+                    <a href="#competences" class="text-light-200 hover:text-light transition-colors">Compétences</a>
+                    <a href="#projets" class="text-light-200 hover:text-light transition-colors">Projets</a>
+                    <a href="#contact" class="btn-primary px-5 py-2 rounded-md font-semibold">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white">
+                <button id="mobileMenuBtn" class="md:hidden text-light-200 hover:text-light">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden glass border-t border-slate-700">
+        <div id="mobileMenu" class="hidden md:hidden glass border-t border-dark-200">
             <div class="px-4 py-4 space-y-3">
                 <a href="#presentation"
-                    class="block text-slate-300 hover:text-accent transition-colors py-2">Présentation</a>
-                <a href="#parcours" class="block text-slate-300 hover:text-accent transition-colors py-2">Parcours</a>
+                    class="block text-light-200 hover:text-light transition-colors py-2">Présentation</a>
+                <a href="#parcours" class="block text-light-200 hover:text-light transition-colors py-2">Parcours</a>
                 <a href="#competences"
-                    class="block text-slate-300 hover:text-accent transition-colors py-2">Compétences</a>
-                <a href="#projets" class="block text-slate-300 hover:text-accent transition-colors py-2">Projets</a>
-                <a href="#contact"
-                    class="block bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg transition-all font-medium text-center">Contact</a>
+                    class="block text-light-200 hover:text-light transition-colors py-2">Compétences</a>
+                <a href="#projets" class="block text-light-200 hover:text-light transition-colors py-2">Projets</a>
+                <a href="#contact" class="block btn-primary text-center px-4 py-2 rounded-md font-semibold">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section / Présentation -->
     <section id="presentation" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <!-- Background effects -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-        </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:text-left text-center">
                 <!-- Profile Photo -->
                 <div class="lg:w-1/3 flex justify-center">
-                    <div
-                        class="relative w-64 h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border-2 border-slate-800 shadow-2xl">
+                    <div class="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border border-dark-200">
                         <!-- Placeholder for photo -->
-                        <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
-                            <i data-lucide="user" class="w-24 h-24 text-slate-600"></i>
+                        <div class="absolute inset-0 bg-dark-50 flex items-center justify-center">
+                            <i data-lucide="user" class="w-20 h-20 text-dark-300"></i>
                         </div>
                         <!-- L'utilisateur pourra mettre sa photo ici -->
                         <img src="photo.jpg" alt="Cyriak Launay" class="w-full h-full object-cover relative z-10"
@@ -232,38 +204,35 @@
 
                 <div class="lg:w-2/3">
                     <!-- Status badge -->
-                    <div
-                        class="inline-flex items-center gap-2 bg-slate-800/50 border border-slate-700/50 rounded-full px-4 py-2 mb-6">
+                    <div class="inline-flex items-center gap-2 border border-dark-200 rounded-full px-4 py-2 mb-6">
                         <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                        <span class="text-sm text-slate-300">En recherche d'alternance — Rentré 2025</span>
+                        <span class="text-sm text-light-200">En recherche d'alternance — Rentrée 2025</span>
                     </div>
 
                     <!-- Title -->
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-                        <span class="text-white">Bonjour, je suis</span><br>
-                        <span class="text-accent">Cyriak Launay</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="text-light">Bonjour, je suis</span><br>
+                        <span class="text-light">Cyriak Launay</span>
                     </h1>
 
-                    <!-- Typing subtitle -->
-                    <p class="text-xl sm:text-2xl text-slate-300 font-medium mb-6">
-                        Étudiant <span class="text-white">BTS SIO</span> — Option <span
-                            class="text-accent underline decoration-2 underline-offset-4">SISR</span>
+                    <!-- Subtitle -->
+                    <p class="text-xl sm:text-2xl text-light-200 font-medium mb-6">
+                        Étudiant <span class="text-light">BTS SIO</span> — Option <span
+                            class="text-light border-b border-light-300">SISR</span>
                     </p>
 
                     <!-- Description -->
-                    <p class="text-lg text-slate-400 max-w-2xl lg:mx-0 mx-auto mb-10 leading-relaxed">
-                        Futur <span class="text-white font-medium">administrateur système et réseau</span>, je me
-                        spécialise dans la sécurisation des infrastructures et la gestion du parc informatique.
+                    <p class="text-lg text-light-300 max-w-2xl lg:mx-0 mx-auto mb-10 leading-relaxed">
+                        Futur <span class="text-light">administrateur système et réseau</span>, je me spécialise dans la
+                        sécurisation des infrastructures et la gestion du parc informatique.
                     </p>
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4">
-                        <a href="#projets"
-                            class="bg-accent hover:bg-accent-light text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg shadow-blue-900/20">
-                            Explorer mes projets
+                        <a href="#projets" class="btn-primary px-8 py-4 rounded-md font-semibold">
+                            Voir mes projets
                         </a>
-                        <a href="#contact"
-                            class="border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white px-8 py-4 rounded-lg font-bold transition-all">
+                        <a href="#contact" class="btn-secondary px-8 py-4 rounded-md font-semibold">
                             Me contacter
                         </a>
                     </div>
@@ -271,223 +240,162 @@
             </div>
 
             <!-- Stats Simplified -->
-            <div class="grid grid-cols-3 gap-4 mt-20 border-t border-slate-800 pt-10">
+            <div class="grid grid-cols-3 gap-4 mt-20 border-t border-dark-200 pt-10">
                 <div class="text-center">
-                    <div class="text-3xl font-black text-white">5+</div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Ans Formation</div>
+                    <div class="text-3xl font-bold text-light">5+</div>
+                    <div class="text-xs uppercase tracking-widest text-light-300 mt-1">Ans Formation</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-black text-white">3+</div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Projets Majors</div>
+                    <div class="text-3xl font-bold text-light">3+</div>
+                    <div class="text-xs uppercase tracking-widest text-light-300 mt-1">Projets</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-black text-white">15+</div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Technologies</div>
+                    <div class="text-3xl font-bold text-light">15+</div>
+                    <div class="text-xs uppercase tracking-widest text-light-300 mt-1">Technologies</div>
                 </div>
             </div>
         </div>
 
         <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <i data-lucide="chevron-down" class="w-8 h-8 text-slate-500"></i>
+            <i data-lucide="chevron-down" class="w-6 h-6 text-light-300"></i>
         </div>
     </section>
 
     <!-- Parcours Section -->
-    <section id="parcours" class="py-24 bg-navy-800/50">
+    <section id="parcours" class="py-24 bg-dark-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                    Mon <span class="gradient-text">Parcours</span>
-                </h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mon Parcours</h2>
+                <p class="text-light-300 max-w-2xl mx-auto">
                     Une progression constante vers l'expertise en infrastructures et réseaux
                 </p>
             </div>
 
-            <div class="relative max-w-3xl mx-auto">
-                <!-- Timeline line -->
-                <div
-                    class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-purple-500 to-cyan-500">
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- BTS SIO -->
+                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-light">BTS SIO — Option SISR</h3>
+                        <span class="text-sm text-light-300">2024 — 2026</span>
+                    </div>
+                    <p class="text-light-200 text-sm mb-3">Lycée Fulbert, Chartres</p>
+                    <p class="text-light-300 text-sm">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Linux</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
+                    </div>
                 </div>
 
-                <!-- Timeline items -->
-                <div class="space-y-12">
-                    <!-- Item 1 -->
-                    <div class="fade-in relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
-                        <div class="md:text-right md:pr-12">
-                            <div
-                                class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-accent rounded-full border-4 border-navy-900 flex items-center justify-center">
-                                <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
-                            </div>
-                            <span class="text-accent font-semibold">2024 - 2026</span>
-                            <h3 class="text-xl font-bold text-white mt-1">BTS SIO - Option SISR</h3>
-                            <p class="text-slate-400 mt-2">Lycée Fulbert - Chartres</p>
-                            <p class="text-slate-500 text-sm">Solutions d'Infrastructure, Systèmes et Réseaux</p>
-                            <div class="mt-3 flex flex-wrap gap-2 md:justify-end">
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Windows Server</span>
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Linux</span>
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Cisco</span>
-                            </div>
-                        </div>
-                        <div class="hidden md:block"></div>
+                <!-- Stage -->
+                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-light">Stage — XO XLS Optronic</h3>
+                        <span class="text-sm text-light-300">2026</span>
                     </div>
+                    <p class="text-light-200 text-sm mb-3">Dreux</p>
+                    <p class="text-light-300 text-sm">Administration système et téléphonie. Maintenance du parc
+                        informatique.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
+                        <span class="badge text-xs px-2 py-1 rounded">3CX</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Maintenance</span>
+                    </div>
+                </div>
 
-                    <!-- Item 2 -->
-                    <div class="fade-in relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
-                        <div class="hidden md:block"></div>
-                        <div class="md:pl-12">
-                            <div
-                                class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-purple-500 rounded-full border-4 border-navy-900 flex items-center justify-center">
-                                <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
-                            </div>
-                            <span class="text-purple-400 font-semibold">2026</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Stage - XO XLS Optronic</h3>
-                            <p class="text-slate-400 mt-2">Administration système et téléphonie. Gestion serveurs et
-                                maintenance du parc informatique.</p>
-                            <div class="mt-3 flex flex-wrap gap-2">
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">VOIP</span>
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">3CX</span>
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Maintenance</span>
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Gestion
-                                    Serveur</span>
-                            </div>
-                        </div>
+                <!-- BAC Pro -->
+                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-light">BAC Pro Systèmes Numériques</h3>
+                        <span class="text-sm text-light-300">2021 — 2024</span>
                     </div>
+                    <p class="text-light-200 text-sm mb-3">Lycée des Métiers Sully, Nogent-le-Rotrou</p>
+                    <p class="text-light-300 text-sm">3 années de formation technique</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge text-xs px-2 py-1 rounded">Électronique</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Réseaux</span>
+                    </div>
+                </div>
 
-                    <!-- Item 3 -->
-                    <div class="fade-in relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
-                        <div class="md:text-right md:pr-12">
-                            <div
-                                class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-cyan-500 rounded-full border-4 border-navy-900 flex items-center justify-center">
-                                <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
-                            </div>
-                            <span class="text-cyan-400 font-semibold">2021 - 2024</span>
-                            <h3 class="text-xl font-bold text-white mt-1">BAC Pro Systèmes Numériques</h3>
-                            <p class="text-slate-400 mt-2">Lycée des Métiers Sully - Nogent-le-Rotrou</p>
-                            <p class="text-slate-500 text-sm">3 années de formation technique</p>
-                            <div class="mt-3 flex flex-wrap gap-2 md:justify-end">
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Électronique</span>
-                                <span class="text-xs bg-navy-700 text-slate-300 px-2 py-1 rounded">Réseaux</span>
-                            </div>
-                        </div>
-                        <div class="hidden md:block"></div>
+                <!-- Brevet -->
+                <div class="fade-in bg-dark-100 p-6 rounded-lg border border-dark-200">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-light">Brevet des Collèges</h3>
+                        <span class="text-sm text-light-300">2021</span>
                     </div>
-
-                    <!-- Item 4 -->
-                    <div class="fade-in relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
-                        <div class="hidden md:block"></div>
-                        <div class="md:pl-12">
-                            <div
-                                class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-green-500 rounded-full border-4 border-navy-900 flex items-center justify-center">
-                                <i data-lucide="award" class="w-4 h-4 text-white"></i>
-                            </div>
-                            <span class="text-green-400 font-semibold">2021</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Brevet des Collèges</h3>
-                            <p class="text-slate-400 mt-2">Collège Jean Monnet - La Loupe</p>
-                        </div>
-                    </div>
+                    <p class="text-light-200 text-sm">Collège Jean Monnet, La Loupe</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Compétences Section -->
-    <section id="competences" class="py-24 bg-slate-950">
+    <section id="competences" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
-                    Mes <span class="text-accent underline decoration-4 underline-offset-8">Compétences</span>
-                </h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes Compétences</h2>
+                <p class="text-light-300 max-w-2xl mx-auto">
                     Un ensemble de compétences techniques acquises en formation et en stage
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Systèmes -->
-                <div class="fade-in skill-card rounded-xl p-6 border border-slate-800">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                            <i data-lucide="server" class="w-5 h-5 text-accent"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white">Systèmes</h3>
+                <div class="fade-in skill-card rounded-lg p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <i data-lucide="server" class="w-5 h-5 text-light-200"></i>
+                        <h3 class="text-base font-semibold text-light">Systèmes</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Windows
-                            Server</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Active
-                            Directory</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Apache2 /
-                            Nginx</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Linux
-                            (Debian/Ubuntu)</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Scripting
-                            (PS/Bash)</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Active Directory</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Apache2 / Nginx</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Linux</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Scripting</span>
                     </div>
                 </div>
 
                 <!-- Réseaux -->
-                <div class="fade-in skill-card rounded-xl p-6 border border-slate-800">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                            <i data-lucide="network" class="w-5 h-5 text-accent"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white">Réseaux</h3>
+                <div class="fade-in skill-card rounded-lg p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <i data-lucide="network" class="w-5 h-5 text-light-200"></i>
+                        <h3 class="text-base font-semibold text-light">Réseaux</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Cisco
-                            IOS</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Routage &
-                            Switching</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">VLAN /
-                            Trunking</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">VOIP
-                            (3CX)</span>
-                        <span
-                            class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Wireshark</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Cisco IOS</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Routage & Switching</span>
+                        <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
+                        <span class="badge text-xs px-2 py-1 rounded">VOIP (3CX)</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Wireshark</span>
                     </div>
                 </div>
 
                 <!-- Sécurité & Supervision -->
-                <div class="fade-in skill-card rounded-xl p-6 border border-slate-800">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                            <i data-lucide="shield-check" class="w-5 h-5 text-accent"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white">Sûreté & Gestion</h3>
+                <div class="fade-in skill-card rounded-lg p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-light-200"></i>
+                        <h3 class="text-base font-semibold text-light">Sécurité & Gestion</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">SSL/TLS
-                            (ACME)</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Firewall &
-                            VPN</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Supervision
-                            SNMP</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">OXIBOX /
-                            Kiwak</span>
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">GLPI /
-                            Inventaire</span>
+                        <span class="badge text-xs px-2 py-1 rounded">SSL/TLS</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Firewall & VPN</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Supervision SNMP</span>
+                        <span class="badge text-xs px-2 py-1 rounded">GLPI</span>
                     </div>
                 </div>
 
                 <!-- Virtualisation -->
-                <div class="fade-in skill-card rounded-xl p-6 border border-slate-800">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                            <i data-lucide="box" class="w-5 h-5 text-accent"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white">Virtualisation</h3>
+                <div class="fade-in skill-card rounded-lg p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <i data-lucide="box" class="w-5 h-5 text-light-200"></i>
+                        <h3 class="text-base font-semibold text-light">Virtualisation</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Proxmox
-                            VE</span>
-                        <span
-                            class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">VirtualBox</span>
-                        <span
-                            class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Docker</span>
-                        <span
-                            class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded text-xs font-semibold">Hyper-V</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Proxmox VE</span>
+                        <span class="badge text-xs px-2 py-1 rounded">VirtualBox</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Docker</span>
+                        <span class="badge text-xs px-2 py-1 rounded">Hyper-V</span>
                     </div>
                 </div>
             </div>
@@ -495,109 +403,74 @@
     </section>
 
     <!-- Projets Section -->
-    <section id="projets" class="py-24 bg-slate-900">
+    <section id="projets" class="py-24 bg-dark-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
-                    Mes <span class="text-accent underline decoration-4 underline-offset-8">Projets</span>
-                </h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">
-                    Découvrez mes réalisations techniques effectuées en formation
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes Projets</h2>
+                <p class="text-light-300 max-w-2xl mx-auto">
+                    Des projets concrets réalisés en formation BTS SIO
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Projet 1 -->
-                <div
-                    class="fade-in project-card bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-accent transition-all">
-                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700">
-                        <i data-lucide="network" class="w-16 h-16 text-accent/50"></i>
+                <div class="fade-in project-card bg-dark-100 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-dark-200 flex items-center justify-center">
+                        <i data-lucide="network" class="w-12 h-12 text-dark-300"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Sport Ludique Orléans</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Projet BTS : Conception et mise en place d'une infrastructure réseau complète, segmentée et
-                            sécurisée.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">VLAN</span>
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">Cisco</span>
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">Routage</span>
+                        <h3 class="text-lg font-semibold text-light mb-2">Sport Ludique Orléans</h3>
+                        <p class="text-light-300 text-sm mb-4">Conception et mise en place d'une infrastructure réseau
+                            complète, segmentée et sécurisée.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Routage</span>
                         </div>
-                        <div class="flex gap-3">
-                            <a href="https://xola-max.github.io/gp-orleans-sportludique2025-2026/" target="_blank"
-                                class="flex-1 text-center bg-accent hover:bg-accent-light text-white py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-blue-900/40">
-                                Voir le projet
-                            </a>
-                        </div>
+                        <a href="https://xola-max.github.io/gp-orleans-sportludique2025-2026/" target="_blank"
+                            class="btn-primary block text-center py-2 rounded-md text-sm font-semibold">
+                            Voir le projet
+                        </a>
                     </div>
                 </div>
 
                 <!-- Projet 2 -->
-                <div
-                    class="fade-in project-card bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-accent transition-all">
-                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700">
-                        <i data-lucide="globe" class="w-16 h-16 text-accent/50"></i>
+                <div class="fade-in project-card bg-dark-100 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-dark-200 flex items-center justify-center">
+                        <i data-lucide="globe" class="w-12 h-12 text-dark-300"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Site Web : FC Fulbert</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Projet BTS : Conception et développement d'un site web pour le club de football, optimisé
-                            pour le référencement (SEO).
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">HTML/CSS</span>
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">SEO</span>
+                        <h3 class="text-lg font-semibold text-light mb-2">Site Web : FC Fulbert</h3>
+                        <p class="text-light-300 text-sm mb-4">Conception et développement d'un site web pour le club de
+                            football, optimisé pour le SEO.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge text-xs px-2 py-1 rounded">HTML/CSS</span>
+                            <span class="badge text-xs px-2 py-1 rounded">SEO</span>
                         </div>
-                        <div class="flex gap-3">
-                            <span
-                                class="flex-1 text-center bg-slate-900 text-slate-500 py-2.5 rounded-lg text-sm font-bold border border-slate-800">
-                                Indisponible
-                            </span>
-                        </div>
+                        <span
+                            class="btn-secondary block text-center py-2 rounded-md text-sm font-semibold opacity-50 cursor-not-allowed">
+                            Indisponible
+                        </span>
                     </div>
                 </div>
 
                 <!-- Projet 3 -->
-                <div
-                    class="fade-in project-card bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-accent transition-all">
-                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700">
-                        <i data-lucide="code" class="w-16 h-16 text-accent/50"></i>
+                <div class="fade-in project-card bg-dark-100 rounded-lg overflow-hidden">
+                    <div class="h-40 bg-dark-200 flex items-center justify-center">
+                        <i data-lucide="code" class="w-12 h-12 text-dark-300"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Jeu en ligne : Cluedo</h3>
-                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                            Projet BTS : Développement d'un jeu de Cluedo en ligne, intégrant des mécaniques de jeu
-                            dynamiques.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">JavaScript</span>
-                            <span
-                                class="text-[10px] uppercase tracking-wider bg-slate-700 text-slate-300 px-2 py-1 rounded font-bold">Algorithmie</span>
+                        <h3 class="text-lg font-semibold text-light mb-2">Jeu en ligne : Cluedo</h3>
+                        <p class="text-light-300 text-sm mb-4">Développement d'un jeu de Cluedo en ligne avec mécaniques
+                            de jeu dynamiques.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge text-xs px-2 py-1 rounded">JavaScript</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Algorithmie</span>
                         </div>
-                        <div class="flex gap-3">
-                            <span
-                                class="flex-1 text-center bg-slate-900 text-slate-500 py-2.5 rounded-lg text-sm font-bold border border-slate-800">
-                                En cours...
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projet 6 - Plus de projets -->
-                <div
-                    class="fade-in project-card bg-slate-900/50 rounded-2xl overflow-hidden border border-dashed border-slate-800 flex items-center justify-center min-h-[360px]">
-                    <div class="text-center p-6">
-                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="plus" class="w-6 h-6 text-slate-600"></i>
-                        </div>
-                        <p class="text-slate-500 font-medium">Bientôt de nouveaux projets</p>
+                        <span
+                            class="btn-secondary block text-center py-2 rounded-md text-sm font-semibold opacity-50 cursor-not-allowed">
+                            En cours...
+                        </span>
                     </div>
                 </div>
             </div>
@@ -605,13 +478,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-slate-950">
+    <section id="contact" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
-                    Me <span class="text-accent underline decoration-4 underline-offset-8">Contacter</span>
-                </h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Me Contacter</h2>
+                <p class="text-light-300 max-w-2xl mx-auto">
                     Vous recherchez un alternant motivé ? Discutons-en !
                 </p>
             </div>
@@ -619,107 +490,87 @@
             <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                 <!-- Form -->
                 <div class="fade-in">
-                    <form id="contactForm" class="space-y-6">
+                    <form id="contactForm" class="space-y-5">
                         <div>
-                            <label for="name"
-                                class="block text-sm font-bold text-slate-300 mb-2 uppercase tracking-wide">Nom
-                                complet</label>
+                            <label for="name" class="block text-sm font-medium text-light-200 mb-2">Nom complet</label>
                             <input type="text" id="name" name="name" required
-                                class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
                                 placeholder="Votre nom">
                         </div>
                         <div>
-                            <label for="email"
-                                class="block text-sm font-bold text-slate-300 mb-2 uppercase tracking-wide">Email</label>
+                            <label for="email" class="block text-sm font-medium text-light-200 mb-2">Email</label>
                             <input type="email" id="email" name="email" required
-                                class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
                                 placeholder="votre@email.com">
                         </div>
                         <div>
-                            <label for="message"
-                                class="block text-sm font-bold text-slate-300 mb-2 uppercase tracking-wide">Message</label>
+                            <label for="message" class="block text-sm font-medium text-light-200 mb-2">Message</label>
                             <textarea id="message" name="message" rows="5" required
-                                class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                                placeholder="Votre message pour Cyriak..."></textarea>
+                                class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
+                                placeholder="Votre message..."></textarea>
                         </div>
                         <button type="submit"
-                            class="w-full bg-accent hover:bg-accent-light text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-5 h-5"></i>
-                            Envoyer le message
+                            class="w-full btn-primary py-3 rounded-md font-semibold flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            Envoyer
                         </button>
                     </form>
                 </div>
 
                 <!-- Info -->
-                <a href="mailto:cyriaklaunay@gmail.com"
-                    class="flex items-center gap-4 text-slate-300 hover:text-accent transition-colors group">
-                    <div
-                        class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center group-hover:bg-accent/30 transition-colors">
-                        <i data-lucide="mail" class="w-6 h-6 text-accent"></i>
-                    </div>
-                    <div>
-                        <div class="font-medium text-white">Email</div>
-                        <div class="text-sm text-slate-500">cyriaklaunay@gmail.com</div>
-                    </div>
-                    <i data-lucide="external-link"
-                        class="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- Download CV -->
-        <div class="bg-gradient-to-r from-accent/20 to-purple-500/20 rounded-2xl p-6 border border-accent/30">
-            <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shrink-0">
-                    <i data-lucide="file-down" class="w-6 h-6 text-white"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-lg font-bold text-white mb-2">Télécharger mon CV</h3>
-                    <p class="text-slate-400 text-sm mb-4">
-                        Obtenez une version PDF complète de mon parcours et mes compétences.
-                    </p>
-                    <a href="#" download
-                        class="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-white px-6 py-3 rounded-xl font-medium transition-all">
-                        <i data-lucide="download" class="w-5 h-5"></i>
-                        <span>Télécharger CV (PDF)</span>
+                <div class="space-y-6 fade-in">
+                    <a href="mailto:cyriaklaunay@gmail.com"
+                        class="flex items-center gap-4 p-4 bg-dark-100 rounded-lg border border-dark-200 hover:border-dark-300 transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5 text-light-200"></i>
+                        <div>
+                            <div class="text-sm font-medium text-light">Email</div>
+                            <div class="text-sm text-light-300">cyriaklaunay@gmail.com</div>
+                        </div>
                     </a>
+
+                    <!-- CV Download -->
+                    <div class="p-4 bg-dark-100 rounded-lg border border-dark-200">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="file-down" class="w-5 h-5 text-light-200"></i>
+                            <div class="flex-1">
+                                <div class="text-sm font-medium text-light mb-1">Télécharger mon CV</div>
+                                <a href="CV.pdf" download
+                                    class="text-sm text-light-300 hover:text-light transition-colors underline">
+                                    CV.pdf
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="p-4 bg-dark-100 rounded-lg border border-dark-200">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span class="text-sm text-light">Disponible pour une alternance — Rentrée 2025</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Availability -->
-        <div class="bg-green-500/10 rounded-2xl p-6 border border-green-500/30">
-            <div class="flex items-center gap-3">
-                <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                <span class="text-green-400 font-medium">Disponible pour une alternance</span>
-            </div>
-            <p class="text-slate-400 text-sm mt-2">
-                Je recherche activement une entreprise pour ma Licence Professionnelle en alternance à
-                partir de septembre 2025.
-            </p>
-        </div>
-        </div>
-        </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-slate-800">
+    <footer class="py-8 border-t border-dark-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="text-slate-500 text-sm">
-                    © 2025 Cyriak Launay - Portfolio BTS SIO SISR
+                <div class="text-light-300 text-sm">
+                    © 2025 Cyriak Launay — Portfolio BTS SIO SISR
                 </div>
                 <div class="flex items-center gap-6">
                     <a href="https://linkedin.com/in/cyriak-launay" target="_blank"
-                        class="text-slate-500 hover:text-accent transition-colors">
+                        class="text-light-300 hover:text-light transition-colors">
                         <i data-lucide="linkedin" class="w-5 h-5"></i>
                     </a>
                     <a href="https://github.com/CLePtiot" target="_blank"
-                        class="text-slate-500 hover:text-accent transition-colors">
+                        class="text-light-300 hover:text-light transition-colors">
                         <i data-lucide="github" class="w-5 h-5"></i>
                     </a>
-                    <a href="mailto:cyriaklaunay@gmail.com" class="text-slate-500 hover:text-accent transition-colors">
+                    <a href="mailto:cyriaklaunay@gmail.com" class="text-light-300 hover:text-light transition-colors">
                         <i data-lucide="mail" class="w-5 h-5"></i>
                     </a>
                 </div>
