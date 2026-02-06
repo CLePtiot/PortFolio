@@ -16,37 +16,44 @@
                 extend: {
                     colors: {
                         'dark': {
-                            DEFAULT: '#181818',
-                            50: '#1e1e1e',
-                            100: '#242424',
-                            200: '#2e2e2e',
-                            300: '#444444',
-                            400: '#5a5a5a',
+                            DEFAULT: '#0b0e14',
+                            50: '#12171f',
+                            100: '#1a202c',
+                            200: '#1e2530',
+                            300: '#2d3748',
+                            400: '#4a5568',
                         },
                         'light': {
-                            DEFAULT: '#fafafa',
-                            100: '#e5e5e5',
-                            200: '#b0b0b0',
-                            300: '#808080'
+                            DEFAULT: '#e5e7eb',
+                            100: '#d1d5db',
+                            200: '#9ca3af',
+                            300: '#6b7280'
                         },
-                        'gold': {
-                            DEFAULT: '#c9a962',
-                            light: '#d4bc7a',
-                            dark: '#b8954d'
+                        'emerald': {
+                            DEFAULT: '#10b981',
+                            light: '#34d399',
+                            dark: '#059669'
+                        },
+                        'amber': {
+                            DEFAULT: '#f59e0b',
+                            light: '#fbbf24',
+                            dark: '#d97706'
                         }
                     },
                     fontFamily: {
-                        'inter': ['Inter', 'sans-serif']
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'Fira Code', 'monospace']
                     }
                 }
             }
         }
     </script>
 
-    <!-- Google Fonts - Inter -->
+    <!-- Google Fonts - Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
@@ -57,22 +64,26 @@
             font-family: 'Inter', sans-serif;
         }
 
+        .font-mono {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
         /* Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #181818;
+            background: #0b0e14;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #c9a962;
+            background: #10b981;
             border-radius: 3px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #d4bc7a;
+            background: #34d399;
         }
 
         /* Animation fade-in au scroll */
@@ -87,774 +98,1088 @@
             transform: translateY(0);
         }
 
-        /* Glass effet subtle */
+        /* Glass effet for sidebar */
         .glass {
-            background: rgba(24, 24, 24, 0.95);
+            background: rgba(11, 14, 20, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(201, 169, 98, 0.15);
+            border-right: 1px solid #1e2530;
+        }
+
+        /* Glassmorphism cards */
+        .glass-card {
+            background: rgba(18, 23, 31, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #1e2530;
+            border-left: 3px solid #10b981;
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            background: rgba(26, 32, 44, 0.9);
         }
 
         /* Card hover effect */
         .project-card {
             transition: all 0.25s ease;
-            border: 1px solid #2e2e2e;
+            border: 1px solid #1e2530;
+            border-left: 3px solid #10b981;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            border-color: #c9a962;
-            background: #1e1e1e;
+            border-color: #10b981;
+            background: #12171f;
         }
 
         /* Skill card */
         .skill-card {
             transition: all 0.2s ease;
-            background: #1e1e1e;
-            border: 1px solid #2e2e2e;
+            background: #12171f;
+            border: 1px solid #1e2530;
         }
 
         .skill-card:hover {
-            border-color: #c9a962;
-            background: #242424;
+            border-color: #10b981;
+            background: #1a202c;
         }
 
-        /* Gold button primary */
+        /* Emerald button primary */
         .btn-primary {
-            background: #c9a962;
-            color: #181818;
+            background: #10b981;
+            color: #0b0e14;
             transition: all 0.2s ease;
         }
 
         .btn-primary:hover {
-            background: #d4bc7a;
+            background: #34d399;
         }
 
         .btn-secondary {
-            border: 1px solid #444444;
-            color: #e5e5e5;
+            border: 1px solid #2d3748;
+            color: #e5e7eb;
             transition: all 0.2s ease;
         }
 
         .btn-secondary:hover {
-            border-color: #c9a962;
-            background: #242424;
+            border-color: #10b981;
+            background: #1a202c;
         }
 
-        /* Badge with gold border */
+        /* Badge with emerald border */
         .badge {
-            background: #242424;
-            border: 1px solid #c9a962;
-            color: #c9a962;
+            background: #1a202c;
+            border: 1px solid #10b981;
+            color: #10b981;
+        }
+
+        /* Amber badge for alerts */
+        .badge-amber {
+            background: #1a202c;
+            border: 1px solid #f59e0b;
+            color: #f59e0b;
         }
 
         /* Nav link */
         .nav-link {
-            color: #b0b0b0;
+            color: #9ca3af;
             transition: color 0.2s ease;
         }
 
         .nav-link:hover {
-            color: #fafafa;
+            color: #10b981;
+        }
+
+        /* Terminal window */
+        .terminal {
+            background: #0b0e14;
+            border: 1px solid #1e2530;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .terminal-header {
+            background: #12171f;
+            border-bottom: 1px solid #1e2530;
+            padding: 8px 12px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Pulse indicator for skills */
+        .pulse-green {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse-green 2s infinite;
+        }
+
+        .pulse-amber {
+            width: 8px;
+            height: 8px;
+            background: #f59e0b;
+            border-radius: 50%;
+        }
+
+        @keyframes pulse-green {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+        }
+
+        /* Typing animation */
+        .typing {
+            border-right: 2px solid #10b981;
+            animation: blink 1s step-end infinite;
+        }
+
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
 
         /* ========== LIGHT MODE ========== */
         body.light-mode {
-            background: #f5f5f5;
-            color: #181818;
+            background: #f8fafc;
+            color: #0f172a;
         }
 
         body.light-mode .glass {
             background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(201, 169, 98, 0.2);
+            border-right: 1px solid #e2e8f0;
         }
 
         body.light-mode .nav-link {
-            color: #525252;
+            color: #64748b;
         }
 
         body.light-mode .nav-link:hover {
-            color: #181818;
+            color: #10b981;
         }
 
         body.light-mode .bg-dark {
-            background: #f5f5f5 !important;
+            background: #f8fafc !important;
         }
 
         body.light-mode .bg-dark-50 {
-            background: #eeeeee !important;
+            background: #f1f5f9 !important;
         }
 
         body.light-mode .bg-dark-100 {
-            background: #e5e5e5 !important;
+            background: #e2e8f0 !important;
         }
 
         body.light-mode .text-light {
-            color: #181818 !important;
-        }
-
-        body.light-mode .text-light {
-            color: #525252 !important;
+            color: #0f172a !important;
         }
 
         body.light-mode .border-dark-200 {
-            border-color: #d4d4d4 !important;
+            border-color: #e2e8f0 !important;
         }
 
         body.light-mode .btn-primary {
-            background: #c9a962;
-            color: #181818;
+            background: #10b981;
+            color: #ffffff;
         }
 
         body.light-mode .btn-secondary {
-            border-color: #d4d4d4;
-            color: #181818;
+            border-color: #e2e8f0;
+            color: #0f172a;
         }
 
         body.light-mode .badge {
-            background: #fafafa;
-            border-color: #c9a962;
-            color: #8b7a3d;
+            background: #f1f5f9;
+            border-color: #10b981;
+            color: #059669;
         }
 
         body.light-mode .skill-card {
-            background: #fafafa;
-            border-color: #d4d4d4;
+            background: #ffffff;
+            border-color: #e2e8f0;
         }
 
         body.light-mode .project-card {
-            background: #fafafa;
-            border-color: #d4d4d4;
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode .terminal {
+            background: #1e293b;
         }
 
         body.light-mode #themeToggle {
-            background: #fafafa;
-            border-color: #d4d4d4;
+            background: #ffffff;
+            border-color: #e2e8f0;
         }
 
         body.light-mode ::-webkit-scrollbar-track {
-            background: #f5f5f5;
+            background: #f8fafc;
         }
     </style>
 </head>
 
 <body class="bg-dark text-light antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <a href="#" class="text-xl font-bold text-gold">
-                    Cyriak.L
-                </a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#presentation" class="nav-link">Présentation</a>
-                    <a href="#about" class="nav-link">À propos</a>
-                    <a href="#parcours" class="nav-link">Parcours</a>
-                    <a href="#experiences" class="nav-link">Expériences</a>
-                    <a href="#competences" class="nav-link">Compétences</a>
-                    <a href="#projets" class="nav-link">Projets</a>
-                    <!-- Theme Toggle -->
-                    <button id="themeToggle"
-                        class="w-10 h-10 rounded-lg bg-dark-100 border border-dark-200 flex items-center justify-center hover:border-gold transition-all"
-                        title="Changer de thème">
-                        <i data-lucide="sun" class="w-5 h-5 text-gold hidden" id="sunIcon"></i>
-                        <i data-lucide="moon" class="w-5 h-5 text-gold" id="moonIcon"></i>
-                    </button>
-                    <a href="#contact" class="btn-primary px-5 py-2 rounded-md font-semibold">Contact</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-light hover:text-light">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
+    <!-- Mobile Header (Visible on mobile only) -->
+    <header class="lg:hidden fixed top-0 w-full z-50 glass border-b border-dark-200">
+        <div class="px-4 py-3 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold text-emerald font-mono flex items-center gap-2">
+                <span class="w-2 h-2 bg-emerald rounded-full"></span>
+                Cyriak.L
+            </a>
+            <button id="mobileMenuBtn" class="text-light hover:text-emerald transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
-
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden glass border-t border-dark-200">
+        <div id="mobileMenu" class="hidden glass border-t border-dark-200 absolute w-full left-0">
             <div class="px-4 py-4 space-y-3">
                 <a href="#presentation"
-                    class="block text-light hover:text-light transition-colors py-2">Présentation</a>
-                <a href="#about" class="block text-light hover:text-light transition-colors py-2">À propos</a>
-                <a href="#parcours" class="block text-light hover:text-light transition-colors py-2">Parcours</a>
-                <a href="#experiences" class="block text-light hover:text-light transition-colors py-2">Expériences</a>
-                <a href="#competences" class="block text-light hover:text-light transition-colors py-2">Compétences</a>
-                <a href="#projets" class="block text-light hover:text-light transition-colors py-2">Projets</a>
-                <a href="#contact" class="block btn-primary text-center px-4 py-2 rounded-md font-semibold">Contact</a>
+                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
+                    <span class="text-emerald mr-2">></span>Tableau de bord
+                </a>
+                <a href="#competences"
+                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
+                    <span class="text-dark-300 mr-2">#</span>Inventaire
+                </a>
+                <a href="#projets"
+                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
+                    <span class="text-dark-300 mr-2">#</span>Projets
+                </a>
+                <a href="#lab"
+                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
+                    <span class="text-dark-300 mr-2">#</span>Environnement
+                </a>
+                <a href="#veille"
+                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
+                    <span class="text-dark-300 mr-2">#</span>Veille
+                </a>
+                <a href="#contact"
+                    class="block text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg px-3 py-2 transition-colors font-mono text-sm">
+                    <span class="text-dark-300 mr-2">@</span>Contact
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section / Présentation -->
-    <section id="presentation" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:text-left text-center">
-                <!-- Profile Photo -->
-                <div class="lg:w-1/3 flex justify-center">
-                    <div class="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border border-dark-200">
-                        <!-- Placeholder for photo -->
-                        <div class="absolute inset-0 bg-dark-50 flex items-center justify-center">
-                            <i data-lucide="user" class="w-20 h-20 text-dark-300"></i>
-                        </div>
-                        <!-- L'utilisateur pourra mettre sa photo ici -->
-                        <img src="images/profile.png" alt="Cyriak Launay"
-                            class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="lg:w-2/3">
-                    <!-- Status badge -->
-                    <div class="inline-flex items-center gap-2 border border-dark-200 rounded-full px-4 py-2 mb-6">
-                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                        <span class="text-sm text-light">En recherche d'alternance — Rentrée 2026-2027</span>
-                    </div>
-
-                    <!-- Title -->
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        <span class="text-light">Bonjour, je suis</span><br>
-                        <span class="text-gold">Cyriak Launay</span>
-                    </h1>
-
-                    <!-- Subtitle -->
-                    <p class="text-xl sm:text-2xl text-light font-medium mb-6">
-                        Étudiant <span class="text-light">BTS SIO</span> — Option <span
-                            class="text-gold border-b border-gold">SISR</span>
-                    </p>
-
-                    <!-- Description -->
-                    <p class="text-lg text-light max-w-2xl lg:mx-0 mx-auto mb-10 leading-relaxed">
-                        Futur <span class="text-light">administrateur système et réseau</span>, je me spécialise dans la
-                        sécurisation des infrastructures et la gestion du parc informatique.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4">
-                        <a href="#projets" class="btn-primary px-8 py-4 rounded-md font-semibold">
-                            Voir mes projets
-                        </a>
-                        <a href="#contact" class="btn-secondary px-8 py-4 rounded-md font-semibold">
-                            Me contacter
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stats Simplified -->
-            <div class="grid grid-cols-3 gap-4 mt-20 border-t border-dark-200 pt-10">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-light">5+</div>
-                    <div class="text-xs uppercase tracking-widest text-light mt-1">Ans Formation</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-light">3+</div>
-                    <div class="text-xs uppercase tracking-widest text-light mt-1">Projets</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-light">15+</div>
-                    <div class="text-xs uppercase tracking-widest text-light mt-1">Technologies</div>
-                </div>
-            </div>
+    <!-- Sidebar (Visible on desktop) -->
+    <aside class="hidden lg:flex flex-col w-64 fixed inset-y-0 left-0 glass border-r border-dark-200 z-40">
+        <!-- Sidebar Header -->
+        <div class="p-6 border-b border-dark-200">
+            <a href="#" class="text-xl font-bold text-emerald font-mono flex items-center gap-2">
+                <div class="w-3 h-3 bg-emerald rounded-full pulse-green"></div>
+                Cyriak_L
+            </a>
+            <div class="text-[10px] text-zinc-500 font-mono mt-1">v2.0.1-stable</div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <i data-lucide="chevron-down" class="w-6 h-6 text-light"></i>
+        <!-- Navigation Links -->
+        <div class="flex-1 overflow-y-auto py-6 px-4 space-y-1">
+            <div class="text-xs font-bold text-zinc-600 uppercase tracking-wider mb-2 px-3 font-mono mt-6">Modules</div>
+            <a href="#competences"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors group">
+                <i data-lucide="cpu" class="w-4 h-4 text-zinc-500 group-hover:text-emerald transition-colors"></i>
+                Inventaire Skills
+            </a>
+            <a href="#experiences"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors group">
+                <i data-lucide="history" class="w-4 h-4 text-zinc-500 group-hover:text-emerald transition-colors"></i>
+                Parcours
+            </a>
+            <a href="#projets"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors group">
+                <i data-lucide="folder-git-2"
+                    class="w-4 h-4 text-zinc-500 group-hover:text-emerald transition-colors"></i>
+                Projets
+            </a>
+
+            <div class="text-xs font-bold text-zinc-600 uppercase tracking-wider mb-2 px-3 font-mono mt-6">Ressources
+            </div>
+            <a href="#lab"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-amber hover:bg-dark-200 rounded-lg transition-colors group">
+                <i data-lucide="server" class="w-4 h-4 text-zinc-500 group-hover:text-amber transition-colors"></i>
+                Environnement
+            </a>
+            <a href="#veille"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-blue-400 hover:bg-dark-200 rounded-lg transition-colors group">
+                <i data-lucide="rss" class="w-4 h-4 text-zinc-500 group-hover:text-blue-400 transition-colors"></i>
+                Veille
+            </a>
         </div>
-    </section>
 
-    <!-- À Propos Section -->
-    <section id="about" class="py-24 bg-dark-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-light">À propos de <span class="text-gold">Moi</span>
-            </h2>
-            <div class="space-y-6 text-lg text-light leading-relaxed font-medium">
-                <p>
-                    Passionné par l'informatique depuis toujours, j'ai choisi de m'orienter vers l'administration
-                    système et réseaux pour comprendre et maîtriser les infrastructures qui font tourner le monde
-                    numérique.
-                </p>
-                <p>
-                    Actuellement en BTS SIO option SISR, je combine formation théorique et expérience pratique
-                    pour développer une expertise solide en sécurisation, virtualisation et gestion de parc.
-                </p>
-                <p>
-                    Curieux et rigoureux, j'aime relever des défis techniques et apprendre de nouvelles technologies
-                    pour proposer des solutions toujours plus performantes et sécurisées.
-                </p>
-            </div>
+
+        <!-- Sidebar Footer -->
+        <div class="p-4 border-t border-dark-200">
+            <a href="#contact"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-mono text-light-200 hover:text-emerald hover:bg-dark-200 rounded-lg transition-colors mb-4">
+                <i data-lucide="mail-plus" class="w-4 h-4"></i>
+                Me contacter
+            </a>
+
+            <!-- Theme Toggle -->
+            <button id="themeToggle"
+                class="w-full h-10 rounded-lg bg-dark-100 border border-dark-200 flex items-center justify-center hover:border-emerald transition-all gap-2 text-xs font-mono text-light-200">
+                <i data-lucide="sun" class="w-4 h-4 hidden" id="sunIcon"></i>
+                <i data-lucide="moon" class="w-4 h-4" id="moonIcon"></i>
+                <span>Changer thème</span>
+            </button>
         </div>
-    </section>
+    </aside>
 
-    <!-- Parcours Section -->
-    <section id="parcours" class="py-24 bg-dark-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mon <span class="text-gold">Parcours</span>
-                </h2>
-                <p class="text-light max-w-2xl mx-auto">
-                    Une progression constante vers l'expertise en infrastructures et réseaux
-                </p>
-            </div>
+    <!-- Main Content Wrapper -->
+    <main class="lg:pl-64 pt-16 lg:pt-0">
 
-            <!-- Timeline -->
-            <div class="relative max-w-4xl mx-auto">
-                <!-- Vertical Line -->
-                <div
-                    class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-gold">
-                </div>
-
-                <!-- BTS SIO - Left -->
-                <div class="fade-in relative flex items-center mb-12">
-                    <div class="w-1/2 pr-8 text-right">
-                        <span class="text-blue-400 font-bold text-sm">2024 - 2026</span>
-                        <h3 class="text-xl font-bold text-light mt-1">BTS SIO - Option SISR</h3>
-                        <p class="text-cyan-400 text-sm mt-1">Lycée Fulbert - Chartres</p>
-                        <p class="text-light text-sm mt-2">Solutions d'Infrastructure, Systèmes et Réseaux</p>
-                        <div class="mt-3 flex flex-wrap gap-2 justify-end">
-                            <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Linux</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
-                        </div>
-                    </div>
-                    <!-- Icon -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-blue-500/30">
-                        <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
-                    </div>
-                    <div class="w-1/2"></div>
-                </div>
-
-                <!-- Stage - Right -->
-                <div class="fade-in relative flex items-center mb-12">
-                    <div class="w-1/2"></div>
-                    <!-- Icon -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-cyan-500/30">
-                        <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
-                    </div>
-                    <div class="w-1/2 pl-8">
-                        <span class="text-cyan-400 font-bold text-sm">2026</span>
-                        <h3 class="text-xl font-bold text-light mt-1">Stage - XO XLS Optronic</h3>
-                        <p class="text-light text-sm mt-1 mb-1 font-bold">DEV — Le Coudray</p>
-                        <p class="text-light text-sm mt-2">Développement, administration système et téléphonie. Gestion
-                            serveurs et
-                            maintenance du parc informatique.</p>
-                        <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="badge text-xs px-2 py-1 rounded">DEV</span>
-                            <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
-                            <span class="badge text-xs px-2 py-1 rounded">3CX</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Maintenance</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Gestion Serveur</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BAC Pro - Left -->
-                <div class="fade-in relative flex items-center mb-12">
-                    <div class="w-1/2 pr-8 text-right">
-                        <span class="text-teal-400 font-bold text-sm">2021 - 2024</span>
-                        <h3 class="text-xl font-bold text-light mt-1">BAC Pro Systèmes Numériques</h3>
-                        <p class="text-teal-400 text-sm mt-1">Lycée des Métiers Sully - Nogent-le-Rotrou</p>
-                        <p class="text-light text-sm mt-2">3 années de formation technique</p>
-                        <div class="mt-3 flex flex-wrap gap-2 justify-end">
-                            <span class="badge text-xs px-2 py-1 rounded">Électronique</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Réseaux</span>
-                        </div>
-                    </div>
-                    <!-- Icon -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-teal-500/30">
-                        <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
-                    </div>
-                    <div class="w-1/2"></div>
-                </div>
-
-                <!-- Brevet - Right -->
-                <div class="fade-in relative flex items-center">
-                    <div class="w-1/2"></div>
-                    <!-- Icon -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center z-10 shadow-lg shadow-gold/30">
-                        <i data-lucide="award" class="w-5 h-5 text-dark"></i>
-                    </div>
-                    <div class="w-1/2 pl-8">
-                        <span class="text-gold font-bold text-sm">2021</span>
-                        <h3 class="text-xl font-bold text-light mt-1">Brevet des Collèges</h3>
-                        <p class="text-light text-sm mt-2">Collège Jean Monnet - La Loupe</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expériences Section -->
-    <section id="experiences" class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span
-                        class="text-gold">Expériences</span></h2>
-                <p class="text-light max-w-2xl mx-auto">
-                    Stages, événements et projets professionnels
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- XLS Optronic -->
-                <div
-                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-cyan-500/50 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="server-cog" class="w-6 h-6 text-cyan-400"></i>
-                        </div>
-                        <div>
-                            <span class="text-cyan-400 text-xs font-bold">BAC+2 — 2026</span>
-                            <h3 class="text-lg font-bold text-light">XO XLS Optronic</h3>
-                            <span class="text-cyan-400 text-sm font-bold block mt-1">DEV</span>
-                        </div>
-                    </div>
-                    <p class="text-light text-sm mb-1">Stage • Le Coudray</p>
-                    <p class="text-light text-sm mb-4">Développement, administration système, téléphonie 3CX et
-                        maintenance du parc informatique.</p>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">DEV</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
-                        <span class="badge text-xs px-2 py-1 rounded">3CX</span>
-                        <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
-                    </div>
-                </div>
-
-                <!-- XtremPro -->
-                <div
-                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-blue-500/50 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="monitor-check" class="w-6 h-6 text-blue-400"></i>
-                        </div>
-                        <div>
-                            <span class="text-blue-400 text-xs font-bold">BAC+1 — 2025</span>
-                            <h3 class="text-lg font-bold text-light">XtremPro</h3>
-                        </div>
-                    </div>
-                    <p class="text-light text-sm mb-1">Stage • Boutique informatique</p>
-                    <p class="text-light text-sm mb-4">Réparation matérielle, diagnostic de pannes et relation
-                        client.</p>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">Hardware</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Réparation</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Diagnostic</span>
-                    </div>
-                </div>
-
-                <!-- Nuit de l'Info -->
-                <div
-                    class="fade-in bg-dark-100 rounded-xl p-6 border border-dark-200 hover:border-gold/50 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="trophy" class="w-6 h-6 text-gold"></i>
-                        </div>
-                        <div>
-                            <span class="text-gold text-xs font-bold">Événement — 2025</span>
-                            <h3 class="text-lg font-bold text-light">Nuit de l'Info</h3>
-                        </div>
-                    </div>
-                    <p class="text-light text-sm mb-1">Hackathon national</p>
-                    <p class="text-light text-sm mb-4">Participation à des challenges CTF (Capture The Flag) et
-                        résolution de défis de sécurité en équipe sur une nuit.</p>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">CTF</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Cybersécurité</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Travail d'équipe</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compétences Section -->
-    <section id="competences" class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span
-                        class="text-gold">Compétences</span></h2>
-                <p class="text-light max-w-2xl mx-auto">
-                    Un ensemble de compétences techniques acquises en formation et en stage
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Systèmes -->
-                <div
-                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-5">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="server" class="w-6 h-6 text-blue-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-light">Systèmes</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Active Directory</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Apache2 / Nginx</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Linux</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Scripting</span>
-                    </div>
-                </div>
-
-                <!-- Réseaux -->
-                <div
-                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-cyan-500/10 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-5">
-                        <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="network" class="w-6 h-6 text-cyan-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-light">Réseaux</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">Cisco IOS</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Routage & Switching</span>
-                        <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
-                        <span class="badge text-xs px-2 py-1 rounded">VOIP (3CX)</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Wireshark</span>
-                    </div>
-                </div>
-
-                <!-- Sécurité & Supervision -->
-                <div
-                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-teal-500/10 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-5">
-                        <div class="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="shield-check" class="w-6 h-6 text-teal-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-light">Sécurité & Gestion</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">SSL/TLS</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Firewall & VPN</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Supervision SNMP</span>
-                        <span class="badge text-xs px-2 py-1 rounded">GLPI</span>
-                    </div>
-                </div>
-
-                <!-- Virtualisation -->
-                <div
-                    class="fade-in skill-card rounded-xl p-6 hover:shadow-lg hover:shadow-gold/10 transition-all text-center">
-                    <div class="flex flex-col items-center gap-4 mb-5">
-                        <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-                            <i data-lucide="layers" class="w-6 h-6 text-gold"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-light">Virtualisation</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="badge text-xs px-2 py-1 rounded">Proxmox VE</span>
-                        <span class="badge text-xs px-2 py-1 rounded">VirtualBox</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Docker</span>
-                        <span class="badge text-xs px-2 py-1 rounded">Hyper-V</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projets Section -->
-    <section id="projets" class="py-24 bg-dark-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span class="text-gold">Projets</span>
-                </h2>
-                <p class="text-light max-w-2xl mx-auto">
-                    Des projets concrets réalisés en formation BTS SIO
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projet 1 -->
-                <div
-                    class="fade-in project-card bg-dark-100 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-cyan-500/10 transition-all">
-                    <div
-                        class="h-44 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-cyan-500/30 rounded-2xl flex items-center justify-center">
-                            <i data-lucide="share-2" class="w-8 h-8 text-cyan-400"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-lg font-bold text-light mb-2">Sport Ludique Orléans</h3>
-                        <p class="text-light text-sm mb-4">Conception et mise en place d'une infrastructure réseau
-                            complète, segmentée et sécurisée.</p>
-                        <div class="flex flex-wrap gap-2 mb-5 justify-center">
-                            <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Routage</span>
-                        </div>
-                        <a href="https://xola-max.github.io/gp-orleans-sportludique2025-2026/" target="_blank"
-                            class="btn-primary block text-center py-2.5 rounded-lg text-sm font-semibold">
-                            Voir le projet
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Projet 2 -->
-                <div
-                    class="fade-in project-card bg-dark-100 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-teal-500/10 transition-all">
-                    <div
-                        class="h-44 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-teal-500/30 rounded-2xl flex items-center justify-center">
-                            <i data-lucide="layout-dashboard" class="w-8 h-8 text-teal-400"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-lg font-bold text-light mb-2">Site Web : FC Fulbert</h3>
-                        <p class="text-light text-sm mb-4">Conception et développement d'un site web pour le club de
-                            football, optimisé pour le SEO.</p>
-                        <div class="flex flex-wrap gap-2 mb-5 justify-center">
-                            <span class="badge text-xs px-2 py-1 rounded">HTML/CSS</span>
-                            <span class="badge text-xs px-2 py-1 rounded">SEO</span>
-                        </div>
-                        <span
-                            class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
-                            Indisponible
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Projet 3 -->
-                <div
-                    class="fade-in project-card bg-dark-100 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-gold/10 transition-all">
-                    <div class="h-44 bg-gradient-to-br from-gold/20 to-amber-500/20 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-gold/30 rounded-2xl flex items-center justify-center">
-                            <i data-lucide="gamepad-2" class="w-8 h-8 text-gold"></i>
-                        </div>
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-lg font-bold text-light mb-2">Jeu en ligne : Cluedo</h3>
-                        <p class="text-light text-sm mb-4">Développement d'un jeu de Cluedo en ligne avec mécaniques
-                            de jeu dynamiques.</p>
-                        <div class="flex flex-wrap gap-2 mb-5 justify-center">
-                            <span class="badge text-xs px-2 py-1 rounded">JavaScript</span>
-                            <span class="badge text-xs px-2 py-1 rounded">Algorithmie</span>
-                        </div>
-                        <span
-                            class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
-                            En cours...
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Me Contacter</h2>
-                <p class="text-light max-w-2xl mx-auto">
-                    Vous recherchez un alternant motivé ? Discutons-en !
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <!-- Form -->
-                <div class="fade-in">
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST"
-                        class="space-y-5">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-light mb-2">Nom complet</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
-                                placeholder="Votre nom">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-light mb-2">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
-                                placeholder="votre@email.com">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-light mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
-                                placeholder="Votre message..."></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full btn-primary py-3 rounded-md font-semibold flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-4 h-4"></i>
-                            Envoyer
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Info -->
-                <!-- Info -->
-                <div class="space-y-6 fade-in">
-                    <!-- Email -->
-                    <a href="mailto:cyriaklaunay@gmail.com"
-                        class="flex items-center gap-4 p-4 bg-dark-100 rounded-lg border border-dark-200 hover:border-dark-300 transition-colors">
-                        <div class="w-10 h-10 flex items-center justify-center bg-dark-200 rounded-full">
-                            <i data-lucide="mail" class="w-5 h-5 text-light"></i>
-                        </div>
-                        <div>
-                            <div class="text-sm font-medium text-light">Email</div>
-                            <div class="text-sm text-light">cyriaklaunay@gmail.com</div>
-                        </div>
-                    </a>
-
-                    <!-- CV Download -->
-                    <div class="p-4 bg-dark-100 rounded-lg border border-dark-200">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 flex items-center justify-center bg-dark-200 rounded-full">
-                                <i data-lucide="file-down" class="w-5 h-5 text-light"></i>
+        <!-- Hero Section / Présentation -->
+        <section id="presentation" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:text-left text-center">
+                    <!-- Profile Photo -->
+                    <div class="lg:w-1/3 flex justify-center">
+                        <div
+                            class="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-emerald">
+                            <!-- Placeholder for photo -->
+                            <div class="absolute inset-0 bg-dark-50 flex items-center justify-center">
+                                <i data-lucide="user" class="w-20 h-20 text-dark-300"></i>
                             </div>
-                            <div class="flex-1">
-                                <div class="text-sm font-medium text-light mb-1">Télécharger mon CV</div>
-                                <a href="CV.pdf" download
-                                    class="text-sm text-light hover:text-light transition-colors underline">
-                                    CV.pdf
+                            <img src="images/profile.png" alt="Cyriak Launay"
+                                class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3">
+                        <!-- Terminal Window -->
+                        <div class="terminal max-w-2xl mx-auto lg:mx-0 mb-8">
+                            <!-- Terminal Header -->
+                            <div class="terminal-header rounded-t-lg">
+                                <div class="terminal-btn bg-red-500"></div>
+                                <div class="terminal-btn bg-yellow-500"></div>
+                                <div class="terminal-btn bg-green-500"></div>
+                                <span class="ml-4 text-sm text-light-200 font-mono">cmd.exe — Portfolio v2.0</span>
+                            </div>
+                            <!-- Terminal Content -->
+                            <div class="p-6 font-mono text-sm leading-relaxed">
+                                <div class="mb-3">
+                                    <span class="text-emerald">C:\Users\Cyriak></span>
+                                    <span class="text-light" id="typeCommand1"></span>
+                                </div>
+                                <div class="mb-3 text-light-200" id="typeResult1"></div>
+                                <div class="mb-3">
+                                    <span class="text-emerald">C:\Users\Cyriak></span>
+                                    <span class="text-light" id="typeCommand2"></span>
+                                </div>
+                                <div class="mb-3 text-light-200" id="typeResult2"></div>
+                                <div class="mb-3">
+                                    <span class="text-emerald">C:\Users\Cyriak></span>
+                                    <span class="text-light" id="typeCommand3"></span>
+                                </div>
+                                <div class="mb-3 text-light-200" id="typeResult3"></div>
+                                <div class="mb-3">
+                                    <span class="text-emerald">C:\Users\Cyriak></span>
+                                    <span class="text-light" id="typeCommand4"></span>
+                                </div>
+                                <div class="mb-3 text-light-200" id="typeResult4"></div>
+
+                            </div>
+                        </div>
+
+                        <!-- Status badge with amber -->
+                        <div
+                            class="inline-flex items-center gap-2 bg-dark-50 border border-amber rounded-full px-4 py-2 mb-6">
+                            <span class="pulse-amber"></span>
+                            <span class="text-sm text-amber font-medium">En recherche d'alternance — Rentrée
+                                2026-2027</span>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4">
+                            <a href="#projets"
+                                class="btn-primary px-8 py-4 rounded-md font-semibold flex items-center gap-2">
+                                <i data-lucide="folder-open" class="w-5 h-5"></i>
+                                Voir mes projets
+                            </a>
+                            <a href="#contact"
+                                class="btn-secondary px-8 py-4 rounded-md font-semibold flex items-center gap-2">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                Me contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats with emerald accent -->
+                <div class="grid grid-cols-3 gap-4 mt-20 border-t border-dark-200 pt-10">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-emerald font-mono">5+</div>
+                        <div class="text-xs uppercase tracking-widest text-light-200 mt-1">Ans Formation</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-emerald font-mono">3+</div>
+                        <div class="text-xs uppercase tracking-widest text-light-200 mt-1">Projets</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-emerald font-mono">15+</div>
+                        <div class="text-xs uppercase tracking-widest text-light-200 mt-1">Technologies</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <i data-lucide="chevron-down" class="w-6 h-6 text-emerald"></i>
+            </div>
+        </section>
+
+        <!-- À Propos Section -->
+        <section id="about" class="py-24 bg-dark-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-light">À propos de <span
+                        class="text-gold">Moi</span>
+                </h2>
+                <div class="space-y-6 text-lg text-light leading-relaxed font-medium">
+                    <p>
+                        Passionné par l'informatique depuis toujours, j'ai choisi de m'orienter vers l'administration
+                        système et réseaux pour comprendre et maîtriser les infrastructures qui font tourner le monde
+                        numérique.
+                    </p>
+                    <p>
+                        Actuellement en BTS SIO option SISR, je combine formation théorique et expérience pratique
+                        pour développer une expertise solide en sécurisation, virtualisation et gestion de parc.
+                    </p>
+                    <p>
+                        Curieux et rigoureux, j'aime relever des défis techniques et apprendre de nouvelles technologies
+                        pour proposer des solutions toujours plus performantes et sécurisées.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parcours Section -->
+        <section id="parcours" class="py-24 bg-dark-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mon <span
+                            class="text-gold">Parcours</span>
+                    </h2>
+                    <p class="text-light max-w-2xl mx-auto">
+                        Une progression constante vers l'expertise en infrastructures et réseaux
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Vertical Line -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-gold">
+                    </div>
+
+                    <!-- BTS SIO - Left -->
+                    <div class="fade-in relative flex items-center mb-12">
+                        <div class="w-1/2 pr-8 text-right">
+                            <span class="text-blue-400 font-bold text-sm">2024 - 2026</span>
+                            <h3 class="text-xl font-bold text-light mt-1">BTS SIO - Option SISR</h3>
+                            <p class="text-cyan-400 text-sm mt-1">Lycée Fulbert - Chartres</p>
+                            <p class="text-light text-sm mt-2">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                            <div class="mt-3 flex flex-wrap gap-2 justify-end">
+                                <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Linux</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
+                            </div>
+                        </div>
+                        <!-- Icon -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-blue-500/30">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div class="w-1/2"></div>
+                    </div>
+
+                    <!-- Stage - Right -->
+                    <div class="fade-in relative flex items-center mb-12">
+                        <div class="w-1/2"></div>
+                        <!-- Icon -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-cyan-500/30">
+                            <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <span class="text-cyan-400 font-bold text-sm">2026</span>
+                            <h3 class="text-xl font-bold text-light mt-1">Stage - XO XLS Optronic</h3>
+                            <p class="text-light text-sm mt-1 mb-1 font-bold">Le Coudray</p>
+                            <p class="text-light text-sm mt-2">Développement, administration système et téléphonie.
+                                Gestion
+                                serveurs et
+                                maintenance du parc informatique.</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="badge text-xs px-2 py-1 rounded">DEV</span>
+                                <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
+                                <span class="badge text-xs px-2 py-1 rounded">3CX</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Maintenance</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Gestion Serveur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BAC Pro - Left -->
+                    <div class="fade-in relative flex items-center mb-12">
+                        <div class="w-1/2 pr-8 text-right">
+                            <span class="text-teal-400 font-bold text-sm">2021 - 2024</span>
+                            <h3 class="text-xl font-bold text-light mt-1">BAC Pro Systèmes Numériques</h3>
+                            <p class="text-teal-400 text-sm mt-1">Lycée des Métiers Sully - Nogent-le-Rotrou</p>
+                            <p class="text-light text-sm mt-2">3 années de formation technique</p>
+                            <div class="mt-3 flex flex-wrap gap-2 justify-end">
+                                <span class="badge text-xs px-2 py-1 rounded">Électronique</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Réseaux</span>
+                            </div>
+                        </div>
+                        <!-- Icon -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-teal-500/30">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div class="w-1/2"></div>
+                    </div>
+
+                    <!-- Brevet - Right -->
+                    <div class="fade-in relative flex items-center">
+                        <div class="w-1/2"></div>
+                        <!-- Icon -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center z-10 shadow-lg shadow-gold/30">
+                            <i data-lucide="award" class="w-5 h-5 text-dark"></i>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <span class="text-gold font-bold text-sm">2021</span>
+                            <h3 class="text-xl font-bold text-light mt-1">Brevet des Collèges</h3>
+                            <p class="text-light text-sm mt-2">Collège Jean Monnet - La Loupe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expériences Section -->
+        <section id="experiences" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span
+                            class="text-emerald">Expériences</span></h2>
+                    <p class="text-light-200 max-w-2xl mx-auto">
+                        Stages, événements et projets professionnels
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- XLS Optronic -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all text-center">
+                        <div class="flex flex-col items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="server-cog" class="w-6 h-6 text-emerald"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-light mt-1">XO XLS Optronic</h3>
+                            </div>
+                        </div>
+                        <p class="text-light-200 text-sm mb-1">Stage • Le Coudray</p>
+                        <p class="text-light-200 text-sm mb-4">Développement, administration système, téléphonie 3CX et
+                            maintenance du parc informatique.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="badge text-xs px-2 py-1 rounded">DEV</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Windows Server</span>
+                            <span class="badge text-xs px-2 py-1 rounded">3CX</span>
+                            <span class="badge text-xs px-2 py-1 rounded">VOIP</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Maintenance Parc</span>
+                        </div>
+                    </div>
+
+                    <!-- XtremPro -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all text-center">
+                        <div class="flex flex-col items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="monitor-check" class="w-6 h-6 text-emerald"></i>
+                            </div>
+                            <div>
+                                <span class="text-emerald text-xs font-bold font-mono">BAC+1 — 2025</span>
+                                <h3 class="text-lg font-bold text-light mt-1">XtremPro</h3>
+                            </div>
+                        </div>
+                        <p class="text-light-200 text-sm mb-1">Stage • Boutique informatique</p>
+                        <p class="text-light-200 text-sm mb-4">Réparation matérielle, diagnostic de pannes et relation
+                            client.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="badge text-xs px-2 py-1 rounded">Hardware</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Réparation</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Diagnostic</span>
+                        </div>
+                    </div>
+
+                    <!-- Nuit de l'Info -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all text-center">
+                        <div class="flex flex-col items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="trophy" class="w-6 h-6 text-amber"></i>
+                            </div>
+                            <div>
+                                <span class="text-amber text-xs font-bold font-mono">Événement — 2025</span>
+                                <h3 class="text-lg font-bold text-light mt-1">Nuit de l'Info</h3>
+                            </div>
+                        </div>
+                        <p class="text-light-200 text-sm mb-1">Hackathon national</p>
+                        <p class="text-light-200 text-sm mb-4">Participation à des challenges CTF et résolution de défis
+                            de
+                            sécurité.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="badge-amber text-xs px-2 py-1 rounded">CTF</span>
+                            <span class="badge-amber text-xs px-2 py-1 rounded">Cybersécurité</span>
+                            <span class="badge-amber text-xs px-2 py-1 rounded">Teamwork</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences Section -->
+        <section id="competences" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span
+                            class="text-emerald">Compétences</span></h2>
+                    <p class="text-light-200 max-w-2xl mx-auto">
+                        Un ensemble de compétences techniques acquises en formation et en stage
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Systèmes -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 bg-emerald/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="server" class="w-5 h-5 text-emerald"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Systèmes</h3>
+                            <div class="pulse-green ml-auto" title="Maîtrisé"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge text-xs px-2 py-1 rounded">Windows Server (AD, DNS, DHCP)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Debian (Apache, Nginx, MariaDB)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Scripting Bash/PS</span>
+                        </div>
+                    </div>
+
+                    <!-- Réseaux -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 bg-emerald/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="network" class="w-5 h-5 text-emerald"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Réseaux</h3>
+                            <div class="pulse-green ml-auto" title="Maîtrisé"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge text-xs px-2 py-1 rounded">Cisco IOS (9200L/3750, 1921)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Segmentation VLAN</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Routage Statique/Dynamique</span>
+                            <span class="badge text-xs px-2 py-1 rounded">VOIP (3CX)</span>
+                        </div>
+                    </div>
+
+                    <!-- Sécurité & Supervision -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 bg-emerald/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-emerald"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Sécurité</h3>
+                            <div class="pulse-green ml-auto" title="Maîtrisé"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge text-xs px-2 py-1 rounded">Firewalls Stormshield (SN210)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">OPNsense</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Certificats OpenSSL (HTTPS)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">VPN IPsec/OpenVPN</span>
+                        </div>
+                    </div>
+
+                    <!-- Outils Pro -->
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-emerald/10 transition-all">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 bg-emerald/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="wrench" class="w-5 h-5 text-emerald"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Outils Pro</h3>
+                            <div class="pulse-green ml-auto" title="Maîtrisé"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge text-xs px-2 py-1 rounded">GLPI (Parc)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Graylog (Logs)</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Ansible</span>
+                            <span class="badge text-xs px-2 py-1 rounded">Docker & Proxmox</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets Section -->
+        <section id="projets" class="py-24 bg-dark-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Mes <span
+                            class="text-emerald">Projets</span>
+                    </h2>
+                    <p class="text-light-200 max-w-2xl mx-auto">
+                        Des projets concrets réalisés en formation BTS SIO
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projet 1 -->
+                    <div
+                        class="fade-in glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-emerald/10 transition-all group">
+                        <div class="h-44 bg-dark-100 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-emerald/5 group-hover:bg-emerald/10 transition-colors">
+                            </div>
+                            <i data-lucide="share-2" class="w-12 h-12 text-emerald relative z-10"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-light mb-2 font-mono">Infrastructure Multi-sites
+                                "SportLudique"</h3>
+                            <p class="text-light-200 text-sm mb-4">Conception et déploiement d'une infrastructure réseau
+                                et système interconnectant 4 villes. Mise en place de la sécurité (Firewalls, Reverse
+                                Proxy), de la gestion de parc (GLPI) et de la centralisation des logs (Graylog).</p>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="badge text-xs px-2 py-1 rounded">VLAN</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Cisco</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Routage</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://xola-max.github.io/gp-orleans-sportludique2025-2026/" target="_blank"
+                                    class="flex-1 btn-primary text-center py-2 rounded-lg text-sm font-semibold">
+                                    Consulter le dossier technique
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Availability -->
-                    <div class="p-4 bg-dark-100 rounded-lg border border-dark-200">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 flex items-center justify-center bg-dark-200 rounded-full">
-                                <div class="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]">
-                                </div>
+                    <!-- Projet 2 -->
+                    <div
+                        class="fade-in glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-emerald/10 transition-all group">
+                        <div class="h-44 bg-dark-100 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-emerald/5 group-hover:bg-emerald/10 transition-colors">
                             </div>
-                            <span class="text-sm text-light">Disponible pour une alternance — Rentrée 2026</span>
+                            <i data-lucide="layout-dashboard" class="w-12 h-12 text-emerald relative z-10"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-light mb-2 font-mono">Site Web : FC Fulbert</h3>
+                            <p class="text-light-200 text-sm mb-4">Site web vitrine pour club de football, optimisé SEO.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="badge text-xs px-2 py-1 rounded">HTML/CSS</span>
+                                <span class="badge text-xs px-2 py-1 rounded">SEO</span>
+                            </div>
+                            <span
+                                class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
+                                Indisponible
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div
+                        class="fade-in glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-amber/10 transition-all group">
+                        <div class="h-44 bg-dark-100 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-amber/5 group-hover:bg-amber/10 transition-colors"></div>
+                            <i data-lucide="gamepad-2" class="w-12 h-12 text-amber relative z-10"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-light mb-2 font-mono">Jeu en ligne : Cluedo</h3>
+                            <p class="text-light-200 text-sm mb-4">Jeu web interactif avec logique algorithmie complexe.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="badge-amber text-xs px-2 py-1 rounded">JS</span>
+                                <span class="badge-amber text-xs px-2 py-1 rounded">Algo</span>
+                            </div>
+                            <span
+                                class="btn-secondary block text-center py-2.5 rounded-lg text-sm font-semibold opacity-60 cursor-not-allowed">
+                                En développement...
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-dark-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="text-light text-sm">
-                    © 2025 Cyriak Launay — Portfolio BTS SIO SISR v1.4
+        <!-- Home Lab Section -->
+        <section id="lab" class="py-24 bg-dark-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Environnement <span
+                            class="text-amber">Technique</span></h2>
+                    <p class="text-light-200 max-w-2xl mx-auto">
+                        Utilisation de serveurs HP ProLiant DL380 en environnement de test, virtualisation sous Proxmox
+                        et gestion de conteneurs Docker pour les services web.
+                    </p>
                 </div>
-                <div class="flex items-center gap-6">
-                    <a href="https://linkedin.com/in/cyriak-launay" target="_blank"
-                        class="text-light hover:text-light transition-colors">
-                        <i data-lucide="linkedin" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://github.com/CLePtiot/PortFolio" target="_blank"
-                        class="text-light hover:text-light transition-colors">
-                        <i data-lucide="github" class="w-5 h-5"></i>
-                    </a>
-                    <a href="mailto:cyriaklaunay@gmail.com" class="text-light hover:text-light transition-colors">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
-                    </a>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Proxmox -->
+                    <div class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="server" class="w-6 h-6 text-amber"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Hyperviseur</h3>
+                        </div>
+                        <ul class="text-light-200 text-sm space-y-2 font-mono">
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Proxmox VE 8.1</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> VirtualBox (Tests
+                                locaux)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> LXC Containers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Network -->
+                    <div class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="network" class="w-6 h-6 text-amber"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Réseau & DNS</h3>
+                        </div>
+                        <ul class="text-light-200 text-sm space-y-2 font-mono">
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Windows Server (AD /
+                                DNS / DHCP)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Segmentation VLAN
+                                (802.1Q)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Routage Inter-VLAN
+                                (L3)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Cisco IOS (9200L /
+                                3750)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-amber/10 transition-all">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="container" class="w-6 h-6 text-amber"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-light font-mono">Services Docker</h3>
+                        </div>
+                        <ul class="text-light-200 text-sm space-y-2 font-mono">
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Nginx Proxy Manager
+                                (Reverse Proxy)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Portainer (Gestion
+                                GUI)</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Wordpress & Apache2
+                            </li>
+                            <li class="flex items-center gap-2"><span class="text-emerald">✓</span> Ansible
+                                (Automatisation)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- Veille Technologique Section -->
+        <section id="veille" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Veille <span
+                            class="text-blue-400">Technologique</span></h2>
+                    <p class="text-light-200 max-w-2xl mx-auto">
+                        Outils et sources pour rester informé sur la cybersécurité et l'infrastructure
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="rss" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-light font-mono">Flux de sécurité</h3>
+                                <p class="text-xs text-light-200">Veille sur les menaces et vulnérabilités</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center text-sm border-b border-dark-200 pb-2">
+                                <span class="text-light font-mono">CERT-FR (ANSSI)</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Officiel</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm border-b border-dark-200 pb-2">
+                                <span class="text-light font-mono">Cybermalveillance.gouv.fr</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Prévention</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-light font-mono">Suivi Solutions Open Source</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Debian, OPNsense</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="fade-in glass-card rounded-xl p-6 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="book-open" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-light font-mono">Méthodologie & Documentation</h3>
+                                <p class="text-xs text-light-200">Organisation et partage du savoir</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center text-sm border-b border-dark-200 pb-2">
+                                <span class="text-light font-mono">Documentation MkDocs</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Statique</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm border-b border-dark-200 pb-2">
+                                <span class="text-light font-mono">Versioning GitHub</span>
+                                <span class="badge text-xs px-2 py-1 rounded">Git</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-light font-mono">Veille Technologique</span>
+                                <span class="badge text-xs px-2 py-1 rounded">SISR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-light">Me Contacter</h2>
+                    <p class="text-light max-w-2xl mx-auto">
+                        Vous recherchez un alternant motivé ? Discutons-en !
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <!-- Form -->
+                    <div class="fade-in">
+                        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST"
+                            class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-light mb-2">Nom complet</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
+                                    placeholder="Votre nom">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-light mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
+                                    placeholder="votre@email.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-light mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full bg-dark-100 border border-dark-200 rounded-md px-4 py-3 text-light placeholder-dark-400 focus:outline-none focus:border-dark-300 transition-all"
+                                    placeholder="Votre message..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full btn-primary py-3 rounded-md font-semibold flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                Envoyer
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="space-y-6 fade-in">
+                        <!-- Email -->
+                        <a href="mailto:cyriaklaunay@gmail.com"
+                            class="flex items-center gap-4 p-4 bg-dark-100 rounded-lg border border-dark-200 hover:border-dark-300 transition-colors">
+                            <div class="w-10 h-10 flex items-center justify-center bg-dark-200 rounded-full">
+                                <i data-lucide="mail" class="w-5 h-5 text-light"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-light">Email</div>
+                                <div class="text-sm text-light">cyriaklaunay@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <!-- CV Download -->
+                        <div class="p-4 bg-dark-100 rounded-lg border border-dark-200">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-dark-200 rounded-full">
+                                    <i data-lucide="file-down" class="w-5 h-5 text-light"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-sm font-medium text-light mb-1">Télécharger mon CV</div>
+                                    <a href="CV.pdf" download
+                                        class="text-sm text-light hover:text-light transition-colors underline">
+                                        CV.pdf
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Availability -->
+                        <div class="p-4 bg-dark-100 rounded-lg border border-dark-200">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-dark-200 rounded-full">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]">
+                                    </div>
+                                </div>
+                                <span class="text-sm text-light">Disponible pour une alternance — Rentrée 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 border-t border-dark-200 mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="text-light text-sm font-mono">
+                        <span class="text-emerald">root@cyriak:~$</span> © 2026 Cyriak.L — Portfolio v2.0
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="https://linkedin.com/in/cyriak-launay" target="_blank"
+                            class="text-light hover:text-emerald transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://github.com/CLePtiot/PortFolio" target="_blank"
+                            class="text-light hover:text-emerald transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:cyriaklaunay@gmail.com" class="text-light hover:text-emerald transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
 
     <!-- JavaScript -->
     <script>
@@ -955,6 +1280,50 @@
                 moonIcon.classList.remove('hidden');
             }
         });
+
+        // ========== TERMINAL TYPING ANIMATION ==========
+        const terminalCommands = [
+            { cmd: 'whoami', result: '> Cyriak — Étudiant BTS SIO SISR', cmdEl: 'typeCommand1', resultEl: 'typeResult1' },
+            { cmd: 'current-project', result: '> Infrastructure SportLudique 2026', cmdEl: 'typeCommand2', resultEl: 'typeResult2' },
+            { cmd: 'skills', result: '<span class="text-emerald">[OK]</span> Réseaux Cisco, Sécurité Stormshield, Virtualisation Proxmox', cmdEl: 'typeCommand3', resultEl: 'typeResult3' },
+            { cmd: 'status', result: '> À la recherche d\'une alternance (Sept. 2026)', cmdEl: 'typeCommand4', resultEl: 'typeResult4' }
+        ];
+
+        let commandIndex = 0;
+        let charIndex = 0;
+        let isTypingCommand = true;
+        let currentDelay = 50;
+
+        function typeTerminal() {
+            if (commandIndex >= terminalCommands.length) return;
+
+            const current = terminalCommands[commandIndex];
+            const cmdElement = document.getElementById(current.cmdEl);
+            const resultElement = document.getElementById(current.resultEl);
+
+            if (isTypingCommand) {
+                if (charIndex < current.cmd.length) {
+                    cmdElement.textContent += current.cmd[charIndex];
+                    charIndex++;
+                    setTimeout(typeTerminal, currentDelay);
+                } else {
+                    isTypingCommand = false;
+                    charIndex = 0;
+                    setTimeout(typeTerminal, 300);
+                }
+            } else {
+                resultElement.innerHTML = current.result;
+                commandIndex++;
+                charIndex = 0;
+                isTypingCommand = true;
+                if (commandIndex < terminalCommands.length) {
+                    setTimeout(typeTerminal, 500);
+                }
+            }
+        }
+
+        // Start typing animation after page load
+        setTimeout(typeTerminal, 800);
     </script>
 </body>
 
