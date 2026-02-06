@@ -16,18 +16,18 @@
                 extend: {
                     colors: {
                         'dark': {
-                            DEFAULT: '#121212',
-                            50: '#1a1a1a',
-                            100: '#1f1f1f',
-                            200: '#2a2a2a',
-                            300: '#3d3d3d',
-                            400: '#525252',
+                            DEFAULT: '#181818',
+                            50: '#1e1e1e',
+                            100: '#242424',
+                            200: '#2e2e2e',
+                            300: '#444444',
+                            400: '#5a5a5a',
                         },
                         'light': {
                             DEFAULT: '#fafafa',
                             100: '#e5e5e5',
-                            200: '#a3a3a3',
-                            300: '#737373'
+                            200: '#b0b0b0',
+                            300: '#808080'
                         },
                         'gold': {
                             DEFAULT: '#c9a962',
@@ -63,16 +63,16 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #121212;
+            background: #181818;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #3d3d3d;
+            background: #c9a962;
             border-radius: 3px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #525252;
+            background: #d4bc7a;
         }
 
         /* Animation fade-in au scroll */
@@ -89,62 +89,62 @@
 
         /* Glass effet subtle */
         .glass {
-            background: rgba(18, 18, 18, 0.95);
+            background: rgba(24, 24, 24, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.15);
         }
 
         /* Card hover effect */
         .project-card {
             transition: all 0.25s ease;
-            border: 1px solid #2a2a2a;
+            border: 1px solid #2e2e2e;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
             border-color: #c9a962;
-            background: #1a1a1a;
+            background: #1e1e1e;
         }
 
         /* Skill card */
         .skill-card {
             transition: all 0.2s ease;
-            background: #121212;
-            border: 1px solid #2a2a2a;
+            background: #1e1e1e;
+            border: 1px solid #2e2e2e;
         }
 
         .skill-card:hover {
             border-color: #c9a962;
-            background: #1a1a1a;
+            background: #242424;
         }
 
-        /* Subtle border glow on buttons */
+        /* Gold button primary */
         .btn-primary {
-            background: #fafafa;
-            color: #0a0a0a;
+            background: #c9a962;
+            color: #181818;
             transition: all 0.2s ease;
         }
 
         .btn-primary:hover {
-            background: #e5e5e5;
+            background: #d4bc7a;
         }
 
         .btn-secondary {
-            border: 1px solid #404040;
+            border: 1px solid #444444;
             color: #e5e5e5;
             transition: all 0.2s ease;
         }
 
         .btn-secondary:hover {
-            border-color: #737373;
-            background: #171717;
+            border-color: #c9a962;
+            background: #242424;
         }
 
-        /* Badge minimal */
+        /* Badge with gold border */
         .badge {
-            background: #1a1a1a;
-            border: 1px solid #262626;
-            color: #a3a3a3;
+            background: #242424;
+            border: 1px solid #c9a962;
+            color: #c9a962;
         }
     </style>
 </head>
@@ -349,7 +349,7 @@
                 <!-- Systèmes -->
                 <div class="fade-in skill-card rounded-lg p-6">
                     <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="server" class="w-5 h-5 text-light-200"></i>
+                        <i data-lucide="server" class="w-5 h-5 text-gold"></i>
                         <h3 class="text-base font-semibold text-light">Systèmes</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -364,7 +364,7 @@
                 <!-- Réseaux -->
                 <div class="fade-in skill-card rounded-lg p-6">
                     <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="network" class="w-5 h-5 text-light-200"></i>
+                        <i data-lucide="network" class="w-5 h-5 text-gold"></i>
                         <h3 class="text-base font-semibold text-light">Réseaux</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -379,7 +379,7 @@
                 <!-- Sécurité & Supervision -->
                 <div class="fade-in skill-card rounded-lg p-6">
                     <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-light-200"></i>
+                        <i data-lucide="shield-check" class="w-5 h-5 text-gold"></i>
                         <h3 class="text-base font-semibold text-light">Sécurité & Gestion</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
@@ -393,7 +393,7 @@
                 <!-- Virtualisation -->
                 <div class="fade-in skill-card rounded-lg p-6">
                     <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="box" class="w-5 h-5 text-light-200"></i>
+                        <i data-lucide="box" class="w-5 h-5 text-gold"></i>
                         <h3 class="text-base font-semibold text-light">Virtualisation</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
